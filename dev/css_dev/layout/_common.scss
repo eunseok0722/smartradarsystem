@@ -1,0 +1,703 @@
+//// 기본 폰트 정의
+body {
+  font-family: $default_font;
+  scroll-behavior: smooth;
+}
+
+//// 웹접근성용 안내 문구 숨김
+.blind {
+  font-size: 0;
+  position: absolute;
+  text-indent: -9999px;
+}
+
+//// font 설정
+.tit-l {
+  font-family: $point_font;
+  //font-weight: $r;
+  font-size: $font-16r;
+}
+.tit-r {
+  font-family: $point_font;
+  //font-weight: $b;
+  font-size: $font-14r;
+}
+.tit-m {
+  font-family: $point_font;
+  //font-weight: $sb;
+  font-size: $font-13r;
+}
+.tit-s {
+  font-family: $point_font;
+  //font-weight: $r;
+  font-size: $font-12r;
+}
+
+.txt-l {
+  font-size: $font-16r;
+  //font-weight: $r;
+}
+.txt-r {
+  font-size: $font-13r;
+  //font-weight: $r;
+}
+.txt-m {
+  font-size: $font-11r;
+  //font-weight: $r;
+}
+.txt-s {
+  font-size: $font-10r;
+  //font-weight: $r;
+}
+
+.lb-tit-r {
+  font-family: $point-font;
+  font-size: $font-18r;
+  //font-weight: $sb;
+}
+.lb-txt-r {
+  font-family: $default_font;
+  font-size: $font-14r;
+  //font-weight: $r;
+}
+
+.tit-cont {
+  font-size: $font-42r;
+  //font-weight: $r;
+}
+.tit-sec {
+  font-family: $point_font;
+  font-size: $font-48r;
+  //font-weight: $r;
+}
+.tit-art {
+  font-size: $font-22r;
+  font-family: $point_font;
+  //font-weight: $r;
+}
+.tit-art-02 {
+  font-size: $font-24r;
+  font-family: $point_font;
+  //font-weight: $md;
+}
+.tit-art-03 {
+  font-size: $font-20r;
+  font-family: $point_font;
+  //font-weight: $r;
+}
+.tit-art-04 {
+  font-size: $font-28r;
+  font-family: $point_font;
+}
+.tit-head {
+  font-size: $font-54r;
+  font-family: $point_font;
+  //font-weight: $r;
+}
+.txt-cont {
+  font-size: $font-18r;
+  //font-weight: $r;
+  line-height: 1.5;
+}
+
+.fw-r {
+  font-weight: $r;
+}
+.fw-md {
+  font-weight: $md;
+}
+.fw-sb {
+  font-weight: $sb;
+}
+.fw-b {
+  font-weight: $b;
+}
+
+
+.garet {
+  font-family: "Garet", sans-serif;
+}
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+
+.blue-d {
+  background-color: $blue_d;
+}
+.blue-l {
+  background-color: $blue_l;
+}
+.gray {
+  background-color: $gray_05;
+}
+
+/* icon style */
+.ico-item {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.8rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  box-shadow: 4.9px 3.4px 8px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  box-sizing: border-box;
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  &.ty02 {
+    width: 5.2rem;
+    height: 5.2rem;
+    border-radius: 1.3rem;
+  }
+}
+
+
+.ico-facebook {
+  background-image: url("../images/ico_facebook_001.png");
+  background-size: 3rem 3rem;
+}
+.ico-linkedin {
+  background-image: url("../images/ico_linkedin_001.png");
+  background-size: 3rem 3rem;
+}
+.ico-arrow-top {
+  background-image: url("../images/ico_arrow_001.png");
+  background-size: 2.5rem 1.4rem;
+  background-color: $blue_l;
+  border: 1px solid $blue_d;
+}
+
+
+
+/* //icon style */
+
+
+/* pagenation */
+
+.layout-ty01 .pagination-wrap {
+  width: 100%;
+  align-self: center;
+}
+.pagination-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .pagination {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    .page-list {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+}
+
+
+.page-item {
+  width: 4rem;
+  height: 4rem;
+  box-sizing: border-box;
+  @include bd(1px, $gray_02);
+
+  color: $gray_03;
+  &:hover {
+    color: #000;
+    background-color: $gray_01;
+  }
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.btn-page {
+  width: 4rem;
+  height: 4rem;
+  box-sizing: border-box;
+  background-size: 18px 33px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  &.next {
+    background-image: url("../images/ico_arrow_004.png");
+  }
+  &.prev {
+    background-image: url("../images/ico_arrow_004.png");
+    transform: rotate(180deg);
+  }
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.btn-ty01 {
+
+  width: fit-content;
+  min-width: 20rem;
+  border-radius: 5rem;
+  @include bd(1px, $gray_04);
+
+  box-sizing: border-box;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    font-weight: $r;
+    padding: 1.8rem 1.4rem;
+  }
+}
+
+.btn-cross {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  background-size: 2.6rem 2.6rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../images/ico_cross_001.png");
+}
+
+
+/* //pagenation */
+
+/* Custom Select */
+.custom-select {
+  position: relative;
+  width: fit-content;
+  min-width: 18rem;
+  text-align: left;
+  //outline: none;
+  height: 3.5rem;
+  line-height: 2.8rem;
+}
+
+.custom-select .selected {
+  //background-color: #0a0a0a;
+  width: fit-content;
+  min-width: 100%;
+  white-space: nowrap;
+  border-radius: 3.5rem;
+  border: 1px solid #666666;
+  //color: #fff;
+  //padding-left: 1.5rem;
+  //padding-right: 4.2rem;
+  padding: 0.3rem 4.2rem 0.3rem 1.5rem;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1.15rem;
+  box-sizing: border-box;
+}
+
+.custom-select .selected.open {
+  border: 2px solid $blue_l;
+  border-radius: 3.5rem;
+  &::after {
+    top: 1rem;
+    border-color: transparent transparent $blue_l transparent;
+  }
+}
+
+.custom-select .selected:after {
+  position: absolute;
+  content: "";
+  top: 1.6rem;
+  right: 1.5rem;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: $blue_l transparent transparent transparent;
+}
+
+.custom-select .items {
+  margin-top: 0.3rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  white-space: nowrap;
+  background-color: $white;
+  box-shadow: 0px 6px 8px 0 rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  padding: 1rem;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.custom-select .items div {
+  width: fit-content;
+  min-width: 100%;
+  white-space: nowrap;
+  color: inherit;
+  padding: 0 2.2rem 0 1rem;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1.15rem;
+}
+
+.custom-select .items div:hover {
+  background-color: #edf8fc;
+  color: $blue_l;
+  font-weight: $md;
+
+}
+.custom-select .items div.checked {
+  background-size: 12px 9px;
+  background-position: 95% center;
+  background-repeat: no-repeat;
+  background-image: url("../images/ico_check_001.png");
+}
+
+.selectHide {
+  display: none;
+}
+/* // Custom Select */
+
+//
+//
+//
+//// input 기본 모양 설정
+//input {
+//  box-sizing: border-box;
+//  font-size: $font-16r;
+//  //@include m-l {
+//  //  font-size: $font-12r;
+//  //}
+//}
+//
+//// address 기본 모양 설정
+//address {
+//  font-style: normal;
+//  font-size: $font-14r;
+//  line-height: 21px;
+//}
+//
+//// font 설정
+//.tit-r {
+//  font-size: $font-14r;
+//  font-weight: $b;
+//  //@include p-s {
+//  //  font-size: $font-12r;
+//  //}
+//}
+//
+//.txt-r {
+//  font-size: $font-14r;
+//  //@include p-s {
+//  //  font-size: $font-12r;
+//  //}
+//}
+//
+//.txt-l {
+//  font-size: $font-16r;
+//  //@include p-s {
+//  //  font-size: $font-14r;
+//  //}
+//}
+//
+//.tit-l {
+//  font-size: $font-16r;
+//  font-weight: $b;
+//  //@include p-s {
+//  //  font-size: $font-14r;
+//  //}
+//}
+//
+//.post-sub-tit {
+//  font-size: $font-20r;
+//  font-weight: $b;
+//  //@include m-l {
+//  //  font-size: $font-16r;
+//  //}
+//}
+//
+//.popular-txt {
+//  font-size: $font-24r;
+//  font-weight: $b;
+//  //@include p-s {
+//  //  font-size: $font-18r;
+//  //}
+//}
+//
+//.post-tit {
+//  font-size: $font-32r;
+//  font-weight: $b;
+//  //@include t-s {
+//  //  font-size: $font-24r;
+//  //}
+//  //@include m-l {
+//  //  font-size: $font-20r;
+//  //}
+//}
+//
+//.article-tit {
+//  font-size: $font-48r;
+//  font-weight: $b;
+//  //@include m-l {
+//  //  font-size: $font-32r;
+//  //}
+//}
+//
+//.author-tit {
+//  font-size: $font-72r;
+//  font-weight: $b;
+//  //@include t-l {
+//  //  font-size: $font-60r;
+//  //}
+//  //@include m-l {
+//  //  font-size: $font-32r;
+//  //}
+//}
+//
+//.hl-tit-s {
+//  font-size: 10rem;
+//  font-weight: $b;
+//  //@include p-s {
+//  //  font-size: 8rem;
+//  //}
+//  //@include t-l {
+//  //  font-size: 5.5rem;
+//  //}
+//  //@include t-s {
+//  //  font-size: 4.2rem;
+//  //}
+//  //@include m-s {
+//  //  font-size: 3.2rem;
+//  //}
+//}
+//
+//.section-tit {
+//  font-size: $font-104r;
+//  font-weight: $b;
+//  //@include t-s {
+//  //  font-size: $font-84r;
+//  //}
+//  //@include m-l {
+//  //  font-size: $font-48r;
+//  //}
+//}
+//
+//
+//// buttons
+//.btn-area {
+//  ul {
+//    width: 100%;
+//    display: table;
+//    table-layout: fixed;
+//
+//    li {
+//      width: 100%;
+//      display: table-cell;
+//
+//      a {
+//        width: 100%;
+//        text-align: center;
+//      }
+//    }
+//  }
+//}
+//
+//.btn-view-more {
+//  position: relative;
+//  height: 24px;
+//  width: fit-content;
+//  font-size: $font-16r;
+//  font-weight: $b;
+//  white-space: nowrap;
+//
+//  a,
+//  button {
+//    display: inline-block;
+//    width: 100%;
+//    height: 100%;
+//
+//    &::after {
+//      content: '';
+//      display: inline-block;
+//      width: 24px;
+//      height: 24px;
+//      background-image: url("../images/ico_arrow_right.png");
+//      background-size: 16px 16px;
+//      background-repeat: no-repeat;
+//      padding-left: 8px;
+//      background-position: 10px 4px;
+//      vertical-align: -40%;
+//    }
+//  }
+//}
+//
+//// 뒤로가기
+//.btn-go-back {
+//  position: relative;
+//  height: 24px;
+//  width: fit-content;
+//  font-size: $font-16r;
+//  font-weight: $b;
+//
+//  a,
+//  button {
+//    display: inline-block;
+//    width: 100%;
+//    height: 100%;
+//
+//    &::before {
+//      content: '';
+//      display: inline-block;
+//      width: 24px;
+//      height: 24px;
+//      background-image: url("../images/ico_arrow_right.png");
+//      background-position: 10px 4px;
+//      background-size: 16px 16px;
+//      background-repeat: no-repeat;
+//      padding-left: 8px;
+//      vertical-align: -40%;
+//      transform: rotate(180deg);
+//    }
+//  }
+//}
+//
+//.btn-s {
+//  display: block;
+//  width: fit-content;
+//  height: 50px;
+//  //@include m-l {
+//  //  height: 4rem;
+//  //}
+//
+//  a,
+//  button {
+//    display: block;
+//    width: 100%;
+//    height: 100%;
+//    padding: 0 24px;
+//    font-size: $font-14r;
+//    line-height: 50px;
+//    box-sizing: border-box;
+//    background: inherit;
+//    color: inherit;
+//    border: none;
+//    font-weight: $md;
+//    //@include m-l {
+//    //  line-height: 4rem;
+//    //  font-size: $font-12r;
+//    //  padding: 0 1rem;
+//    //}
+//  }
+//}
+//
+//.btn-ty-b {
+//  background-color: #000000;
+//  color: #ffffff;
+//}
+//
+//.btn-ty-w {
+//  background-color: #ffffff;
+//  color: #000000;
+//}
+//
+///* 트랜지션 정의 */
+//.mgzn-enter-active,
+//.mgzn-leave-active,
+//.mgzn-move {
+//  transition: opacity 0.5s, transform 0.5s;
+//}
+//
+//.mgzn-enter-from,
+//.mgzn-leave-to {
+//  opacity: 0;
+//  transform: translateY(-1rem);
+//}
+//
+//@include p-s {
+//  .tit-r {
+//    font-size: $font-12r;
+//  }
+//  .txt-r {
+//    font-size: $font-12r;
+//  }
+//  .tit-l {
+//    font-size: $font-14r;
+//  }
+//  .txt-l {
+//    font-size: $font-14r;
+//  }
+//  .popular-txt {
+//    font-size: $font-18r;
+//  }
+//  .hl-tit-s {
+//    font-size: 8rem;
+//  }
+//}
+//
+//@include t-l {
+//
+//  .section-tit {
+//    font-size: $font-84r;
+//  }
+//  .author-tit {
+//    font-size: $font-60r;
+//  }
+//  .hl-tit-s {
+//    font-size: 5.5rem;
+//  }
+//}
+//
+//@include t-s {
+//  .post-tit {
+//    font-size: $font-24r;
+//  }
+//  .hl-tit-s {
+//    font-size: 4.2rem;
+//  }
+//}
+//@include m-l {
+//  input {
+//    font-size: $font-12r;
+//  }
+//  .post-sub-tit {
+//    font-size: $font-16r;
+//  }
+//  .post-tit {
+//    font-size: $font-20r;
+//  }
+//  .article-tit {
+//    font-size: $font-32r;
+//  }
+//  .author-tit {
+//    font-size: $font-32r;
+//  }
+//  .section-tit {
+//    font-size: $font-48r;
+//  }
+//  .btn-s {
+//    height: 4rem;
+//
+//    a,
+//    button {
+//      line-height: 4rem;
+//      font-size: $font-12r;
+//      padding: 0 1rem;
+//    }
+//  }
+//}
+//@include m-s {
+//  .hl-tit-s {
+//    font-size: 3.2rem;
+//  }
+//}

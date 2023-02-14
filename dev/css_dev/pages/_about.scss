@@ -1,0 +1,400 @@
+.post-content {
+  section {
+    .post-cont {
+      padding: 0 3.2rem 7.8rem;
+      box-sizing: border-box;
+      @include bdb(1px, $gray_02);
+      @include flex-col(9.6rem);
+
+      .post-tit {
+        @include flex-col(8rem);
+        align-items: center;
+
+        .tit-box {
+          @include flex-col(1rem);
+          align-items: center;
+
+          .tit-cont {
+            font-weight: $md;
+          }
+
+          .txt-l {
+            color: $blue_l;
+          }
+        }
+
+        .img-wrap {
+          width: 60%;
+          height: 0;
+          padding-bottom: 34.2%;
+          min-width: 738px;
+          overflow: hidden;
+          position: relative;
+
+          img,
+          iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+
+      .post-txt {
+        @include flex-col(5rem);
+      }
+    }
+
+    .btn-list-wrap {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 4.8rem;
+    }
+  }
+}
+
+/* Awards & Patents CSS */
+.award-head-content {
+  section {
+    position: relative;
+    display: flex;
+
+    .art-txt {
+      width: 83%;
+      @include flex-col(5rem);
+
+      .tit-head {
+        line-height: 1.1;
+      }
+
+      .txt-box {
+        width: 66.66%;
+        @include flex-col(7rem);
+        line-height: 1.75;
+      }
+    }
+
+    .art-img {
+      flex-basis: 25%;
+      width: 25%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      .img-wrap {
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%;
+
+        img {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+// history
+
+
+.award-history-content {
+  align-items: center;
+
+  .his-list {
+    display: flex;
+
+    .list-item {
+      flex-basis: 25%;
+    }
+  }
+}
+
+.his-item {
+  @include flex-col(3rem);
+
+  .dia-box {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+
+    .dia-dot {
+      width: 2.4rem;
+      height: 2.4rem;
+      border-radius: 2.4rem;
+      margin-top: 1rem;
+      background-color: $blue_l;
+    }
+
+    .dia-line {
+      width: calc(100% - 7.8rem);
+      height: 2.5rem;
+      border-bottom: 2px dotted $blue_l;
+      box-sizing: border-box;
+
+      span {
+        font-size: $font-16r;
+        font-weight: $md;
+        font-family: $point_font;
+        color: $blue_l;
+      }
+    }
+  }
+
+  .txt-box {
+    @include flex-col(6rem);
+    width: 84%;
+
+    .box {
+      @include flex-col(1.5rem);
+
+      .tit-art {
+        line-height: 1.2;
+      }
+
+      .txt-l {
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+.award-vision-content {
+  padding-top: 16.8rem;
+  .content-header {
+    width: 40%;
+    line-height: 1.2;
+  }
+
+  section {
+    @include flex-col(12.5rem);
+  }
+
+  .art-cont {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 4rem;
+
+    &:nth-child(2n) {
+      flex-direction: row;
+    }
+
+    .txt-box {
+      flex-basis: 50%;
+      width: 50%;
+      line-height: 1.7;
+    }
+
+    .img-wrap {
+      flex-basis: 50%;
+      width: 50%;
+      height: 0;
+      padding-bottom: 29.7%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+// team content
+.container .award-member-content {
+  padding: 6.5rem 0;
+}
+.award-member-content {
+  align-items: center;
+  .content-header {
+    width: 50%;
+    text-align: center;
+    line-height: 1.2;
+  }
+  section {
+    width: 100%
+  }
+  .team-list {
+    display: flex;
+    gap: 6rem;
+    .list-item {
+      position: relative;
+      flex-basis: 33.33%;
+    }
+  }
+}
+
+.team-item {
+  @include flex-col(3rem);
+  align-items: center;
+  text-align: center;
+  background-color: $white;
+  padding: 7.6rem 3rem 9.5rem;
+  box-sizing: border-box;
+  @include bdrs(1.6rem);
+  box-shadow: 5.2px 6px 12px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  transform: rotateY(0);
+  z-index: 1;
+  perspective: 300px;
+  .txt-box {
+    @include flex-col(1.8rem);
+  }
+  .img-box {
+    position: relative;
+    overflow: hidden;
+    width: 186px;
+    max-width: 186px;
+    height: 186px;
+    max-height: 186px;
+    border-radius: 186px;
+
+    .img-layer {
+      position: absolute;
+      height: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition: height 0.3s;
+      background: linear-gradient(360deg, $blue_l 18%, rgba(255, 255, 255, 0) 79%);
+      z-index: 1;
+
+      .btn-wrap {
+        position: absolute;
+        bottom: -3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: bottom 0.3s;
+
+        .sns-list {
+          gap: 1rem;
+
+          .sns-item {
+            a,
+            button {
+              &::after {
+                background-size: 13px 13px;
+                background-repeat: no-repeat;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .img-wrap {
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: auto;
+      }
+    }
+
+  }
+
+  &:hover {
+    .img-box {
+      .img-layer {
+        height: 100%;
+
+        .btn-wrap {
+          bottom: 3rem;
+        }
+      }
+    }
+  }
+  &.on {
+    transform: rotateY(-180deg);
+    z-index: 0;
+  }
+}
+.layer-item {
+  padding: 2.5rem;
+  background-color: $blue_l;
+  color: $white;
+  border-radius: 1.6rem;
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  transition: all 0.3s ease;
+  transform: rotateY(-180deg);
+  z-index: -1;
+  perspective: 300px;
+  @include flex-col(2.2rem);
+  .btn-wrap {
+    position: absolute;
+    right: 2.5rem;
+    top: 2.5rem;
+    transform: rotate(45deg);
+  }
+  .txt-box {
+    @include flex-col(0.7rem);
+  }
+  .career-list-wrap {
+    padding-left: 1.6rem;
+    .career-list {
+      @include flex-col(0.7rem);
+      .tit-r {
+        font-weight: $r;
+      }
+      .list-item {
+        text-indent: -1.3rem;
+        padding-left: 1.3rem;
+      }
+    }
+  }
+  .intro-wrap {
+    .intro {
+      line-height: 1.4;
+    }
+  }
+
+  &.on {
+    transform: rotateY(0);
+    z-index: 1;
+  }
+}
+
+
+/* //Awards & Patents CSS */
+
+/* team building & Careers */
+.team-org-content {
+  @include flex-col(74px);
+  .tit-sec {
+    text-align: center;
+  }
+  section {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 3rem;
+    .img-wrap {
+      width: 100%;
+      height: 0;
+      padding-bottom: 48.80%;
+      background-image: url("../images/img_about_team_001.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: contain;
+      img {
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+/* //team building & Careers */
+

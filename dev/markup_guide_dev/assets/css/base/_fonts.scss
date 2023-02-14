@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url('../font/Nanum-SquareRound-L.woff2') format('woff2'),
+  url('../font/Nanum-SquareRound-L.woff') format('woff'),
+  url('../font/Nanum-SquareRound-L.ttf') format('truetype'),
+  url('../font/Nanum-SquareRound-L.otf') format('opentype');
+  font-weight: $l;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url('../font/Nanum-SquareRound-R.woff2') format('woff2'),
+  url('../font/Nanum-SquareRound-R.woff') format('woff'),
+  url('../font/Nanum-SquareRound-R.ttf') format('truetype'),
+  url('../font/Nanum-SquareRound-R.otf') format('opentype');
+  font-weight: $l;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Garet';
+  src: url('../../../assets/font/Garet-Book.woff2') format('woff2'),
+  url('../../../assets/font/Garet-Book.woff') format('woff'),
+  url('../../../assets/font/Garet-Book.ttf') format('truetype'),
+  url('../../../assets/font/Garet-Book.otf') format('opentype');
+  font-weight: $r;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Garet';
+  src: url('../../../assets/font/Garet-Heavy.woff2') format('woff2'),
+  url('../../../assets/font/Garet-Heavy.woff') format('woff'),
+  url('../../../assets/font/Garet-Heavy.ttf') format('truetype'),
+  url('../../../assets/font/Garet-Heavy.otf') format('opentype');
+  font-weight: $b;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../../assets/font/Poppins-Light.woff2') format('woff2'),
+  url('../../../assets/font/Poppins-Light.woff') format('woff'),
+  url('../../../assets/font/Poppins-Light.ttf') format('truetype'),
+  url('../../../assets/font/Poppins-Light.otf') format('opentype');
+  font-weight: $l;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../../assets/font/Poppins-Regular.woff2') format('woff2'),
+  url('../../../assets/font/Poppins-Regular.woff') format('woff'),
+  url('../../../assets/font/Poppins-Regular.ttf') format('truetype'),
+  url('../../../assets/font/Poppins-Regular.otf') format('opentype');
+  font-weight: $r;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../../assets/font/Poppins-Medium.woff2') format('woff2'),
+  url('../../../assets/font/Poppins-Medium.woff') format('woff'),
+  url('../../../assets/font/Poppins-Medium.ttf') format('truetype'),
+  url('../../../assets/font/Poppins-Medium.otf') format('opentype');
+  font-weight: $md;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../../assets/font/Poppins-SemiBold.woff2') format('woff2'),
+  url('../../../assets/font/Poppins-SemiBold.woff') format('woff'),
+  url('../../../assets/font/Poppins-SemiBold.ttf') format('truetype'),
+  url('../../../assets/font/Poppins-SemiBold.otf') format('opentype');
+  font-weight: $sb;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../../assets/font/Poppins-Bold.woff2') format('woff2'),
+  url('../../../assets/font/Poppins-Bold.woff') format('woff'),
+  url('../../../assets/font/Poppins-Bold.ttf') format('truetype'),
+  url('../../../assets/font/Poppins-Bold.otf') format('opentype');
+  font-weight: $b;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../../assets/font/Poppins-ExtraBold.woff2') format('woff2'),
+  url('../../../assets/font/Poppins-ExtraBold.woff') format('woff'),
+  url('../../../assets/font/Poppins-ExtraBold.ttf') format('truetype'),
+  url('../../../assets/font/Poppins-ExtraBold.otf') format('opentype');
+  font-weight: $eb;
+  font-style: normal;
+}

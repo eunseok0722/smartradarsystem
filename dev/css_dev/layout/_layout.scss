@@ -1,0 +1,164 @@
+#wrapper {
+  width: 100%;
+}
+
+#header {
+  //width: 90%;
+  //max-width: 1920px;
+  //margin: 0 auto;
+  //min-width: 1280px;
+}
+
+.container {
+  overflow: hidden;
+  //width: 90%;
+  //max-width: 1920px;
+  //margin: 0 auto;
+  //min-width: 1280px;
+  .content {
+    width: $pc-min;
+    margin: 0 auto;
+    padding-bottom: 16.8rem;
+    @include flex-col(8rem);
+    .content-header {
+      transition: all 0.3s ease;
+    }
+  }
+
+  .head-content {
+    padding-top: 5rem;
+  }
+}
+
+
+#footer {
+  //width: 90%;
+  //max-width: 1920px;
+  //margin: 0 auto;
+  //min-width: 1280px;
+}
+
+
+// 아티클 type1
+.layout-ty01{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  column-gap: 4rem;
+  row-gap: 14rem;
+  article{
+    width: calc((100% - 8rem) / 3 );
+    @include flex-col(4rem);
+    .img-wrap{
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      padding-bottom: 67%;
+    }
+    img,
+    .art-media {
+      width: 100%;
+    }
+    img {
+      transition: transform 0.3s;
+    }
+    .art-tet{
+      @include flex-col(3rem);
+      .tit-box{
+        @include flex-col(2rem);
+        line-height: 1.4;
+        .tit-art {
+          @include ln-b(3);
+        }
+        .tit-l {
+          @include ln-1();
+        }
+      }
+      .txt-box {
+        line-height: 1.4;
+        p {
+         @include ln-b(3);
+        }
+      }
+    }
+    &:hover {
+      .img-wrap {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+}
+
+// 아티클 type2 (교차되는 article)
+.layout-ty02{
+  article{
+    display: flex;
+    align-items: center;
+    gap: 14rem;
+    &:nth-child(odd){
+      flex-direction: row-reverse;
+    }
+    .img-wrap{
+      width: calc(50% - 140px);
+      img,
+      .art-media {
+        width: 100%;
+      }
+      img {
+        transition: transform 0.3s;
+      }
+    }
+    .art-tet{
+      width: 50%;
+    }
+    &:hover {
+      .img-wrap {
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
+
+//@include t-l {
+//  .layout-ty01 {
+//    gap: 3rem;
+//    article {
+//      width: calc((100% - 3rem) / 2);
+//    }
+//  }
+//
+//  .layout-ty02{
+//    article{
+//      gap: 8rem;
+//      .img-wrap {
+//        width: calc(50% - 80px);
+//      }
+//    }
+//  }
+//}
+//
+//@include m-l {
+//  .layout-ty01 {
+//    article {
+//      width: 100%;
+//    }
+//  }
+//  .layout-ty02{
+//    article{
+//      display: block;
+//      .img-wrap {
+//        width: 100%;
+//      }
+//      .art-tet{
+//        width: 100%;
+//      }
+//    }
+//  }
+//}
+
+

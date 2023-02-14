@@ -1,0 +1,500 @@
+
+.img-cont {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  gap: 6rem;
+
+  .tit-box {
+    flex-basis: calc((100% - 6rem) / 2);
+    width: calc((100% - 6rem) / 2);
+    @include flex-col(3rem);
+    justify-content: space-between;
+
+    .head-sec {
+      width: 100%;
+      height: 100%;
+      @include flex-col();
+      justify-content: space-between;
+
+      .txt-wrap {
+        @include flex-col(6rem);
+
+        .txt-inner-wrap {
+          @include flex-col(3rem);
+        }
+
+        .tit-head {
+          line-height: 1.1;
+        }
+
+        .tit-art {
+          font-weight: $l;
+          line-height: 1.4;
+        }
+      }
+
+      .img-wrap {
+        width: 100%;
+        height: 0;
+        padding-bottom: 66%;
+        position: relative;
+        overflow: hidden;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          z-index: -1;
+        }
+
+        .img-tag {
+          position: absolute;
+          right: 4rem;
+          bottom: 2rem;
+          background-color: $black_02;
+
+          @include bdrs(2rem);
+
+          .tit-l {
+            color: $white;
+          }
+          .tag-link {
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 0.5rem 0.5rem 0.5rem 2rem;
+
+            &::after {
+              content: '';
+              display: inline-block;
+              width: 3rem;
+              height: 3rem;
+              margin-left: 1rem;
+              border-radius: 3rem;
+              background-image: url("../images/ico_arrow_005.png");
+              background-repeat: no-repeat;
+              background-size: 22px 17px;
+              background-position: center;
+              background-color: $light_gray;
+            }
+          }
+        }
+
+        &.ty02 {
+          padding-bottom: 82%;
+        }
+
+        &.ty03 {
+          padding-bottom: 100%;
+        }
+      }
+    }
+
+    .feat-sec {
+      width: 100%;
+      padding: 0 3rem;
+      box-sizing: border-box;
+
+      .feat-info-list {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: calc((100% - 480px) / 3);
+
+        .list-item {
+
+        }
+      }
+
+      .feat-info-item {
+        width: 12rem;
+        @include flex-col(2rem);
+        align-items: center;
+        text-align: center;
+        .tit-l {
+          line-height: 1.25;
+        }
+
+        .ico-box {
+          width: 9rem;
+          height: 9rem;
+          @include bdrs(1.6rem);
+          @include bd(3px, $white);
+          box-sizing: border-box;
+          box-shadow: 5.1px 3.2px 8px 0 rgba(0, 0, 0, 0.12);
+          background-color: $light_gray;
+          background-size: auto;
+          background-position: center;
+          background-repeat: no-repeat;
+
+          &.ty01 {
+            background-image: url("../images/ico_appl_feat_001.png");
+          }
+
+          &.ty02 {
+            background-image: url("../images/ico_appl_feat_002.png");
+          }
+
+          &.ty03 {
+            background-image: url("../images/ico_appl_feat_003.png");
+          }
+
+          &.ty04 {
+            background-image: url("../images/ico_appl_feat_004.png");
+          }
+          &.ty05 {
+            background-image: url("../images/ico_appl_feat_005.png");
+          }
+          &.ty06 {
+            background-image: url("../images/ico_appl_feat_006.png");
+          }
+          &.ty07 {
+            background-image: url("../images/ico_appl_feat_007.png");
+          }
+          &.ty08 {
+            background-image: url("../images/ico_appl_feat_008.png");
+          }
+          &.ty09 {
+            background-image: url("../images/ico_appl_feat_009.png");
+          }
+          &.ty10 {
+            background-image: url("../images/ico_appl_feat_010.png");
+          }
+          &.ty11 {
+            background-image: url("../images/ico_appl_feat_011.png");
+          }
+          &.ty12 {
+            background-image: url("../images/ico_appl_feat_012.png");
+          }
+          &.ty13 {
+            background-image: url("../images/ico_appl_feat_013.png");
+          }
+          &.ty14 {
+            background-image: url("../images/ico_appl_feat_014.png");
+          }
+          &.ty15 {
+            background-image: url("../images/ico_appl_feat_015.png");
+          }
+          &.ty16 {
+            background-image: url("../images/ico_appl_feat_016.png");
+          }
+          &.ty17 {
+            background-image: url("../images/ico_appl_feat_017.png");
+          }
+          &.ty18 {
+            background-image: url("../images/ico_appl_feat_018.png");
+          }
+        }
+      }
+      &.ty02 {
+        padding-bottom: 15rem;
+      }
+    }
+  }
+
+  .img-box {
+    @include flex-col(4.5rem);
+    flex-basis: calc(50% - 6rem);
+    width: calc(50% - 6rem);
+
+    .main-img {
+      width: 100%;
+      height: 0;
+      padding-bottom: 97%;
+      overflow: hidden;
+      @include bdrs(2.8rem);
+      position: relative;
+
+      img {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+
+    .sub-img {
+      width: 100%;
+      height: 0;
+      padding-bottom: 72.5%;
+      overflow: hidden;
+      @include bdrs(2.8rem);
+      position: relative;
+
+      img {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+
+    &.ty02 {
+      .main-img {
+        padding-bottom: 79%;
+      }
+    }
+
+    &.ty03 {
+      .main-img {
+        padding-bottom: 107%;
+      }
+    }
+
+    &.ty04 {
+      .main-img {
+        padding-bottom: 130%;
+      }
+    }
+  }
+}
+
+.auto-vehi-cont {
+  display: flex;
+  justify-content: space-between;
+  gap: 9rem;
+  align-items: center;
+
+  .tit-box {
+    @include flex-col(6rem);
+
+    .txt-wrap {
+      @include flex-col(6rem);
+
+      .tit-head {
+        line-height: 1.2;
+      }
+
+      .tit-art {
+        line-height: 1.4;
+      }
+    }
+
+    .count-wrap {
+      .count-list {
+        display: flex;
+        gap: 2rem;
+
+        .list-item {
+          flex-basis: 25%;
+
+          &:first-child {
+            .count-item {
+              .tit-r {
+                font-weight: $md;
+              }
+
+              .num {
+                color: $white;
+                background-color: $blue_l;
+                border: 1px solid $blue_l;
+              }
+            }
+          }
+        }
+      }
+
+      .count-item {
+        @include flex-col(1.2rem);
+        justify-content: center;
+        align-items: center;
+
+        .num {
+          width: 100%;
+          font-size: $font-60r;
+          font-family: $point_font;
+          text-align: center;
+          padding: 2rem 0;
+          @include bdrs(1rem);
+          border: 1px dashed $gray_02;
+          box-sizing: border-box;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+}
+
+.prod-cont {
+  @include flex-col(5rem);
+
+  .prod-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 2.7rem;
+    column-gap: 1.2rem;
+
+    .list-item {
+      flex-basis: calc((100% - 2.4rem) / 3);
+    }
+
+    &.ty02 {
+      .list-item {
+        flex-basis: calc((100% - 1.2rem) / 2);
+      }
+    }
+  }
+
+  .dtl-item {
+    .img-box {
+      padding-bottom: 32rem;
+      @include bd(1px, $gray_01);
+
+      img {
+        width: auto;
+        height: auto;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.cabi-contents {
+  .feat-list {
+    .list-item {
+      flex-basis: 100%;
+    }
+  }
+}
+
+
+.desc-table-wrap {
+  width: 100%;
+  height: fit-content;
+
+  .desc-table {
+    width: 100%;
+    height: fit-content;
+    @include bdt(2px, $blue_l);
+    @include bdb(2px, $blue_l);
+
+    .table-row {
+      &:first-child {
+        text-align: center;
+        font: {
+          size: $font-12r;
+          weight: $r;
+          family: $point_font;
+
+        };
+
+        .table-column {
+          .table-item {
+            background-color: unset !important;
+          }
+        }
+      }
+
+      .table-column {
+        display: flex;
+        @include bdb(1px, $gray_04);
+        justify-content: space-between;
+        align-items: center;
+
+        .table-item {
+          flex-basis: 10%;
+          font-size: $font-12r;
+          padding: 0 2.5rem;
+          box-sizing: border-box;
+          height: 3.5rem;
+          line-height: 3.5rem;
+          transition: background-color 0.3s;
+          @include bdr(1px, $gray_04);
+
+          &:nth-child(1) {
+            flex-basis: 46%;
+            background-color: $light_gray;
+          }
+
+          &:nth-child(2),
+          &:nth-child(3) {
+            flex-basis: 27%;
+            text-align: center;
+
+          }
+
+          &:last-child {
+            border-right: unset
+          }
+
+          .circle {
+            font: {
+              size: $font-32r;
+              family: $default_font;
+            }
+            line-height: 1;
+            color: $red;
+          }
+        }
+      }
+    }
+  }
+}
+
+//.feat-item:hover {
+//  .desc-table-wrap {
+//    .desc-table {
+//      @include bdt(2px, $white);
+//      @include bdb(2px, $white);
+//
+//      .table-row {
+//        .table-column {
+//          .table-item {
+//            background-color: unset
+//          }
+//        }
+//      }
+//    }
+//  }
+//}
+
+.bath-contents {
+  .img-cont .tit-box {
+    gap: 6rem;
+  }
+}
+
+// uam custom
+.uam-contents {
+  .prod-cont .dtl-item .img-box {
+    padding-bottom: 67%;
+
+    img {
+      width: 100%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+// construction Vehicle custom
+.auto-contents {
+  .img-cont .tit-box {
+    gap: 6rem;
+  }
+}
+.const-vehi-contents {
+  .img-cont .tit-box {
+    gap: 10rem;
+  }
+}
+
+// hospital nursing home custom
+
+//.nursing-contents {
+
+// home custom
+
+.home-contents {
+  .img-cont .tit-box {
+    gap: 4rem;
+  }
+}

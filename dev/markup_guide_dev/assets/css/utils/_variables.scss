@@ -1,0 +1,131 @@
+// ======================================================================== //
+// file		: variables
+// writer	: OES
+// date		: 20221110
+// ======================================================================== //
+
+// font==================================================================== //
+
+$default_font: 'NanumSquareRound', sans-serif;
+$second_font: 'Dotum';
+
+$th: 100;
+$l: 300;
+$r: 400;
+$md: 500;
+$sb: 600;
+$b: 700;
+$eb: 800;
+$bk: 900;
+$title_fc: #333;
+$default_fc: #222;
+
+//color
+$white: #fff;
+$black: #000;
+$blue_d: #0054a6;
+$blue_l: #008aff;
+$blue_m: #066dbd;
+
+$mrkp-blue: #0072bc;
+$mrkp-sky: #f2f8fb;
+//btn
+//$df_h_s: 35px;
+//$df_h_m: 40px;
+//$df_h_l: 50px;
+
+//layout
+$pc-max: 1920px;
+$pc-min: 1280px;
+
+//media queries
+$t-l: 1279px;
+//$p-l: 1919px;
+//$p-m: 1679px;
+//$p-s: 1279px;
+
+//$t-s: 767px;
+//$m-l: 640px;
+//$m-m: 478px;
+//$m-s: 374px;
+
+//$pd-pc-m: 80px;
+//$pd-pc-s: 40px;
+//
+//$pd-mbl-m: 3rem;
+//$pd-mbl-s: 2rem;
+//
+//$con_gap: 96px;
+//
+//$cont-gap-tbl: 96px;
+//$con-gap-tbl: 60px;
+//$sess-gap-tbl: 30px;
+//
+//$cont-gap-mbl: 8rem;
+//$con-gap-mbl: 4rem;
+//$sess-gap-mbl: 2rem;
+//
+//$header_h: 50px;
+//$con_pd: 80px;
+//$con_mg: 80px;
+//
+//$con_gap_196: 196px;
+//$con_mg2: 35px;
+//$con_pd2: 20px;
+//$con_pd3: 30px;
+//$con_pd_t: 48px;
+//$txt_pd: 24px;
+
+//popup
+//$pop-pd: 15px;
+
+
+//url
+//$img_url: '../../images/';
+//$img_common_url: 'common_sub/';
+//$img_order_url: 'order/';
+//$img_pg_url: 'pg/';
+//$img_cs_url: 'cs/';
+//$img_mbr_url: 'member/';
+//$img_mp_url: 'mypage/';
+
+//motion
+//$slide_time: 300;
+
+
+$font-6r: 0.6rem;
+$font-7r: 0.7rem;
+$font-8r: 0.8rem;
+$font-9r: 0.9rem;
+$font-1r: 1rem;
+$font-11r: 1.1rem;
+$font-12r: 1.2rem;
+$font-12r: 1.2rem;
+$font-13r: 1.3rem;
+$font-14r: 1.4rem;
+$font-15r: 1.5rem;
+$font-16r: 1.6rem;
+$font-17r: 1.7rem;
+$font-18r: 1.8rem;
+$font-19r: 1.9rem;
+$font-20r: 2rem;
+$font-22r: 2.2rem;
+$font-24r: 2.4rem;
+$font-26r: 2.6rem;
+$font-28r: 2.8rem;
+$font-30r: 3rem;
+$font-32r: 3.2rem;
+$font-34r: 3.4rem;
+$font-36r: 3.6rem;
+$font-40r: 4rem;
+$font-46r: 4.6rem;
+$font-48r: 4.8rem;
+$font-50r: 5rem;
+$font-52r: 5.2rem;
+$font-60r: 6rem;
+$font-72r: 7.2rem;
+$font-84r: 8.4rem;
+$font-104r: 10.4rem;
+
+// z-index;
+$nav-z-index: 100;
