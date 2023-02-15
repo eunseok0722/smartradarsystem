@@ -1,0 +1,776 @@
+<!DOCTYPE HTML>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8">
+    <meta content="text/javascript" http-equiv="Content-Script-Type">
+    <meta content="text/css" http-equiv="Content-Style-Type">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui"
+          name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <!-- og-tag -->
+    <!--    <meta content="SRS" property="og:title">-->
+    <!--    <meta content="https://idrpubadmin.github.io/srstobe/pages/srs_main.html#/" property="og:url">-->
+    <!--    <meta content="website" property="og:type">-->
+    <!--    <meta content="SRS" property="og:description">-->
+    <!--    <meta content="" property="og:image">-->
+    <!-- //og-tag -->
+    <title>SRS</title>
+<!--    <link rel="shortcut icon" href="../assets/images/favicon.png">-->
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<!--start Contents-->
+<div id="wrapper">
+    <div id="container" class="container">
+
+<!--  header  -->
+<div id="header">
+    <div class="sub-header ty01">
+        <div class="gnb-wrap">
+            <ul class="nav-list">
+                <li class="list-item"><h2 class="tit-l"><a href="#" class="nav-item"> APPLICATIONS </a></h2>
+                    <div class="d2-list-wrap v1">
+                        <div class="d2-section">
+                            <div class="d2-section-tit"><p class="tit-m">Mobility</p></div>
+                            <ul class="d2-list">
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><p class="txt-s blind">Mobility</p>
+                                            <h3 class="tit-m fw-md">AutoMotive</h3></div>
+                                        <ul class="d3-list">
+                                            <li class="d3-list-item"><a aria-current="page"
+                                                                        href="#/applications/autonomous-driving"
+                                                                        class="router-link-active router-link-exact-active txt-r">
+                                                Autonomous Driving </a></li>
+                                            <li class="d3-list-item"><a href="#/applications/in-cabin" class="txt-r">
+                                                In-Cabin </a></li>
+                                            <li class="d3-list-item"><a href="#/applications/agv" class="txt-r">
+                                                AGV </a></li>
+                                            <li class="d3-list-item"><a href="#/applications/uam" class="txt-r">
+                                                UAM </a></li>
+                                            <li class="d3-list-item"><a href="#/applications/last-mile-delivery"
+                                                                        class="txt-r"> Last Mile Delivery </a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><h3 class="tit-m fw-md">Industrial</h3></div>
+                                        <ul class="d3-list">
+                                            <li class="d3-list-item"><a href="#/applications/construction-vehicle"
+                                                                        class="txt-r"> Construction Vehicle </a></li>
+                                            <li class="d3-list-item"><a href="#" class="txt-r"> Factory Robotics </a>
+                                            </li>
+                                            <li class="d3-list-item"><a href="#" class="txt-r"> Level-meter </a></li>
+                                            <li class="d3-list-item"><a href="#" class="txt-r"> Defense Drone </a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="d2-section">
+                            <div class="d2-section-tit"><p class="tit-m fw-md">Smartcity</p></div>
+                            <ul class="d2-list">
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><p class="txt-s blind">Smartcity</p>
+                                            <h3 class="tit-m fw-md">Healthcare</h3></div>
+                                        <ul class="d3-list">
+                                            <li class="d3-list-item"><a href="#/applications/home" class="txt-r">
+                                                Home </a></li>
+                                            <li class="d3-list-item"><a href="#/applications/hospital-nursing-home"
+                                                                        class="txt-r"> Hospital/Nursing Home </a></li>
+                                            <li class="d3-list-item"><a href="#/applications/public-bathroom"
+                                                                        class="txt-r"> Public Bathroom </a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><h3 class="tit-m fw-md">Smart Places</h3></div>
+                                        <ul class="d3-list">
+                                            <li class="d3-list-item"><a href="#/applications/elevator" class="txt-r">
+                                                Elevator </a></li>
+                                            <li class="d3-list-item"><a href="#/applications/infrastructure"
+                                                                        class="txt-r"> Infrastructure </a></li>
+                                            <li class="d3-list-item"><a href="#/applications/public-spaces"
+                                                                        class="txt-r"> Public Spaces </a></li>
+                                            <li class="d3-list-item"><a href="#/applications/c-its" class="txt-r">
+                                                C-ITS </a></li>
+                                            <li class="d3-list-item"><a href="#" class="txt-r"> Security </a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-item"><h2 class="tit-l"><a href="#" class="nav-item"> PRODUCTS </a></h2>
+                    <div class="d2-list-wrap v2">
+                        <div class="d2-section">
+                            <div class="d2-section-tit"><p class="tit-m"> Imaging Radar </p></div>
+                            <ul class="d2-list">
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><h3 class="tit-m fw-md">RETINA-Next Gen</h3></div>
+                                        <div class="img-box"><a href="#/products/retina-next-gen" class=""><img
+                                                src="../assets/images/img_retina_4f_002.png" alt=""></a></div>
+                                    </div>
+                                </li>
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><h3 class="tit-m fw-md">RETINA-4F</h3></div>
+                                        <div class="img-box"><a href="#/products/retina-4f" class=""><img
+                                                src="../assets/images/img_retina_4f_002.png" alt=""></a></div>
+                                    </div>
+                                </li>
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><h3 class="tit-m fw-md">RETINA-4S</h3></div>
+                                        <div class="img-box"><a href="#/products/retina-4s" class=""><img
+                                                src="../assets/images/img_retina_4sn_002.png" alt=""></a></div>
+                                    </div>
+                                </li>
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><h3 class="tit-m fw-md">RADAR FOR UAS</h3></div>
+                                        <div class="img-box"><a href="#/products/radar-for-uas" class=""><img
+                                                src="../assets/images/img_retina_4sn_002.png" alt=""></a></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="d2-section">
+                            <div class="d2-section-tit"><p class="tit-m"> Single Radar &amp; Module </p></div>
+                            <ul class="d2-list">
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><h3 class="tit-m fw-md">IRISt</h3></div>
+                                        <div class="img-box"><a href="#/products/irist" class=""><img
+                                                src="../assets/images/img_irist_002.png" alt=""></a></div>
+                                    </div>
+                                </li>
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><h3 class="tit-m fw-md">IRISc</h3></div>
+                                        <div class="img-box"><a href="#/products/irisc" class=""><img
+                                                src="../assets/images/img_irisc_002.png" alt=""></a></div>
+                                    </div>
+                                </li>
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><h3 class="tit-m fw-md">IRIS-SafeGuard</h3></div>
+                                        <div class="img-box"><a href="#/products/iris-safeguard" class=""><img
+                                                src="../assets/images/img_irism_002.png" alt=""></a></div>
+                                    </div>
+                                </li>
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><h3 class="tit-m fw-md">RM68-51</h3></div>
+                                        <div class="img-box"><a href="#/products/rm68-51" class=""><img
+                                                src="../assets/images/img_se68_51w_002.png" alt=""></a></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-item"><h2 class="tit-l"><a href="#" class="nav-item"> DESIGN </a></h2>
+                    <div class="d2-list-wrap v3">
+                        <ul class="d2-list">
+                            <li class="d2-list-item">
+                                <div class="d2-item">
+                                    <div class="tit-box"><h3 class="tit-m fw-md">4D Imaging Radar with AI</h3></div>
+                                    <div class="img-box"><a href="#"><img src="../assets/images/temp/img_temp_001.png"
+                                                                          alt=""></a></div>
+                                </div>
+                            </li>
+                            <li class="d2-list-item">
+                                <div class="d2-item">
+                                    <div class="tit-box"><h3 class="tit-m fw-md"><a href="#/design/technology-roadmap"
+                                                                                    class=""> Technology Roadmap </a>
+                                    </h3></div>
+                                    <div class="img-box"><a href="#/design/technology-roadmap" class=""><img
+                                            src="../assets/images/temp/img_temp_001.png" alt=""></a></div>
+                                </div>
+                            </li>
+                            <li class="d2-list-item">
+                                <div class="d2-item">
+                                    <div class="tit-box"><h3 class="tit-m fw-md">SWaP sensor</h3></div>
+                                    <div class="img-box"><a href="#"><img src="../assets/images/temp/img_temp_001.png"
+                                                                          alt=""></a></div>
+                                </div>
+                            </li>
+                            <li class="d2-list-item">
+                                <div class="d2-item">
+                                    <div class="tit-box"><h3 class="tit-m fw-md"><a href="#/design/product-lineup"
+                                                                                    class="">Product Lineup</a></h3>
+                                    </div>
+                                    <div class="img-box"><a href="#/design/product-lineup" class=""><img
+                                            src="../assets/images/temp/img_temp_001.png" alt=""></a></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="list-item"><h2 class="tit-l"><a href="#/about/investors" class="nav-item"> ABOUT SRS </a>
+                </h2>
+                    <div class="d2-list-wrap v4">
+                        <ul class="d2-list">
+                            <li class="d2-list-item">
+                                <div class="d2-item">
+                                    <div class="tit-box"><h3 class="tit-m fw-md"><a href="#/about/investors" class="">Investors
+                                        &amp; Partners</a></h3></div>
+                                </div>
+                            </li>
+                            <li class="d2-list-item">
+                                <div class="d2-item">
+                                    <div class="tit-box"><h3 class="tit-m fw-md"><a href="#/about/awards" class="">Awards</a>
+                                    </h3></div>
+                                </div>
+                            </li>
+                            <li class="d2-list-item">
+                                <div class="d2-item">
+                                    <div class="tit-box"><h3 class="tit-m fw-md"><a href="#/about/patent" class="">
+                                        Patent &amp; Certifications </a></h3></div>
+                                </div>
+                            </li>
+                            <li class="d2-list-item">
+                                <div class="d2-item">
+                                    <div class="tit-box"><h3 class="tit-m fw-md"><a href="#/about/team-building"
+                                                                                    class="">Team building &amp;
+                                        Careers</a></h3></div>
+                                </div>
+                            </li>
+                            <li class="d2-list-item">
+                                <div class="d2-item">
+                                    <div class="tit-box"><h3 class="tit-m fw-md"><a href="#/about/contacts" class="">Contacts</a>
+                                    </h3></div>
+                                </div>
+                            </li>
+                            <li class="d2-list-item">
+                                <div class="d2-item">
+                                    <div class="tit-box"><h3 class="tit-m fw-md"><a href="#/about/newsroom" class="">
+                                        Newsroom </a></h3></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="breadcrumb-wrap">
+            <div class="breadcrumb">
+                <ul class="bread-list">
+                    <li class="list-item">
+                        <div class="bread-item">
+                            <div class="custom-select select" tabindex="0">
+                                <div class="selected">APPLICATIONS</div>
+                                <div class="items selectHide">
+                                    <div class="checked">APPLICATIONS</div>
+                                    <div class="">PRODUCTS</div>
+                                    <div class="">DESIGN</div>
+                                    <div class="">ABOUT SRS</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-item">
+                        <div class="bread-item">
+                            <div class="custom-select select" tabindex="0">
+                                <div class="selected">Automotive</div>
+                                <div class="items selectHide">
+                                    <div class="checked">Automotive</div>
+                                    <div class="">Industrial</div>
+                                    <div class="">Healthcare</div>
+                                    <div class="">Smart Places</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-item">
+                        <div class="bread-item">
+                            <div class="custom-select select" tabindex="0">
+                                <div class="selected">Autonomous Driving</div>
+                                <div class="items selectHide">
+                                    <div class="checked">Autonomous Driving</div>
+                                    <div class="">UAM</div>
+                                    <div class="">In-Cabin</div>
+                                    <div class="">Last Mile Delivery</div>
+                                    <div class="">AGV</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div><!----></div>
+<!--  //header  -->
+
+        <div class="lineup-contents">
+            <div class="content head-content">
+                <div class="content-header">
+                    <div class="header-fix-div"><h3 class="tit-cont fw-r">Product
+                        Lineup</h3></div>
+                    <div class="main-img-banner">
+                        <div class="img-wrap"><p class="banner-tit"> Beyond the
+                            Vision </p></div>
+                    </div>
+                </div>
+                <section>
+                    <div class="lineup-table-wrap">
+                        <ul class="lineup-table">
+                            <li class="table-row">
+                                <ul class="table-column">
+                                    <li class="table-item"></li>
+                                    <li class="table-item">RETINA-4FN</li>
+                                    <li class="table-item">RETINA-4SN</li>
+                                    <li class="table-item">IRISt-03A</li>
+                                    <li class="table-item">IRISc-03A</li>
+                                    <li class="table-item">SE68-51</li>
+                                    <li class="table-item">SE68-03W</li>
+                                </ul>
+                            </li>
+                            <li class="table-row">
+                                <ul class="table-column">
+                                    <li class="table-item"></li>
+                                    <li class="table-item"><img
+                                            src="../../assets/images/img_design_prod_002.png" alt="RETINA-4FN"
+                                    ></li>
+                                    <li class="table-item"><img
+                                            src="../../assets/images/img_design_prod_003.png" alt="RETINA-4SN"
+                                    ></li>
+                                    <li class="table-item"><img
+                                            src="../../assets/images/img_design_prod_004.png" alt="IRISt-03A"
+                                    ></li>
+                                    <li class="table-item"><img
+                                            src="../../assets/images/img_design_prod_005.png" alt="IRISc-03A"
+                                    ></li>
+                                    <li class="table-item"><img
+                                            src="../../assets/images/img_design_prod_006.png" alt="SE68-51"
+                                    ></li>
+                                    <li class="table-item"><img
+                                            src="../../assets/images/img_design_prod_007.png" alt="SE68-03W"
+                                    ></li>
+                                </ul>
+                            </li>
+                            <li class="table-row">
+                                <ul class="table-column">
+                                    <li class="table-item">Type</li>
+                                    <li class="table-item">4D Imaging Radar</li>
+                                    <li class="table-item">4D Imaging Radar</li>
+                                    <li class="table-item">Single chip Radar</li>
+                                    <li class="table-item">Single chip Radar</li>
+                                    <li class="table-item">Single chip Radar</li>
+                                    <li class="table-item">Single chip Radar</li>
+                                </ul>
+                            </li>
+                            <li class="table-row">
+                                <ul class="table-column">
+                                    <li class="table-item">Frequency</li>
+                                    <li class="table-item">77 ~ 81 GHz</li>
+                                    <li class="table-item">77 ~ 81 GHz</li>
+                                    <li class="table-item">77 ~ 81 GHz</li>
+                                    <li class="table-item">77 ~ 81 GHz</li>
+                                    <li class="table-item">60 ~ 64 GHz</li>
+                                    <li class="table-item">60 ~ 64 GHz</li>
+                                </ul>
+                            </li>
+                            <li class="table-row">
+                                <ul class="table-column">
+                                    <li class="table-item">Detection range</li>
+                                    <li class="table-item">*LR/SR/USR 250m(vehicle) 100m(vehicle)
+                                        15m(pedestrian)
+                                    </li>
+                                    <li class="table-item">7m</li>
+                                    <li class="table-item">20m</li>
+                                    <li class="table-item">45m(vehicle)/ 22m(pedestrian)</li>
+                                    <li class="table-item">3m</li>
+                                    <li class="table-item">60m(vehicle)/ 40m(pedestrian)</li>
+                                </ul>
+                            </li>
+                            <li class="table-row">
+                                <ul class="table-column">
+                                    <li class="table-item">Azimuth Angle FoV</li>
+                                    <li class="table-item">LR/SR/USR <br> 30°(±15°) /<br> 100°(±50°)
+                                        /<br> 100°(±50°)
+                                    </li>
+                                    <li class="table-item">90°(±45°)</li>
+                                    <li class="table-item">180°(±90°)</li>
+                                    <li class="table-item">100°(±50°)</li>
+                                    <li class="table-item">120°(±60°)</li>
+                                    <li class="table-item"> Front 90°(10m) / Side 45°(5m)</li>
+                                </ul>
+                            </li>
+                            <li class="table-row">
+                                <ul class="table-column">
+                                    <li class="table-item">Elevation Angle FoV</li>
+                                    <li class="table-item">24°(±12°)</li>
+                                    <li class="table-item">90°(±45°)</li>
+                                    <li class="table-item">30°(±15°)</li>
+                                    <li class="table-item">30°(±15°)</li>
+                                    <li class="table-item">120°(±60°)</li>
+                                    <li class="table-item">45°(±22.5°)</li>
+                                </ul>
+                            </li>
+                            <li class="table-row">
+                                <ul class="table-column">
+                                    <li class="table-item">Update Rate</li>
+                                    <li class="table-item">50ms</li>
+                                    <li class="table-item">50ms</li>
+                                    <li class="table-item">100ms</li>
+                                    <li class="table-item">100ms</li>
+                                    <li class="table-item">100ms</li>
+                                    <li class="table-item">100ms</li>
+                                </ul>
+                            </li>
+                            <li class="table-row">
+                                <ul class="table-column">
+                                    <li class="table-item">Comm. Interface</li>
+                                    <li class="table-item">CAN FD x1 Ethernet x1</li>
+                                    <li class="table-item">Wi-Fi</li>
+                                    <li class="table-item">CAN FD x1</li>
+                                    <li class="table-item">CAN FD x1</li>
+                                    <li class="table-item">CAN</li>
+                                    <li class="table-item">Wi-Fi/ BLE</li>
+                                </ul>
+                            </li>
+                            <li class="table-row">
+                                <ul class="table-column">
+                                    <li class="table-item">Main Power supply</li>
+                                    <li class="table-item">Typ. 12V</li>
+                                    <li class="table-item">Typ. 12V</li>
+                                    <li class="table-item">Typ. 12V/24V</li>
+                                    <li class="table-item">Typ. 12V/24V</li>
+                                    <li class="table-item">Typ. 24V</li>
+                                    <li class="table-item">Typ. 5V</li>
+                                </ul>
+                            </li>
+                            <li class="table-row">
+                                <ul class="table-column">
+                                    <li class="table-item">Operating Temperature</li>
+                                    <li class="table-item">-40℃ ~ +85℃</li>
+                                    <li class="table-item">-30℃ ~ +65℃</li>
+                                    <li class="table-item">-40℃ ~ +85℃</li>
+                                    <li class="table-item">-40℃ ~ +85℃</li>
+                                    <li class="table-item">-40℃ ~ +85℃</li>
+                                    <li class="table-item">-40℃ ~ +85℃</li>
+                                </ul>
+                            </li>
+                            <li class="table-row">
+                                <ul class="table-column">
+                                    <li class="table-item">IP Rating</li>
+                                    <li class="table-item">IP67</li>
+                                    <li class="table-item">IP43</li>
+                                    <li class="table-item">IP69K</li>
+                                    <li class="table-item">IP69K</li>
+                                    <li class="table-item">IP43 (ceiling installation based)</li>
+                                    <li class="table-item">IP43</li>
+                                </ul>
+                            </li>
+                            <li class="table-row">
+                                <ul class="table-column">
+                                    <li class="table-item">Dimension (mm)</li>
+                                    <li class="table-item">147.3 x 121.5 x 37.0</li>
+                                    <li class="table-item">130 x 130 x 33.8</li>
+                                    <li class="table-item">90 x 117 x 59.35</li>
+                                    <li class="table-item">90 x 117 x 38.50</li>
+                                    <li class="table-item">119.5 x 82 x 35 (Radar PCB 1.6t/ Power PCB
+                                        1.6t)
+                                    </li>
+                                    <li class="table-item">76 x 76 x 22 (PCB 1.6t)</li>
+                                </ul>
+                            </li>
+                            <li class="table-row">
+                                <ul class="table-column">
+                                    <li class="table-item">Weight (g)</li>
+                                    <li class="table-item">529</li>
+                                    <li class="table-item">580</li>
+                                    <li class="table-item">375</li>
+                                    <li class="table-item">275</li>
+                                    <li class="table-item">135</li>
+                                    <li class="table-item">72</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="table-caption"> * Long-Range/Short-Range/Ultra-Short-Range </p>
+                </section>
+            </div>
+        </div>
+
+<!-- footer -->
+<div id="footer">
+    <div class="footer-wrap">
+        <section class="sec-addr">
+            <article class="art-addr addr-1"><h3 class="tit-m">Smart Radar System Inc.</h3>
+                <address><span class="txt-m">3F, Fine Venture Bldg, 41, Seongnam-daero 925beon-gil, Bundang-gu, Seongnam-si, Gyeonggi-do, South Korea</span><span
+                        class="txt-m">+82 1533 0217</span></address>
+            </article>
+            <article class="art-addr addr-2"><h3 class="tit-m">SRS.ai Inc.</h3>
+                <address><span class="txt-m">51 Cedarlake, Irvine, CA 92614, USA</span><span class="txt-m">+1 949 677 1989</span>
+                </address>
+            </article>
+        </section>
+        <section class="sec-map">
+            <div class="gnb-wrap">
+                <ul class="nav-list">
+                    <li class="list-item"><h2 class="tit-l"><a aria-current="page"
+                                                               href="#/applications/autonomous-driving"
+                                                               class="router-link-active router-link-exact-active nav-item">
+                        APPLICATIONS </a></h2>
+                        <div class="d2-list-wrap v1">
+                            <ul class="d2-list">
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><p class="txt-s">Mobility</p>
+                                            <h3 class="txt-r">AutoMotive</h3></div>
+                                        <ul class="d3-list">
+                                            <li class="d3-list-item"><a aria-current="page"
+                                                                        href="#/applications/autonomous-driving"
+                                                                        class="router-link-active router-link-exact-active txt-s">
+                                                Autonomous Driving </a></li>
+                                            <li class="d3-list-item"><a href="#/applications/in-cabin" class="txt-s">
+                                                In-Cabin </a></li>
+                                            <li class="d3-list-item"><a href="#/applications/agv" class="txt-s">
+                                                AGV </a></li>
+                                            <li class="d3-list-item"><a href="#/applications/uam" class="txt-s">
+                                                UAM </a></li>
+                                            <li class="d3-list-item"><a href="#/applications/last-mile-delivery"
+                                                                        class="txt-s"> Last Mile Delivery </a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><p class="txt-s"></p>
+                                            <h3 class="txt-r">Industrial</h3></div>
+                                        <ul class="d3-list">
+                                            <li class="d3-list-item"><a href="#/applications/construction-vehicle"
+                                                                        class="txt-s"> Construction Vehicle </a></li>
+                                            <li class="d3-list-item"><a aria-current="page"
+                                                                        href="#/applications/autonomous-driving"
+                                                                        class="router-link-active router-link-exact-active txt-s">
+                                                Factory Robotics </a></li>
+                                            <li class="d3-list-item"><a aria-current="page"
+                                                                        href="#/applications/autonomous-driving"
+                                                                        class="router-link-active router-link-exact-active txt-s">
+                                                Fill-Level Meter </a></li>
+                                            <li class="d3-list-item"><a aria-current="page"
+                                                                        href="#/applications/autonomous-driving"
+                                                                        class="router-link-active router-link-exact-active txt-s">
+                                                Defense Drone </a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><p class="txt-s">Smartcity</p>
+                                            <h3 class="txt-r">Healthcare</h3></div>
+                                        <ul class="d3-list">
+                                            <li class="d3-list-item"><a href="#/applications/home" class="txt-s">
+                                                Home </a></li>
+                                            <li class="d3-list-item"><a href="#/applications/hospital-nursing-home"
+                                                                        class="txt-s"> Hospital/Nursing Home </a></li>
+                                            <li class="d3-list-item"><a href="#/applications/public-bathroom"
+                                                                        class="txt-s"> Public Bathroom </a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><p class="txt-s"></p>
+                                            <h3 class="txt-r">Smart Places</h3></div>
+                                        <ul class="d3-list">
+                                            <li class="d3-list-item"><a href="#/applications/elevator" class="txt-s">
+                                                Elevator </a></li>
+                                            <li class="d3-list-item"><a href="#/applications/infrastructure"
+                                                                        class="txt-s"> Infrastructure </a></li>
+                                            <li class="d3-list-item"><a href="#/applications/public-spaces"
+                                                                        class="txt-s"> Public Spaces </a></li>
+                                            <li class="d3-list-item"><a href="#/applications/c-its" class="txt-s">
+                                                C-ITS </a></li>
+                                            <li class="d3-list-item"><a aria-current="page"
+                                                                        href="#/applications/autonomous-driving"
+                                                                        class="router-link-active router-link-exact-active txt-s">
+                                                Security </a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="list-item"><h2 class="tit-l"><a href="#/products/retina-4f" class="nav-item">
+                        PRODUCTS </a></h2>
+                        <div class="d2-list-wrap v2">
+                            <ul class="d2-list">
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><p class="txt-s">Imaging Radar</p>
+                                            <h3 class="txt-r"><a href="#/products/retina-next-gen" class=""> RETINA-Next
+                                                Gen </a></h3></div>
+                                    </div>
+                                </li>
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><h3 class="txt-r"><a href="#/products/retina-4f" class="">
+                                            RETINA-4F </a></h3></div>
+                                    </div>
+                                </li>
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><h3 class="txt-r"><a href="#/products/retina-4s" class="">
+                                            RETINA-4S </a></h3></div>
+                                    </div>
+                                </li>
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><h3 class="txt-r"><a href="#/products/radar-for-uas"
+                                                                                  class=""> RADAR FOR UAS </a></h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><p class="txt-s">Single Radar &amp; Module</p>
+                                            <h3 class="txt-r"><a href="#/products/irist" class=""> IRISt </a></h3></div>
+                                    </div>
+                                </li>
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><h3 class="txt-r"><a href="#/products/irisc" class="">
+                                            IRISc </a></h3></div>
+                                    </div>
+                                </li>
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><h3 class="txt-r"><a href="#/products/iris-safeguard"
+                                                                                  class=""> IRIS-SafeGuard </a></h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><h3 class="txt-r"><a href="#/products/rm68-51" class="">
+                                            RM68-51 </a></h3></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="list-item"><h2 class="tit-l"><a class="nav-item"> DESIGN </a></h2>
+                        <div class="d2-list-wrap v3">
+                            <ul class="d2-list">
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><h3 class="txt-r">4D Imaging Radar with AI</h3></div>
+                                    </div>
+                                </li>
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><h3 class="txt-r"><a href="#/design/technology-roadmap"
+                                                                                  class=""> Technology Roadmap </a></h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><h3 class="txt-r">SWaP sensor</h3></div>
+                                    </div>
+                                </li>
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><h3 class="txt-r"><a href="#/design/product-lineup"
+                                                                                  class="">Product Lineup</a></h3></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="list-item"><h2 class="tit-l"><a href="#/about/investors" class="nav-item"> ABOUT SRS </a>
+                    </h2>
+                        <div class="d2-list-wrap v4">
+                            <ul class="d2-list">
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><h3 class="txt-r"><a href="#/about/investors" class="">
+                                            Investors &amp; Partners </a></h3></div>
+                                    </div>
+                                </li>
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><h3 class="txt-r"><a href="#none"> Awards </a></h3></div>
+                                    </div>
+                                </li>
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><h3 class="txt-r"><a href="#/about/patent" class=""> Patent
+                                            &amp; Certifications </a></h3></div>
+                                    </div>
+                                </li>
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><h3 class="txt-r"><a href="#/about/team-building" class="">
+                                            Team building &amp; Careers </a></h3></div>
+                                    </div>
+                                </li>
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><h3 class="txt-r"><a href="#/about/contacts" class="">
+                                            Contacts </a></h3></div>
+                                    </div>
+                                </li>
+                                <li class="d2-list-item">
+                                    <div class="d2-item">
+                                        <div class="tit-box"><h3 class="txt-r"><a href="#/about/newsroom" class="">
+                                            Newsroom </a></h3></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="sec-copy">
+            <article class="art-copy"><p class="txt-m">©2022 by Smart Radar System Inc.All Rights Reserved.</p>
+            </article>
+            <article>
+                <ul class="ico-list">
+                    <li class="list-item">
+                        <div class="ico-item ico-facebook"><a aria-current="page"
+                                                              href="#/applications/autonomous-driving"
+                                                              class="router-link-active router-link-exact-active"
+                                                              title="새창 이동" target="_blank"></a></div>
+                    </li>
+                    <li class="list-item">
+                        <div class="ico-item ico-linkedin"><a aria-current="page"
+                                                              href="#/applications/autonomous-driving"
+                                                              class="router-link-active router-link-exact-active"
+                                                              title="새창 이동" target="_blank"></a></div>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </div>
+    <div class="ico-item ty02 ico-arrow-top active">
+        <button></button>
+    </div>
+</div>
+<!-- //footer -->
+
+    </div>
+
+</div>
+<!--end Contents-->
+
+
+
+
+<!-- 퍼블리싱 동작 구현 script.js -->
+<script src="/assets/js/script.js"></script>
+</body>
+</html>
