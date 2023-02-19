@@ -1,7 +1,3 @@
-"use strict";
-
-console.log("script start");
-
 const d2Wrap = document.getElementsByClassName("d2-list-wrap");
 const subHeader = document.querySelector(".sub-header");
 const mainHeader = document.querySelector(".main-header-wrap");
@@ -21,12 +17,14 @@ subHeader.addEventListener("mouseleave", () => {
   }
 });
 
-mainHeader.addEventListener("mouseenter", () => {
-  mainHeader.classList.add("active");
-});
-mainHeader.addEventListener("mouseleave", () => {
-  mainHeader.classList.remove("active");
-});
+if (mainHeader) {
+  mainHeader.addEventListener("mouseenter", () => {
+    mainHeader.classList.add("active");
+  });
+  mainHeader.addEventListener("mouseleave", () => {
+    mainHeader.classList.remove("active");
+  });
+}
 
 const d3Item = document.querySelectorAll(".d3-item");
 const itemActive = (number) => {
@@ -40,4 +38,28 @@ const itemInActive = (number) => {
     d3Item[i].classList.remove("active");
   }
 };
+
+const selected = document.querySelectorAll(".selected");
+const showSelect = () => {
+  for (let i = 0; i < selected.length; i++) {
+    selected[i].addEventListener("click", () => {
+      if (selected[i].nextElementSibling.classList.contains("selectHide")) {
+        selected[i].nextElementSibling.classList.remove("selectHide");
+      } else {
+        selected[i].nextElementSibling.classList.add("selectHide");
+      }
+    });
+  }
+};
+showSelect();
+
+// const customSelect = document.getElementsByClassName(".custom-select");
+// const hideSelect = () => {
+//   for (let i = 0; i < customSelect.length; i++) {
+//     customSelect[i].addEventListener("blur", (event) => {
+//       this.lastElementChild.classList.add("selectHide");
+//     });
+//   }
+// };
+// hideSelect();
 

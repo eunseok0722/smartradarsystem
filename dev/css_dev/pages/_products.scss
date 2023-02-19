@@ -35,7 +35,7 @@
   background-image: url("../images/img_irism_001.png");
 }
 
-.bg-rm68-51 {
+.bg-se68-03w {
   background-image: url("../images/img_se68_51w_001.png");
 }
 
@@ -402,9 +402,11 @@
   @include flex-col(5rem);
   justify-content: center;
   align-items: center;
+  text-align: center;
   .tit-cont {
     font-family: $point_font;
     font-weight: $l;
+    line-height: 1.25;
   }
   section {
     width: 100%;
