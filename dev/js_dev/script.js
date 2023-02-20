@@ -42,7 +42,8 @@ const itemInActive = (number) => {
 const selected = document.querySelectorAll(".selected");
 const showSelect = () => {
   for (let i = 0; i < selected.length; i++) {
-    selected[i].addEventListener("click", () => {
+    selected[i].addEventListener("click", (event) => {
+
       if (selected[i].nextElementSibling.classList.contains("selectHide")) {
         selected[i].nextElementSibling.classList.remove("selectHide");
       } else {
@@ -52,14 +53,17 @@ const showSelect = () => {
   }
 };
 showSelect();
-
-// const customSelect = document.getElementsByClassName(".custom-select");
-// const hideSelect = () => {
-//   for (let i = 0; i < customSelect.length; i++) {
-//     customSelect[i].addEventListener("blur", (event) => {
-//       this.lastElementChild.classList.add("selectHide");
-//     });
-//   }
-// };
-// hideSelect();
+const breadcrumb = document.getElementsByClassName('breadcrumb');
+const customSelect = document.getElementsByClassName(".custom-select");
+const hideSelect = () => {
+  // for (let i = 0; i < customSelect.length; i++) {
+  //   customSelect[i].addEventListener("blur", (event) => {
+  //     this.lastElementChild.classList.add("selectHide");
+  //   });
+  // }
+  breadcrumb[0].addEventListener('blur', (event) => {
+    console.log(event);
+  })
+};
+hideSelect();
 
