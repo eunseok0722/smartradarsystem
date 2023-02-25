@@ -11,11 +11,11 @@ for (let i = 0; i < d1Item.length; i++) {
     d2Wrap[i].classList.add("active");
   });
 }
-// subHeader.addEventListener("mouseleave", () => {
-//   for (let i = 0; i < d1Item.length; i++) {
-//     d2Wrap[i].classList.remove("active");
-//   }
-// });
+subHeader.addEventListener("mouseleave", () => {
+  for (let i = 0; i < d1Item.length; i++) {
+    d2Wrap[i].classList.remove("active");
+  }
+});
 
 if (mainHeader) {
   mainHeader.addEventListener("mouseenter", () => {
@@ -67,3 +67,16 @@ const hideSelect = () => {
 };
 hideSelect();
 
+/* change language */
+
+const chLang = document.getElementsByClassName('change-lang')[0];
+const listLang = document.querySelector('.lang-list-wrap');
+console.log(chLang);
+chLang.addEventListener('mouseenter', (event) => {
+  listLang.classList.add('active');
+})
+chLang.addEventListener('mouseleave', (event) => {
+  listLang.classList.remove('active');
+})
+
+/* //change language */
