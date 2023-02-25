@@ -1,2 +1,7 @@
 /dev/node_modules/
 /.idea/inspectionProfiles/Project_Default.xml
+/.idea/.gitignore
+/.idea/modules.xml
+/.idea/smartradarsystem.iml
+/.idea/vcs.xml
+/.idea/jsLibraryMappings.xml

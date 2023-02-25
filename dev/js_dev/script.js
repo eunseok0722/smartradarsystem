@@ -39,7 +39,9 @@ const itemInActive = (number) => {
   }
 };
 
-const selected = document.querySelectorAll(".selected");
+const breadcrumb = document.getElementsByClassName('breadcrumb');
+const customSelect = document.getElementsByClassName(".custom-select");
+const selected = document.getElementsByClassName('selected');
 const showSelect = () => {
   for (let i = 0; i < selected.length; i++) {
     selected[i].addEventListener("click", (event) => {
@@ -53,16 +55,14 @@ const showSelect = () => {
   }
 };
 showSelect();
-const breadcrumb = document.getElementsByClassName('breadcrumb');
-const customSelect = document.getElementsByClassName(".custom-select");
+
 const hideSelect = () => {
-  // for (let i = 0; i < customSelect.length; i++) {
-  //   customSelect[i].addEventListener("blur", (event) => {
-  //     this.lastElementChild.classList.add("selectHide");
-  //   });
-  // }
-  breadcrumb[0].addEventListener('blur', (event) => {
-    console.log(event);
+  document.addEventListener('click', (event) => {
+    for (let i = 0; i < selected.length; i++) {
+      if (event.target !== selected[i]) {
+        selected[i].nextElementSibling.classList.add("selectHide");
+      }
+    }
   })
 };
 hideSelect();
