@@ -11,11 +11,11 @@ for (let i = 0; i < d1Item.length; i++) {
     d2Wrap[i].classList.add("active");
   });
 }
-subHeader.addEventListener("mouseleave", () => {
-  for (let i = 0; i < d1Item.length; i++) {
-    d2Wrap[i].classList.remove("active");
-  }
-});
+// subHeader.addEventListener("mouseleave", () => {
+//   for (let i = 0; i < d1Item.length; i++) {
+//     d2Wrap[i].classList.remove("active");
+//   }
+// });
 
 if (mainHeader) {
   mainHeader.addEventListener("mouseenter", () => {
