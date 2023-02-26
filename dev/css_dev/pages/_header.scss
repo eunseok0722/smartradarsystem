@@ -494,11 +494,17 @@
         .d2-section-tit {
           margin: 0 1.4rem 0 3.2rem;
         }
+        .d2-list {
+          width: 620px;
+        }
       }
       &.d2-sec-2 {
         width: 660px;
         .d2-section-tit {
           margin: 0 3.2rem 0 1.8rem;
+        }
+        .d2-list {
+          width: 660px;
         }
       }
       .d2-section-tit {
@@ -536,10 +542,16 @@
       @include flex-col();
       &.d2-sec-1 {
         width: 500px;
+        .d2-list {
+          width: 500px;
+        }
       }
       &.d2-sec-2 {
         width: 750px;
         margin-right: 3rem;
+        .d2-list {
+          width: 750px;
+        }
       }
       .d2-section-tit {
         margin-left: 3rem;

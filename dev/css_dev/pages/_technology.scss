@@ -384,3 +384,72 @@
 
 /* //Patents & Certifications */
 
+
+/* software defined imaging rader */
+
+.soft-contents {
+  .head-content {
+
+  }
+.soft-sec {
+  width: 100%;
+  height: 1105px;
+  border-radius: 24px;
+  box-shadow: 2.6px 3px 8px 0 rgba(0, 0, 0, 0.12);
+  border: solid 1px #ebebeb;
+  background-color: #fff;
+  padding: 5rem 3rem;
+  @include flex-col(6rem);
+  justify-content: flex-start;
+  box-sizing: border-box;
+  .tit-head {
+    display: block;
+    width: 57%;
+  }
+  .text-wrap {
+    margin-left: 3.5rem;
+
+  }
+  .img-wrap {
+    margin-top: auto;
+    width: 100%;
+    padding-bottom: 40%;
+    background-image: url("../images/img_tech_soft_001.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  .text-list {
+    @include flex-col(3rem);
+  }
+  .tit-art-03 {
+    display: flex;
+    width: 85%;
+    line-height: 1.5;
+  }
+}
+
+
+  .prod-dtl-cont {
+    .dtl-list {
+      flex-wrap: wrap;
+      row-gap: 3rem;
+      column-gap: 1.5rem;
+      .list-item {
+        flex: 1 1 30%;
+      }
+    }
+  }
+
+  .dtl-item {
+    .img-box {
+      padding-bottom: 32rem;
+      img {
+        object-fit: contain;
+        transform: unset;
+      }
+    }
+  }
+}
+/* //software defined imaging rader */
+
