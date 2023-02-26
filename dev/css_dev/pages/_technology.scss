@@ -8,6 +8,7 @@
 .main-img-banner {
   width: 100%;
   height: fit-content;
+
   .img-wrap {
     width: 100%;
     height: 0;
@@ -20,6 +21,7 @@
     border-radius: 1rem;
     overflow: hidden;
   }
+
   .banner-tit {
     position: absolute;
     top: 50%;
@@ -55,17 +57,21 @@
             padding: 0 2.5rem;
             height: 3.5rem;
             border-right: unset;
+
             &:nth-child(1) {
               background-color: $gray_05;
             }
           }
         }
       }
+
       &:nth-child(2) {
         .table-column {
           @include bdb(4px, $blue_l);
+
           .table-item {
             padding: 0;
+
             &:nth-child(1) {
               background-color: unset;
             }
@@ -92,11 +98,13 @@
           height: auto;
           line-height: 1.7;
           @include bdr(1px, $gray_04);
+
           img {
             width: 100%;
             height: 100%;
             object-fit: contain;
           }
+
           &:nth-child(1) {
             background-color: #0d8de0;
             color: $white;
@@ -106,6 +114,7 @@
               family: $point-font;
             }
           }
+
           &:last-child {
             border-right: unset
           }
@@ -122,12 +131,14 @@
   color: #363636;
   margin-top: 2rem;
 }
+
 /* //product lineup */
 
 /* Technology Roadmap */
 .road-sec {
   width: 100%;
   height: fit-content;
+
   img {
     width: 100%;
     height: auto;
@@ -141,17 +152,20 @@
 .inve-contents {
 
 }
+
 .inve-head-content {
   section {
 
   }
 }
+
 .inve-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
   row-gap: 6rem;
+
   .list-item {
     flex-basis: 25%;
   }
@@ -178,12 +192,15 @@
     .txt-sec {
       display: flex;
       margin-top: 10rem;
+
       .tit-box {
         flex-basis: 40%;
       }
+
       .add-box {
         flex-basis: 45%;
         @include flex-col(6rem);
+
         .add {
           @include flex-col(0.5rem);
         }
@@ -209,20 +226,24 @@
   overflow: hidden;
   box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.12);
   margin-top: -16px;
+
   iframe {
     width: 100%;
     height: 100%;
   }
 }
+
 /* // Contacts */
 
 /* Patents & Certifications */
 .pate-head-content {
 }
+
 .pate-sec {
   margin-top: 10rem;
   @include flex-col(4rem);
 }
+
 .pate-box {
   width: 100%;
   height: fit-content;
@@ -230,30 +251,37 @@
   box-shadow: 2.6px 3px 8px 0 rgba(0, 0, 0, 0.12);
   border: solid 1px $gray_05;
 }
+
 .pate-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  >.list-item {
+
+  > .list-item {
     flex-basis: 25%;
     border-right: 1px solid #e1e1e1;
-    &:last-child{
+
+    &:last-child {
       border-right: unset;
     }
   }
 }
+
 .pate-item {
   margin: 0 3rem;
   padding-top: 1rem;
+
   .nation-box {
     border-bottom: 1px solid #e1e1e1;
     padding: 1.5rem 0;
+
     .tit-r {
       color: #363636;
       display: flex;
       justify-content: center;
       align-items: center;
+
       &::before {
         content: '';
         display: block;
@@ -264,21 +292,25 @@
         background-position: center;
         background-repeat: no-repeat;
       }
+
       &.ty01 {
         &::before {
           background-image: url('../images/ico_about_pate_01.png');
         }
       }
+
       &.ty02 {
         &::before {
           background-image: url('../images/ico_about_pate_02.png');
         }
       }
+
       &.ty03 {
         &::before {
           background-image: url('../images/ico_about_pate_03.png');
         }
       }
+
       &.ty04 {
         &::before {
           background-image: url('../images/ico_about_pate_04.png');
@@ -286,17 +318,22 @@
       }
     }
   }
+
   .situ-box {
     padding: 3rem 0;
+
     .situ-list {
       display: flex;
       justify-content: center;
       gap: 1.2rem;
+
       .list-item {
         @include flex-col(1rem);
+
         .tit-s {
           color: #363636;
         }
+
         .num {
           display: flex;
           width: 110px;
@@ -316,17 +353,20 @@
 
 .cert-sec {
   @include flex-col(4rem);
+
   .table-box {
     .table-list {
       display: flex;
       gap: 4rem;
       justify-content: space-between;
+
       .list-item {
         flex-basis: 50%;
       }
     }
   }
 }
+
 .cert-table-wrap {
   width: 100%;
   height: fit-content;
@@ -391,43 +431,49 @@
   .head-content {
 
   }
-.soft-sec {
-  width: 100%;
-  height: 1105px;
-  border-radius: 24px;
-  box-shadow: 2.6px 3px 8px 0 rgba(0, 0, 0, 0.12);
-  border: solid 1px #ebebeb;
-  background-color: #fff;
-  padding: 5rem 3rem;
-  @include flex-col(6rem);
-  justify-content: flex-start;
-  box-sizing: border-box;
-  .tit-head {
-    display: block;
-    width: 57%;
-  }
-  .text-wrap {
-    margin-left: 3.5rem;
 
-  }
-  .img-wrap {
-    margin-top: auto;
+  .soft-sec {
     width: 100%;
-    padding-bottom: 40%;
-    background-image: url("../images/img_tech_soft_001.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    height: 1105px;
+    border-radius: 24px;
+    box-shadow: 2.6px 3px 8px 0 rgba(0, 0, 0, 0.12);
+    border: solid 1px #ebebeb;
+    background-color: #fff;
+    padding: 5rem 3rem;
+    @include flex-col(6rem);
+    justify-content: flex-start;
+    box-sizing: border-box;
+
+    .tit-head {
+      display: block;
+      width: 57%;
+    }
+
+    .text-wrap {
+      margin-left: 3.5rem;
+
+    }
+
+    .img-wrap {
+      margin-top: auto;
+      width: 100%;
+      padding-bottom: 40%;
+      background-image: url("../images/img_tech_soft_001.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    .text-list {
+      @include flex-col(3rem);
+    }
+
+    .tit-art-03 {
+      display: flex;
+      width: 85%;
+      line-height: 1.5;
+    }
   }
-  .text-list {
-    @include flex-col(3rem);
-  }
-  .tit-art-03 {
-    display: flex;
-    width: 85%;
-    line-height: 1.5;
-  }
-}
 
 
   .prod-dtl-cont {
@@ -435,6 +481,7 @@
       flex-wrap: wrap;
       row-gap: 3rem;
       column-gap: 1.5rem;
+
       .list-item {
         flex: 1 1 30%;
       }
@@ -444,6 +491,7 @@
   .dtl-item {
     .img-box {
       padding-bottom: 32rem;
+
       img {
         object-fit: contain;
         transform: unset;
@@ -451,5 +499,95 @@
     }
   }
 }
+
 /* //software defined imaging rader */
 
+.dataset-contents {
+  .soft-sec {
+    width: 100%;
+    height: 870px;
+    border-radius: 24px;
+    box-shadow: 2.6px 3px 8px 0 rgba(0, 0, 0, 0.12);
+    border: solid 1px #ebebeb;
+    background-color: #fff;
+    padding: 9rem 8rem;
+    @include flex-col(5rem);
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+  .text-list {
+    display: flex;
+    gap: 4.5rem;
+  }
+  .tit-art-03 {
+    line-height: 1.5;
+  }
+  .img-wrap {
+    width: 500px;
+    height: 400px;
+    background-image: url('../images/img_tech_4d_001.png');
+  }
+}
+
+.data-dtl-cont {
+  .data-list {
+    display: flex;
+    height: 100%;
+    .list-item {
+      height: 100%;
+      flex-basis: 33.33%;
+      @include bdr(1px, $gray_04);
+      padding: 2rem 3rem 1rem;
+      box-sizing: border-box;
+      @include  flex-col();
+      &:last-child {
+        border-right: unset;
+      }
+      .tit-box {
+        @include flex-col();
+        .tit-head {
+          flex-basis: 145px;
+        }
+        .txt-l {
+          line-height: 1.5;
+        }
+      }
+      .data-item {
+        @include flex-col(3rem);
+        justify-content: space-between;
+        height: fit-content;
+        min-height: 300px;
+      }
+      .btn-learn-more {
+        margin-top: auto;
+      }
+    }
+  }
+}
+
+.btn-learn-more {
+  display: flex;
+  width: 180px;
+  height: 42px;
+  border-radius: 21px;
+  box-sizing: border-box;
+  box-shadow: 3.9px 4.5px 6px 0 rgba(0, 0, 0, 0.12);
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font: {
+    size: $font-14r;
+    family: $point_font;
+  };
+  &::after {
+    display: flex;
+    content: '';
+    width: 34px;
+    height: 17px;
+    background-image: url('../images/ico_arrow_006.png');
+    background-size: 34px 17px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}

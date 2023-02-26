@@ -1387,5 +1387,32 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 .soft-contents .dtl-item .img-box img { object-fit: contain; transform: unset; }
 
 /* //software defined imaging rader */
+.dataset-contents .soft-sec { width: 100%; height: 870px; border-radius: 24px; box-shadow: 2.6px 3px 8px 0 rgba(0, 0, 0, 0.12); border: solid 1px #ebebeb; background-color: #fff; padding: 9rem 8rem; display: flex; flex-direction: column; gap: 5rem; justify-content: flex-start; box-sizing: border-box; }
+
+.dataset-contents .text-list { display: flex; gap: 4.5rem; }
+
+.dataset-contents .tit-art-03 { line-height: 1.5; }
+
+.dataset-contents .img-wrap { width: 500px; height: 400px; background-image: url("../images/img_tech_4d_001.png"); }
+
+.data-dtl-cont .data-list { display: flex; height: 100%; }
+
+.data-dtl-cont .data-list .list-item { height: 100%; flex-basis: 33.33%; border-right: 1px solid #d7d7d7; padding: 2rem 3rem 1rem; box-sizing: border-box; display: flex; flex-direction: column; gap: 0; }
+
+.data-dtl-cont .data-list .list-item:last-child { border-right: unset; }
+
+.data-dtl-cont .data-list .list-item .tit-box { display: flex; flex-direction: column; gap: 0; }
+
+.data-dtl-cont .data-list .list-item .tit-box .tit-head { flex-basis: 145px; }
+
+.data-dtl-cont .data-list .list-item .tit-box .txt-l { line-height: 1.5; }
+
+.data-dtl-cont .data-list .list-item .data-item { display: flex; flex-direction: column; gap: 3rem; justify-content: space-between; height: fit-content; min-height: 300px; }
+
+.data-dtl-cont .data-list .list-item .btn-learn-more { margin-top: auto; }
+
+.btn-learn-more { display: flex; width: 180px; height: 42px; border-radius: 21px; box-sizing: border-box; box-shadow: 3.9px 4.5px 6px 0 rgba(0, 0, 0, 0.12); background-color: #fff; align-items: center; justify-content: center; gap: 2rem; font-size: 1.4rem; font-family: "Poppins", sans-serif; }
+
+.btn-learn-more::after { display: flex; content: ''; width: 34px; height: 17px; background-image: url("../images/ico_arrow_006.png"); background-size: 34px 17px; background-position: center; background-repeat: no-repeat; }
 
 /*# sourceMappingURL=../css/styles.css.map */
