@@ -1286,7 +1286,7 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 
 .inve-list .list-item { flex-basis: 25%; }
 
-.inve-item { width: 240px; height: 200px; border-radius: 24px; background-color: #fff; box-shadow: 2.6px 3px 8px 0 rgba(0, 0, 0, 0.12); border: solid 1px #ebebeb; display: flex; justify-content: center; align-items: center; margin: 0 auto; }
+.inve-item { width: 240px; height: 150px; border-radius: 24px; background-color: #fff; box-shadow: 2.6px 3px 8px 0 rgba(0, 0, 0, 0.12); border: solid 1px #ebebeb; display: flex; justify-content: center; align-items: center; margin: 0 auto; }
 
 /* //Investors & Partners */
 /* Contacts */

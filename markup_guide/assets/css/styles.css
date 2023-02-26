@@ -246,4 +246,6 @@ article.poppins { font-weight: 500; }
 
 .mrkp-list .desc-table-wrap .desc-table .table-row .table-column.end { background-color: WhiteSmoke; }
 
+.mrkp-list .desc-table-wrap .desc-table .table-row .table-column.del { background-color: lightslategray; }
+
 /*# sourceMappingURL=styles.css.map */
