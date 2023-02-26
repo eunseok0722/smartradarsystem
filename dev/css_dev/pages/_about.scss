@@ -398,3 +398,105 @@
 
 /* //team building & Careers */
 
+/* newsroom */
+
+.newsroom-art {
+  margin-bottom: 8.2rem;
+  .desc-table-wrap {
+    //width: 100%;
+    //height: fit-content;
+
+    .desc-table {
+      //width: 100%;
+      //height: fit-content;
+      //@include bdt(2px, $blue_l);
+      border-bottom: unset;
+
+      .table-row {
+        &:first-child {
+          //text-align: center;
+          //font: {
+          //  size: $font-12r;
+          //  weight: $r;
+          //  family: $point_font;
+          //};
+
+          .table-column {
+            @include bdb(1px, #a1a1a1);
+            .table-item {
+              justify-content: center !important;
+              background-color: #fdfcfc !important;
+            }
+          }
+        }
+
+        .table-column {
+          //display: flex;
+          //@include bdb(1px, $gray_04);
+          //justify-content: space-between;
+          //align-items: center;
+
+          .table-item {
+            //width: 100%;
+            //flex-basis: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            //font-size: $font-12r;
+            //padding: 0 2.5rem;
+            //box-sizing: border-box;
+            height: 6rem;
+            line-height: 1.7;
+            //transition: background-color 0.3s;
+            //@include bdr(1px, $gray_04);
+            border-right: unset;
+            a {
+              font-size: $font-18r;
+              display: block;
+              width: 700px;
+              @include ln-1;
+            }
+            span {
+              @include ln-1;
+            }
+
+
+            &:nth-child(1) {
+              flex-basis: 11%;
+              background-color: unset;
+              text-align: center;
+            }
+
+            &:nth-child(2) {
+              flex-basis: unset;
+              justify-content: flex-start;
+              text-align: justify;
+              width: calc(100% - 460px);
+
+            }
+            &:nth-child(3) {
+              flex-basis: 27.34%;
+              text-align: center;
+
+            }
+
+            &:last-child {
+              border-right: unset
+            }
+
+            .circle {
+              font: {
+                size: $font-32r;
+                family: $default_font;
+              }
+              line-height: 1;
+              color: $red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* //newsroom */
