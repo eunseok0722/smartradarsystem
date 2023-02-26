@@ -110,86 +110,7 @@
         }
       }
 
-      .feat-info-item {
-        width: 12rem;
-        @include flex-col(2rem);
-        align-items: center;
-        text-align: center;
-        .tit-l {
-          line-height: 1.25;
-        }
 
-        .ico-box {
-          width: 9rem;
-          height: 9rem;
-          @include bdrs(1.6rem);
-          @include bd(3px, $white);
-          box-sizing: border-box;
-          box-shadow: 5.1px 3.2px 8px 0 rgba(0, 0, 0, 0.12);
-          background-color: $light_gray;
-          background-size: auto;
-          background-position: center;
-          background-repeat: no-repeat;
-
-          &.ty01 {
-            background-image: url("../images/ico_appl_feat_001.png");
-          }
-
-          &.ty02 {
-            background-image: url("../images/ico_appl_feat_002.png");
-          }
-
-          &.ty03 {
-            background-image: url("../images/ico_appl_feat_003.png");
-          }
-
-          &.ty04 {
-            background-image: url("../images/ico_appl_feat_004.png");
-          }
-          &.ty05 {
-            background-image: url("../images/ico_appl_feat_005.png");
-          }
-          &.ty06 {
-            background-image: url("../images/ico_appl_feat_006.png");
-          }
-          &.ty07 {
-            background-image: url("../images/ico_appl_feat_007.png");
-          }
-          &.ty08 {
-            background-image: url("../images/ico_appl_feat_008.png");
-          }
-          &.ty09 {
-            background-image: url("../images/ico_appl_feat_009.png");
-          }
-          &.ty10 {
-            background-image: url("../images/ico_appl_feat_010.png");
-          }
-          &.ty11 {
-            background-image: url("../images/ico_appl_feat_011.png");
-          }
-          &.ty12 {
-            background-image: url("../images/ico_appl_feat_012.png");
-          }
-          &.ty13 {
-            background-image: url("../images/ico_appl_feat_013.png");
-          }
-          &.ty14 {
-            background-image: url("../images/ico_appl_feat_014.png");
-          }
-          &.ty15 {
-            background-image: url("../images/ico_appl_feat_015.png");
-          }
-          &.ty16 {
-            background-image: url("../images/ico_appl_feat_016.png");
-          }
-          &.ty17 {
-            background-image: url("../images/ico_appl_feat_017.png");
-          }
-          &.ty18 {
-            background-image: url("../images/ico_appl_feat_018.png");
-          }
-        }
-      }
       &.ty02 {
         padding-bottom: 15rem;
       }
@@ -251,6 +172,102 @@
       .main-img {
         padding-bottom: 130%;
       }
+    }
+  }
+}
+
+.feat-info-item {
+  width: 12rem;
+  @include flex-col(2rem);
+  align-items: center;
+  text-align: center;
+  .tit-l {
+    line-height: 1.25;
+  }
+
+  .ico-box {
+    width: 9rem;
+    height: 9rem;
+    @include bdrs(1.6rem);
+    @include bd(3px, $white);
+    box-sizing: border-box;
+    box-shadow: 5.1px 3.2px 8px 0 rgba(0, 0, 0, 0.12);
+    background-color: $light_gray;
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &.ty01 {
+      background-image: url("../images/ico_appl_feat_001.png");
+    }
+
+    &.ty02 {
+      background-image: url("../images/ico_appl_feat_002.png");
+    }
+
+    &.ty03 {
+      background-image: url("../images/ico_appl_feat_003.png");
+    }
+
+    &.ty04 {
+      background-image: url("../images/ico_appl_feat_004.png");
+    }
+    &.ty05 {
+      background-image: url("../images/ico_appl_feat_005.png");
+    }
+    &.ty06 {
+      background-image: url("../images/ico_appl_feat_006.png");
+    }
+    &.ty07 {
+      background-image: url("../images/ico_appl_feat_007.png");
+    }
+    &.ty08 {
+      background-image: url("../images/ico_appl_feat_008.png");
+    }
+    &.ty09 {
+      background-image: url("../images/ico_appl_feat_009.png");
+    }
+    &.ty10 {
+      background-image: url("../images/ico_appl_feat_010.png");
+    }
+    &.ty11 {
+      background-image: url("../images/ico_appl_feat_011.png");
+    }
+    &.ty12 {
+      background-image: url("../images/ico_appl_feat_012.png");
+    }
+    &.ty13 {
+      background-image: url("../images/ico_appl_feat_013.png");
+    }
+    &.ty14 {
+      background-image: url("../images/ico_appl_feat_014.png");
+    }
+    &.ty15 {
+      background-image: url("../images/ico_appl_feat_015.png");
+    }
+    &.ty16 {
+      background-image: url("../images/ico_appl_feat_016.png");
+    }
+    &.ty17 {
+      background-image: url("../images/ico_appl_feat_017.png");
+    }
+    &.ty18 {
+      background-image: url("../images/ico_appl_feat_018.png");
+    }
+    &.ty19 {
+      background-image: url("../images/ico_appl_feat_019.png");
+    }
+    &.ty20 {
+      background-image: url("../images/ico_appl_feat_020.png");
+    }
+    &.ty21 {
+      background-image: url("../images/ico_appl_feat_021.png");
+    }
+    &.ty22 {
+      background-image: url("../images/ico_appl_feat_022.png");
+    }
+    &.ty23 {
+      background-image: url("../images/ico_appl_feat_023.png");
     }
   }
 }
