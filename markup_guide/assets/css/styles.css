@@ -132,9 +132,9 @@ a { text-decoration: none; color: inherit; }
 
 button { border: none; background: none; font: inherit; }
 
-@font-face { font-family: 'NanumSquareRound'; src: url("../font/Nanum-SquareRound-L.woff2") format("woff2"), url("../font/Nanum-SquareRound-L.woff") format("woff"), url("../font/Nanum-SquareRound-L.ttf") format("truetype"), url("../font/Nanum-SquareRound-L.otf") format("opentype"); font-weight: 300; font-style: normal; }
+@font-face { font-family: 'NanumSquareRound'; src: url("../../../assets/font/Nanum-SquareRound-L.woff2") format("woff2"), url("../../../assets/font/Nanum-SquareRound-L.woff") format("woff"), url("../../../assets/font/Nanum-SquareRound-L.ttf") format("truetype"), url("../../../assets/font/Nanum-SquareRound-L.otf") format("opentype"); font-weight: 300; font-style: normal; }
 
-@font-face { font-family: 'NanumSquareRound'; src: url("../font/Nanum-SquareRound-R.woff2") format("woff2"), url("../font/Nanum-SquareRound-R.woff") format("woff"), url("../font/Nanum-SquareRound-R.ttf") format("truetype"), url("../font/Nanum-SquareRound-R.otf") format("opentype"); font-weight: 300; font-style: normal; }
+@font-face { font-family: 'NanumSquareRound'; src: url("../../../assets/font/Nanum-SquareRound-R.woff2") format("woff2"), url("../../../assets/font/Nanum-SquareRound-R.woff") format("woff"), url("../../../assets/font/Nanum-SquareRound-R.ttf") format("truetype"), url("../../../assets/font/Nanum-SquareRound-R.otf") format("opentype"); font-weight: 300; font-style: normal; }
 
 @font-face { font-family: 'Garet'; src: url("../../../assets/font/Garet-Book.woff2") format("woff2"), url("../../../assets/font/Garet-Book.woff") format("woff"), url("../../../assets/font/Garet-Book.ttf") format("truetype"), url("../../../assets/font/Garet-Book.otf") format("opentype"); font-weight: 400; font-style: normal; }
 
