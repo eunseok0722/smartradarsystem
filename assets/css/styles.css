@@ -231,6 +231,8 @@ body { font-family: "Garet", sans-serif; scroll-behavior: smooth; }
 
 .tit-sec { font-family: "Poppins", sans-serif; font-size: 4.8rem; }
 
+.tit-sec-02 { font-family: "Poppins", sans-serif; font-size: 3.2rem; }
+
 .tit-art { font-size: 2.2rem; font-family: "Poppins", sans-serif; }
 
 .tit-art-02 { font-size: 2.4rem; font-family: "Poppins", sans-serif; }
@@ -734,6 +736,12 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 
 .award-head-content section .art-img .img-wrap img { width: 100%; object-fit: contain; }
 
+.award-list { display: flex; gap: 5rem; justify-content: flex-start; flex-wrap: wrap; }
+
+.award-list .list-item { width: 210px; height: fit-content; padding: 20px; box-sizing: border-box; border-radius: 25px; box-shadow: 2.6px 3px 8px 0 rgba(0, 0, 0, 0.12); }
+
+.award-list .list-item img { width: 170px; height: auto; }
+
 .award-history-content { align-items: center; }
 
 .award-history-content .his-list { display: flex; }
@@ -867,6 +875,41 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 .newsroom-art .desc-table-wrap .desc-table .table-row .table-column .table-item .circle { font-size: 3.2rem; font-family: "Garet", sans-serif; line-height: 1; color: #ed1c24; }
 
 /* //newsroom */
+/* Investors & Partners */
+.inve-list { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; row-gap: 6rem; }
+
+.inve-list .list-item { flex-basis: 25%; }
+
+.inve-item { width: 240px; height: 150px; border-radius: 24px; background-color: #fff; box-shadow: 2.6px 3px 8px 0 rgba(0, 0, 0, 0.12); border: solid 1px #ebebeb; display: flex; justify-content: center; align-items: center; margin: 0 auto; }
+
+.inve-contents .inve-gest-content { width: 1200px; }
+
+.inve-contents .inve-gest-content section { display: flex; flex-direction: column; gap: 2rem; }
+
+.inve-art { margin-bottom: 8.2rem; }
+
+.inve-art .desc-table-wrap .desc-table { border-bottom: unset; }
+
+.inve-art .desc-table-wrap .desc-table .table-row:first-child .table-column { border-bottom: 1px solid #a1a1a1; }
+
+.inve-art .desc-table-wrap .desc-table .table-row:first-child .table-column .table-item { justify-content: center !important; background-color: #fdfcfc !important; }
+
+.inve-art .desc-table-wrap .desc-table .table-row .table-column .table-item { display: flex; justify-content: center; align-items: center; height: 6rem; line-height: 1.7; border-right: unset; }
+
+.inve-art .desc-table-wrap .desc-table .table-row .table-column .table-item a { font-size: 1.8rem; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.inve-art .desc-table-wrap .desc-table .table-row .table-column .table-item span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.inve-art .desc-table-wrap .desc-table .table-row .table-column .table-item:nth-child(1) { flex-basis: unset; justify-content: flex-start; background-color: unset; text-align: justify; width: 70%; padding: 0 8rem; }
+
+.inve-art .desc-table-wrap .desc-table .table-row .table-column .table-item:nth-child(2) { flex-basis: 30%; text-align: center; }
+
+.inve-art .desc-table-wrap .desc-table .table-row .table-column .table-item:last-child { border-right: unset; }
+
+.btn-pdf { display: block; width: 30px; height: 30px; background-image: url("../images/ico_pdf_001.png"); background-repeat: no-repeat; background-size: 16px 16px; background-position: center; }
+
+/* //newsroom */
+/* //Investors & Partners */
 /* product lineup */
 .lineup-contents .content-header { display: flex; flex-direction: column; gap: 7.2rem; }
 
@@ -1319,14 +1362,6 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 .road-sec img { width: 100%; height: auto; }
 
 /* //Technology Roadmap */
-/* Investors & Partners */
-.inve-list { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; row-gap: 6rem; }
-
-.inve-list .list-item { flex-basis: 25%; }
-
-.inve-item { width: 240px; height: 150px; border-radius: 24px; background-color: #fff; box-shadow: 2.6px 3px 8px 0 rgba(0, 0, 0, 0.12); border: solid 1px #ebebeb; display: flex; justify-content: center; align-items: center; margin: 0 auto; }
-
-/* //Investors & Partners */
 /* Contacts */
 .container .cont-head-content .txt-sec { display: flex; margin-top: 10rem; }
 
