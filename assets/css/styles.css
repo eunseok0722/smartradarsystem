@@ -506,13 +506,7 @@ body { font-family: "Garet", sans-serif; scroll-behavior: smooth; }
 
 .sub-header .d2-list-wrap.v4 .d2-item { width: 21rem; }
 
-.sub-header.ty02 .gnb-wrap { position: absolute; top: 0; left: 0; transition: background-color 0.3s ease; border-bottom: 1px solid #d7d7d733; }
-
-.sub-header.ty02 .gnb-wrap:hover { background-color: #fff; }
-
-.sub-header.ty02 .gnb-wrap:hover .tit-l .nav-item { color: inherit; background-color: unset; }
-
-.sub-header.ty02 .tit-l .nav-item { color: #fff; }
+.sub-header.ty02 .gnb-wrap { position: absolute; top: 0; left: 0; transition: background-color 0.3s ease; background-color: #fff; border-bottom: 1px solid #d7d7d733; }
 
 /* // sub header CSS */
 /* breadcrumb CSS */

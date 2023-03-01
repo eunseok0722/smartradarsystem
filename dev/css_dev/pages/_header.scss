@@ -645,24 +645,9 @@
       top: 0;
       left: 0;
       transition: background-color 0.3s ease;
+      background-color: $white;
       @include bdb(1px, #d7d7d733);
-      &:hover {
-        background-color: $white;
-        .tit-l {
-          .nav-item {
-            color: inherit;
-            background-color: unset;
-          }
-        }
-      }
     }
-
-    .tit-l {
-      .nav-item {
-        color: $white;
-      }
-    }
-
   }
 }
 
