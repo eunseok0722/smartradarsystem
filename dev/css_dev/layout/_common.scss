@@ -12,6 +12,7 @@ body {
 }
 
 //// font 설정
+
 .tit-l {
   font-family: $point_font;
   //font-weight: $r;
@@ -31,6 +32,10 @@ body {
   font-family: $point_font;
   //font-weight: $r;
   font-size: $font-12r;
+}
+
+.txt-el {
+  font-size: $font-20r;
 }
 
 .txt-l {
@@ -98,6 +103,10 @@ body {
   font-size: $font-18r;
   //font-weight: $r;
   line-height: 1.5;
+}
+
+.fw-l {
+  font-weight: $l;
 }
 
 .fw-r {
