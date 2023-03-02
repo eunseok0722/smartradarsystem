@@ -112,3 +112,33 @@ const btnTop = function () {
   });
 };
 /* footer */
+
+/* scroll event */
+const contHeader = document.querySelector(".content-header");
+const headerFix = document.querySelector(".header-fix-div");
+let timer = null;
+let scrollY = 0;
+let lastScrollY = 0;
+
+if (headerFix) {
+  document.addEventListener("scroll", () => {
+    if (timer === null) {
+      timer = setTimeout(function () {
+        lastScrollY = scrollY;
+        scrollY = window.scrollY;
+        clearTimeout(timer);
+        timer = null;
+      }, 200);
+    }
+    console.log(scrollY, lastScrollY);
+    if (scrollY >= 300) {
+      contHeader.classList.add("header-fix-padding");
+      headerFix.classList.add("header-fix");
+    } else {
+      contHeader.classList.remove("header-fix-padding");
+      headerFix.classList.remove("header-fix");
+    }
+  });
+}
+
+/* //scroll event */
