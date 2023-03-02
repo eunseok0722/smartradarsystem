@@ -836,6 +836,28 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 
 .layer-item.on { transform: rotateY(0); z-index: 1; }
 
+.popup-wrap { position: absolute; top: 0; bottom: 100%; left: 0; right: 0; overflow: hidden; background-color: #00000099; transition: all 0.3s; }
+
+.popup-wrap.active { bottom: 0; }
+
+.popup-wrap .btn-x { position: absolute; top: 20%; right: 20%; }
+
+.popup-wrap .popup { display: none; width: 100%; height: 100%; flex-direction: column; gap: 2rem; justify-content: center; align-items: center; }
+
+.popup-wrap .popup .txt-box { display: flex; flex-direction: column; gap: 1rem; text-align: center; }
+
+.popup-wrap .popup .txt-box h4 { color: #fff; }
+
+.popup-wrap .popup .txt-box p { color: #fff; }
+
+.popup-wrap .popup .img-box { width: 410px; height: fit-content; }
+
+.popup-wrap .popup .img-box img { width: 100%; height: 100%; object-fit: contain; }
+
+.popup-wrap .popup.active { display: flex; }
+
+.btn-x { display: block; width: 4rem; height: 4rem; background-size: 3.8rem 3.8rem; background-repeat: no-repeat; background-position: center center; background-image: url("../images/ico_x_001.png"); }
+
 /* //Awards & Patents CSS */
 /* team building & Careers */
 .team-org-content { display: flex; flex-direction: column; gap: 74px; }

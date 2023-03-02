@@ -39,13 +39,12 @@ const itemInActive = (number) => {
   }
 };
 
-const breadcrumb = document.getElementsByClassName('breadcrumb');
+const breadcrumb = document.getElementsByClassName("breadcrumb");
 const customSelect = document.getElementsByClassName(".custom-select");
-const selected = document.getElementsByClassName('selected');
+const selected = document.getElementsByClassName("selected");
 const showSelect = () => {
   for (let i = 0; i < selected.length; i++) {
     selected[i].addEventListener("click", (event) => {
-
       if (selected[i].nextElementSibling.classList.contains("selectHide")) {
         selected[i].nextElementSibling.classList.remove("selectHide");
       } else {
@@ -57,26 +56,59 @@ const showSelect = () => {
 showSelect();
 
 const hideSelect = () => {
-  document.addEventListener('click', (event) => {
+  document.addEventListener("click", (event) => {
     for (let i = 0; i < selected.length; i++) {
       if (event.target !== selected[i]) {
         selected[i].nextElementSibling.classList.add("selectHide");
       }
     }
-  })
+  });
 };
 hideSelect();
 
 /* change language */
 
-const chLang = document.getElementsByClassName('change-lang')[0];
-const listLang = document.querySelector('.lang-list-wrap');
-console.log(chLang);
-chLang.addEventListener('mouseenter', (event) => {
-  listLang.classList.add('active');
-})
-chLang.addEventListener('mouseleave', (event) => {
-  listLang.classList.remove('active');
-})
+const chLang = document.getElementsByClassName("change-lang")[0];
+const listLang = document.querySelector(".lang-list-wrap");
+chLang.addEventListener("mouseenter", (event) => {
+  listLang.classList.add("active");
+});
+chLang.addEventListener("mouseleave", (event) => {
+  listLang.classList.remove("active");
+});
 
 /* //change language */
+
+/* awards */
+const body = document.querySelector("body");
+const popWrap = document.querySelector(".popup-wrap");
+const popActive = function (num) {
+  const pop = document.querySelector(".pop-" + num);
+  window.scrollTo(0, 0);
+  body.style.overflow = "hidden";
+  popWrap.classList.add("active");
+  pop.classList.add("active");
+};
+
+const popClose = function () {
+  const popUp = document.getElementsByClassName("popup");
+  body.style.overflow = "";
+  popWrap.classList.remove("active");
+  for (let i = 0; i < popUp.length; i++) {
+    popUp[i].classList.remove("active");
+  }
+};
+
+/* //awards */
+
+/* footer */
+const wrapper = document.getElementById("wrapper");
+
+const btnTop = function () {
+  wrapper.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+    inline: "start",
+  });
+};
+/* footer */
