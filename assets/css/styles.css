@@ -386,9 +386,9 @@ body { font-family: "Garet", sans-serif; scroll-behavior: smooth; }
 
 .sub-header .gnb-wrap .gnb-inner-wrap .ci { order: 1; width: 100px; height: 48px; box-sizing: border-box; margin: 0 3rem; flex-basis: 160px; }
 
-.sub-header .gnb-wrap .gnb-inner-wrap .ci a { display: block; width: 100%; height: 100%; }
+.sub-header .gnb-wrap .gnb-inner-wrap .ci a { display: block; width: fit-content; height: fit-content; }
 
-.sub-header .gnb-wrap .gnb-inner-wrap .ci a img { width: 100%; height: 100%; object-fit: contain; }
+.sub-header .gnb-wrap .gnb-inner-wrap .ci a img { width: 100px; height: 48px; object-fit: contain; }
 
 .sub-header .gnb-wrap .gnb-inner-wrap .change-lang { order: 3; width: fit-content; flex-basis: 160px; margin: 0 3rem; display: flex; align-items: center; justify-content: flex-end; overflow: hidden; }
 
@@ -435,6 +435,14 @@ body { font-family: "Garet", sans-serif; scroll-behavior: smooth; }
 .sub-header .d2-list-wrap .d2-item .img-box a { display: block; width: 100%; height: 100%; }
 
 .sub-header .d2-list-wrap .d2-item .img-box a img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+
+.sub-header .d2-list-wrap .d2-item .img-box a img.ty02 { width: 33px; height: 50px; }
+
+.sub-header .d2-list-wrap .d2-item .img-box a img.ty03 { width: 47px; height: 46px; }
+
+.sub-header .d2-list-wrap .d2-item .img-box.ty02 a { background-color: #f4f3f3; display: flex; justify-content: center; align-items: center; }
+
+.sub-header .d2-list-wrap .d2-item .img-box.ty02 a img { object-fit: contain; }
 
 .sub-header .d2-list-wrap .d2-item:hover .img-box { border: 2px solid #008aff; }
 
@@ -1506,8 +1514,10 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 
 .data-dtl-cont .data-list .list-item .btn-learn-more { margin-top: auto; }
 
-.btn-learn-more { display: flex; width: 180px; height: 42px; border-radius: 21px; box-sizing: border-box; box-shadow: 3.9px 4.5px 6px 0 rgba(0, 0, 0, 0.12); background-color: #fff; align-items: center; justify-content: center; gap: 2rem; font-size: 1.4rem; font-family: "Poppins", sans-serif; }
+.btn-learn-more { display: flex; width: 180px; height: 42px; border-radius: 21px; box-sizing: border-box; box-shadow: 3.9px 4.5px 6px 0 rgba(0, 0, 0, 0.12); background-color: #fff; align-items: center; justify-content: center; border: 1px solid #f5f5f5; gap: 2rem; transition: 0.3s; font-size: 1.4rem; font-family: "Poppins", sans-serif; }
 
 .btn-learn-more::after { display: flex; content: ''; width: 34px; height: 17px; background-image: url("../images/ico_arrow_006.png"); background-size: 34px 17px; background-position: center; background-repeat: no-repeat; }
+
+.btn-learn-more:hover { border: 1px solid #008aff; }
 
 /*# sourceMappingURL=../css/styles.css.map */

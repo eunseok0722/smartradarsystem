@@ -445,7 +445,9 @@
   background-color: #fff;
   align-items: center;
   justify-content: center;
+  border: 1px solid $light_gray;
   gap: 2rem;
+  transition: 0.3s;
   font: {
     size: $font-14r;
     family: $point_font;
@@ -459,5 +461,8 @@
     background-size: 34px 17px;
     background-position: center;
     background-repeat: no-repeat;
+  }
+  &:hover {
+    border: 1px solid $blue_l;
   }
 }
