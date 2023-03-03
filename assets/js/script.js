@@ -121,7 +121,7 @@ let timer = null;
 let scrollY = 0;
 let lastScrollY = 0;
 
-if (headerFix) {
+if (headerFix && topBtn) {
     document.addEventListener("scroll", () => {
         if (timer === null) {
             timer = setTimeout(function () {
@@ -139,7 +139,30 @@ if (headerFix) {
                 /* header fix */
 
                 /* top button */
-                if (scrollY >= 960) {
+                if (scrollY >= 800) {
+                    topBtn.classList.add('active');
+                } else {
+                    topBtn.classList.remove('active');
+                }
+                /* top button */
+
+                clearTimeout(timer);
+                timer = null;
+            }, 200);
+        }
+
+    });
+}
+
+if (topBtn) {
+    document.addEventListener("scroll", () => {
+        if (timer === null) {
+            timer = setTimeout(function () {
+                lastScrollY = scrollY;
+                scrollY = window.scrollY;
+
+                /* top button */
+                if (scrollY >= 800) {
                     topBtn.classList.add('active');
                 } else {
                     topBtn.classList.remove('active');
