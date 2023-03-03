@@ -1168,15 +1168,15 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 
 .lasso-iradar-contents .prod-dtl-content .dtl-item .img-box { padding-bottom: 36.4rem; }
 
-.swap-contents .swap-sec { box-sizing: border-box; width: 100%; background-image: url("../images/img_tech_swap_002.png"); background-size: contain; background-position: center; background-repeat: no-repeat; height: 1024px; padding: 6rem 2.5rem 2.5rem; display: flex; flex-direction: column; gap: 64rem; justify-content: center; align-items: center; }
+.swap-contents .swap-sec { width: 100%; height: 1024px; background-image: url("../images/img_tech_swap_002.png"); background-size: contain; background-position: center; background-repeat: no-repeat; box-sizing: border-box; padding: 6rem 2.5rem 2.5rem; box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.12); border-radius: 2.4rem; display: flex; flex-direction: column; gap: 64rem; justify-content: center; align-items: center; }
 
 .swap-contents .swap-sec .tit-art { color: #fff; text-align: center; line-height: 1.5; display: flex; width: 75%; }
 
 .swap-contents .swap-sec .app-list-wrap .app-list { display: flex; gap: 1.5rem; }
 
-.swap-contents .swap-sec .app-list-wrap .app-list .app-list-item { flex-basis: 25%; }
+.swap-contents .swap-sec .app-list-wrap .app-list .app-list-item { flex-basis: calc((100% - 4.5rem ) / 4); }
 
-.swap-contents .swap-sec .app-item { width: 300px; height: 240px; background-color: #fff; border-radius: 2.5rem; box-shadow: 2.6px 3px 8px 0 rgba(0, 0, 0, 0.12); overflow: hidden; }
+.swap-contents .swap-sec .app-item { width: 298px; height: 240px; background-color: #fff; border-radius: 2.5rem; box-shadow: 2.6px 3px 8px 0 rgba(0, 0, 0, 0.12); overflow: hidden; }
 
 .swap-contents .swap-sec .app-item .lb-tit-r { padding: 1.5rem 4rem 1rem; color: #fff; }
 

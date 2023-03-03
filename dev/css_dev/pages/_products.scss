@@ -824,14 +824,18 @@
 }
 .swap-contents {
   .swap-sec {
-    box-sizing: border-box;
+
     width: 100%;
+    height: 1024px;
     background-image: url("../images/img_tech_swap_002.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    height: 1024px;
+    box-sizing: border-box;
     padding: 6rem 2.5rem 2.5rem;
+    box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 2.4rem;
+
     @include flex-col(64rem);
     justify-content: center;
     align-items: center;
@@ -847,12 +851,12 @@
         display: flex;
         gap: 1.5rem;
         .app-list-item {
-          flex-basis: 25%;
+          flex-basis: calc((100% - 4.5rem ) / 4);
         }
       }
     }
     .app-item {
-      width: 300px;
+      width: 298px;
       height: 240px;
       background-color: #fff;
       border-radius: 2.5rem;
