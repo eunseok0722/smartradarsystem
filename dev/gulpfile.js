@@ -11,6 +11,7 @@ const pcFontpath = require('postcss-fontpath');
 const stylelint = require('stylelint');
 const extender = require('gulp-html-extend');
 const ws = require('gulp-webserver');
+const image = require('gulp-image');
 
 gulp.task('extend', function () {
     return gulp.src('page_dev/**/*.html')
@@ -42,6 +43,12 @@ gulp.task('sass', function () {
         .pipe(sourcemaps.write('../css'))
         .pipe(gulp.dest('../assets/css'))
 });
+
+gulp.task('image', function() {
+    return gulp.src('img_dev/*')
+        .pipe(image())
+        .pipe(gulp.dest('../assets/images'));
+})
 
 gulp.task('babel', function () {
     return gulp.src('js_dev/*.js')
@@ -102,6 +109,7 @@ gulp.task('watch', function () {
     gulp.watch('css_dev/**/*.scss', gulp.series('sass'));
     gulp.watch('page_dev/**/*.html', gulp.series('extend'));
     gulp.watch('page_include/**/*.html', gulp.series('extend'));
+    gulp.watch('img_dev/*', gulp.series('image'));
     gulp.watch('js_dev/*.js', gulp.series('babel'));
 
     //markup_guide_dev 폴더
@@ -110,4 +118,4 @@ gulp.task('watch', function () {
     gulp.watch('markup_guide_dev/assets/js/*.js', gulp.series('babel-mrkp'));
 });
 
-gulp.task('default', gulp.parallel(['watch', 'webserver']));
+gulp.task('default', gulp.parallel(['watch', 'webserver', 'image']));
