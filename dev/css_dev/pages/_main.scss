@@ -292,15 +292,15 @@
   background-repeat: no-repeat;
 
   &.banner-img-01 {
-    background-image: url('../images/img_main_001.png');
-  }
-
-  &.banner-img-02 {
     background-image: url('../images/img_main_002.png');
   }
 
-  &.banner-img-03 {
+  &.banner-img-02 {
     background-image: url('../images/img_main_003.png');
+  }
+
+  &.banner-img-03 {
+    background-image: url('../images/img_main_001.png');
   }
 
 }
