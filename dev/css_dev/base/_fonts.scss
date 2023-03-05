@@ -20,10 +20,20 @@
 
 @font-face {
   font-family: 'Poppins';
+  src: url('../font/Poppins-ExtraLight.woff2') format('woff2'),
+  url('../font/Poppins-ExtraLight.woff') format('woff'),
+  url('../font/Poppins-ExtraLight.ttf') format('truetype'),
+  url('../font/Poppins-ExtraLight.eot') format('opentype');
+  font-weight: $el;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
   src: url('../font/Poppins-Light.woff2') format('woff2'),
   url('../font/Poppins-Light.woff') format('woff'),
   url('../font/Poppins-Light.ttf') format('truetype'),
-  url('../font/Poppins-Light.otf') format('opentype');
+  url('../font/Poppins-Light.eot') format('opentype');
   font-weight: $l;
   font-style: normal;
 }
@@ -33,7 +43,7 @@
   src: url('../font/Poppins-Regular.woff2') format('woff2'),
   url('../font/Poppins-Regular.woff') format('woff'),
   url('../font/Poppins-Regular.ttf') format('truetype'),
-  url('../font/Poppins-Regular.otf') format('opentype');
+  url('../font/Poppins-Regular.eot') format('opentype');
   font-weight: $r;
   font-style: normal;
 }
@@ -43,7 +53,7 @@
   src: url('../font/Poppins-Medium.woff2') format('woff2'),
   url('../font/Poppins-Medium.woff') format('woff'),
   url('../font/Poppins-Medium.ttf') format('truetype'),
-  url('../font/Poppins-Medium.otf') format('opentype');
+  url('../font/Poppins-Medium.eot') format('opentype');
   font-weight: $md;
   font-style: normal;
 }
@@ -54,7 +64,7 @@
   src: url('../font/Poppins-SemiBold.woff2') format('woff2'),
   url('../font/Poppins-SemiBold.woff') format('woff'),
   url('../font/Poppins-SemiBold.ttf') format('truetype'),
-  url('../font/Poppins-SemiBold.otf') format('opentype');
+  url('../font/Poppins-SemiBold.eot') format('opentype');
   font-weight: $sb;
   font-style: normal;
 }
@@ -64,7 +74,7 @@
   src: url('../font/Poppins-Bold.woff2') format('woff2'),
   url('../font/Poppins-Bold.woff') format('woff'),
   url('../font/Poppins-Bold.ttf') format('truetype'),
-  url('../font/Poppins-Bold.otf') format('opentype');
+  url('../font/Poppins-Bold.eot') format('opentype');
   font-weight: $b;
   font-style: normal;
 }
@@ -74,7 +84,7 @@
   src: url('../font/Poppins-ExtraBold.woff2') format('woff2'),
   url('../font/Poppins-ExtraBold.woff') format('woff'),
   url('../font/Poppins-ExtraBold.ttf') format('truetype'),
-  url('../font/Poppins-ExtraBold.otf') format('opentype');
+  url('../font/Poppins-ExtraBold.eot') format('opentype');
   font-weight: $eb;
   font-style: normal;
 }
