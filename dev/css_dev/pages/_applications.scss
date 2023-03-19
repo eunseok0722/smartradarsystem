@@ -8,12 +8,12 @@
   .tit-box {
     flex-basis: calc((100% - 6rem) / 2);
     width: calc((100% - 6rem) / 2);
-    @include flex-col(3rem);
-    justify-content: space-between;
+    @include flex-col(12rem);
+    //justify-content: space-between;
 
     .head-sec {
       width: 100%;
-      height: 100%;
+      //height: 100%;
       @include flex-col();
       justify-content: space-between;
 
@@ -33,77 +33,20 @@
           line-height: 1.4;
         }
       }
-
-      .img-wrap {
-        width: 100%;
-        height: 0;
-        padding-bottom: 66%;
-        position: relative;
-        overflow: hidden;
-
-        img {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-          z-index: -1;
-        }
-
-        .img-tag {
-          position: absolute;
-          right: 4rem;
-          bottom: 2rem;
-          background-color: $black_02;
-
-          @include bdrs(2rem);
-
-          .tit-l {
-            color: $white;
-          }
-          .tag-link {
-            display: flex;
-            align-items: center;
-            box-sizing: border-box;
-            padding: 0.5rem 0.5rem 0.5rem 2rem;
-
-            &::after {
-              content: '';
-              display: inline-block;
-              width: 3rem;
-              height: 3rem;
-              margin-left: 1rem;
-              border-radius: 3rem;
-              background-image: url("../images/ico_arrow_005.png");
-              background-repeat: no-repeat;
-              background-size: 22px 17px;
-              background-position: center;
-              background-color: $light_gray;
-            }
-          }
-        }
-
-        &.ty02 {
-          padding-bottom: 82%;
-        }
-
-        &.ty03 {
-          padding-bottom: 100%;
-        }
-      }
     }
 
     .feat-sec {
       width: 100%;
-      padding: 0 3rem;
+      padding: 0 3rem 0 0;
       box-sizing: border-box;
+      margin-left: -1.8rem;
 
       .feat-info-list {
         display: flex;
         justify-content: flex-start;
         flex-wrap: wrap;
-        gap: calc((100% - 480px) / 3);
+        column-gap: calc((100% - 480px) / 3);
+        row-gap: 3rem;
 
         .list-item {
 
@@ -170,8 +113,73 @@
 
     &.ty04 {
       .main-img {
-        padding-bottom: 130%;
+        padding-bottom: 125%;
       }
+    }
+  }
+}
+
+.prod-img {
+  display: flex;
+  .prod-img-item {
+    flex-basis: 50%;
+  }
+  .img-wrap {
+    width: 100%;
+    height: 0;
+    padding-bottom: 66%;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      z-index: -1;
+    }
+
+    .img-tag {
+      position: absolute;
+      right: 4rem;
+      bottom: 2rem;
+      background-color: $black_02;
+
+      @include bdrs(2rem);
+
+      .tit-l {
+        color: $white;
+      }
+      .tag-link {
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 0.5rem 0.5rem 0.5rem 2rem;
+
+        &::after {
+          content: '';
+          display: inline-block;
+          width: 3rem;
+          height: 3rem;
+          margin-left: 1rem;
+          border-radius: 3rem;
+          background-image: url("../images/ico_arrow_005.png");
+          background-repeat: no-repeat;
+          background-size: 22px 17px;
+          background-position: center;
+          background-color: $light_gray;
+        }
+      }
+    }
+
+    &.ty02 {
+      padding-bottom: 82%;
+    }
+
+    &.ty03 {
+      padding-bottom: 100%;
     }
   }
 }
@@ -268,6 +276,9 @@
     }
     &.ty23 {
       background-image: url("../images/ico_appl_feat_023.png");
+    }
+    &.ty24 {
+      background-image: url("../images/ico_appl_feat_024.png");
     }
   }
 }
@@ -493,11 +504,6 @@
 }
 
 // construction Vehicle custom
-.auto-contents {
-  .img-cont .tit-box {
-    gap: 6rem;
-  }
-}
 .const-vehi-contents {
   .img-cont .tit-box {
     gap: 10rem;
@@ -513,5 +519,11 @@
 .home-contents {
   .img-cont .tit-box {
     gap: 4rem;
+  }
+}
+
+.drone-contents {
+  .uas-img {
+    position: absolute;
   }
 }
