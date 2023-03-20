@@ -412,12 +412,12 @@
           size: $font-12r;
           weight: $r;
           family: $point_font;
-
         };
 
         .table-column {
           .table-item {
             background-color: unset !important;
+            justify-content: center;
           }
         }
       }
@@ -434,7 +434,9 @@
           padding: 0 2.5rem;
           box-sizing: border-box;
           height: 3.5rem;
-          line-height: 3.5rem;
+          line-height: 1.2;
+          @include flex-col();
+          justify-content: center;
           transition: background-color 0.3s;
           @include bdr(1px, $gray_04);
 
@@ -447,6 +449,7 @@
           &:nth-child(3) {
             flex-basis: 27%;
             text-align: center;
+            justify-content: center;
 
           }
 
@@ -461,6 +464,9 @@
             }
             line-height: 1;
             color: $red;
+          }
+          span {
+            display: block;
           }
         }
       }
