@@ -392,6 +392,17 @@
       flex-basis: 100%;
     }
   }
+  .desc-table-wrap {
+    .desc-table {
+      .table-row {
+        .table-column {
+          .table-item {
+            @include flex-col();
+          }
+        }
+      }
+    }
+  }
 }
 
 
@@ -435,7 +446,6 @@
           box-sizing: border-box;
           height: 3.5rem;
           line-height: 1.2;
-          @include flex-col();
           justify-content: center;
           transition: background-color 0.3s;
           @include bdr(1px, $gray_04);
