@@ -118,7 +118,7 @@
           img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
           }
 
           &:nth-child(1) {
@@ -215,7 +215,7 @@
 
     .tit-head {
       display: block;
-      width: 60%;
+      width: 70%;
       line-height: 1.2;
     }
 
@@ -230,6 +230,10 @@
 .prod-contents {
   .prod-dtl-content {
     padding: 3rem 0 5rem;
+    margin-bottom: 16.8rem;
+  }
+  .btn-learn-more {
+    color: #16aae5;
   }
 }
 
@@ -237,9 +241,10 @@
   .dtl-list {
     display: flex;
     gap: 1.5rem;
+    flex-wrap: wrap;
 
     .list-item {
-      flex: 1 1 33.33%;
+      flex: 1 1 30%;
     }
   }
 }
@@ -275,21 +280,37 @@
 
     img {
       position: absolute;
-      //left: 50%;
       width: 100%;
       height: 100%;
-      //transform: translateX(-50%);
       transform: scale(0.9);
       object-fit: cover;
     }
+    &.ty02 {
+      padding-bottom: 43.6rem;
+      img {
+        transform: unset;
+      }
+    }
   }
 }
-
-
-.prod-spec-content {
-  padding-top: 11.8rem;
+.container .content.prod-use-content {
+  gap: 3.5rem;
 }
-
+.prod-use-content {
+  .tit-cont {
+    font-family: $point_font;
+  }
+}
+.use-img-wrap {
+  background-color: $gray_05;
+  padding: 3.5rem 3rem;
+  border-radius: 1rem;
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
 
 .spec-content {
   .content-header {
@@ -361,6 +382,32 @@
   }
 }
 
+.container .content.prod-feat-content {
+  gap: 3rem;
+}
+
+.prod-feat-content {
+  .tit-cont {
+    font-family: $point_font;
+  }
+
+  .feat-sec {
+    border-top: 1px solid #e1e1e1;
+    padding-top: 3.5rem;
+  }
+  .feat-info-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 3rem;
+    .list-item {
+      flex-basis: 12.5%;
+      .feat-info-item {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
 .feat-list {
   display: flex;
   flex-wrap: wrap;
@@ -380,7 +427,9 @@
   @include bdrs(2rem);
   background-color: $gray_01;
   transition: 0.3s;
-
+  .ces-box {
+    @include flex-col(1.5rem);
+  }
 
   .tit-box {
     display: flex;
@@ -699,6 +748,27 @@
     }
   }
 }
+.prod-purc-content {
+  .purc-img-wrap {
+    width: 100%;
+    height: 140px;
+    background-image: url('../../assets/images/img_prod_developer_kit_001.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    .uas-img {
+      gap: 1rem;
+      p {
+        font-size: 2.4rem;
+        font-weight: $el;
+      }
+      a {
+        font-weight: $md;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
 
 .retina-4sn-developer-kit-contents {
   .img-content {
@@ -707,6 +777,9 @@
       .prod-head-cont {
         .tit-box {
           gap: 1rem;
+          .tit-head {
+            width: 80%;
+          }
           p {
             font-weight: $l;
           }
@@ -812,8 +885,8 @@
 }
 
 .lasso-iradar-contents {
-  .prod-feat-content {
-    padding-top: 16.8rem;
+  .prod-head-cont .tit-box .tit-head {
+    width: 75%;
   }
   .prod-dtl-content {
     padding: 7rem 0;
@@ -821,6 +894,15 @@
       .img-box {
         padding-bottom: 36.4rem;
       }
+    }
+  }
+  .feat-list {
+    position: relative;
+    .btn-learn-more {
+      position: absolute;
+      right: 3rem;
+      bottom: 5rem;
+
     }
   }
 }
