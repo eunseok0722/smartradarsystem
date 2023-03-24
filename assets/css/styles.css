@@ -1068,7 +1068,7 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 
 .prod-head-cont .tit-box { display: flex; flex-direction: column; gap: 12.5rem; }
 
-.prod-head-cont .tit-box .tit-head { display: block; width: 76%; }
+.prod-head-cont .tit-box .tit-head { display: block; width: 60%; line-height: 1.2; }
 
 .prod-head-cont .tit-box .txt-l { display: block; line-height: 1.6; width: 50%; }
 

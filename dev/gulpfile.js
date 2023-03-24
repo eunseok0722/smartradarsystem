@@ -118,4 +118,5 @@ gulp.task('watch', function () {
     gulp.watch('markup_guide_dev/assets/js/*.js', gulp.series('babel-mrkp'));
 });
 
-gulp.task('default', gulp.parallel(['watch', 'webserver', 'image']));
+gulp.task('default', gulp.parallel(['watch', 'webserver']));
+gulp.task('build', gulp.parallel(['watch', 'webserver', 'image']));
