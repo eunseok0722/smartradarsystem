@@ -67,7 +67,6 @@
   .cont-head-content {
     .txt-sec {
       display: flex;
-      margin-top: 10rem;
       gap: 5%;
       justify-content: space-between;
       .tit-box {
@@ -84,6 +83,9 @@
       }
     }
   }
+}
+.add-01 {
+  margin-top: 9rem;
 }
 
 .phone-num {
@@ -801,30 +803,120 @@
 .team-org-content {
   @include flex-col(74px);
 
-  .tit-sec {
-    text-align: center;
-  }
-
   section {
     width: 100%;
     box-sizing: border-box;
     padding: 0 3rem;
 
-    .img-wrap {
-      width: 100%;
-      height: 0;
-      padding-bottom: 48.80%;
-      background-image: url("../images/img_about_team_001.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
+  }
+}
 
-      img {
-        visibility: hidden;
+.org-chart-wrap {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 48.80%;
+  background-image: url("../images/img_about_team_001.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  .chart-item {
+    position: absolute;
+    width: 168px;
+    height: 48px;
+    border-radius: 6px;
+    overflow: hidden;
+    a,
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      font-size: $font-16r;
+
+    }
+    &.ty01 {
+      background-color: #3081d2;
+      a,
+      button {
+        color: $white;
+      }
+    }
+    &.ty02 {
+      width: 340px;
+      background-color: #44ac81;
+      a,
+      button {
+        color: $white;
+      }
+    }
+    &.ty03 {
+      background-color: $black;
+      a,
+      button {
+        color: $white;
+      }
+    }
+    &.ty04 {
+      background-color: #6a6a73;
+      a,
+      button {
+        color: $white;
       }
     }
   }
+  .item-01 {
+    left : 439px;
+  }
+  .item-02 {
+    right : 2px;
+    top: 52px;
+  }
+  .item-03 {
+    left : 178px;
+    top: 111px;
+  }
+  .item-04 {
+    left : 530px;
+    top: 111px;
+  }
+  .item-05 {
+    left : 0;
+    top: 204px;
+  }
+  .item-06 {
+    left : 264px;
+    top: 204px;
+  }
+  .item-07 {
+    right: 526px;
+    top: 204px;
+  }
+  .item-08 {
+    right: 352px;
+    top: 204px;
+  }
+  .item-09 {
+    right: 177px;
+    top: 204px;
+  }
+  .item-10 {
+    right: 2px;
+    top: 204px;
+  }
+  .item-06-01 {
+    left: 175px;
+    top: 270px;
+  }
+  .item-06-02 {
+    left: 350px;
+    top: 270px;
+  }
 }
+
+
 
 /* //team building & Careers */
 
@@ -1039,10 +1131,12 @@
             //@include bdr(1px, $gray_04);
             border-right: unset;
 
-            a {
+            a,
+            button {
               font-size: $font-18r;
               display: block;
               @include ln-1;
+              cursor: pointer;
             }
 
             span {
@@ -1086,6 +1180,25 @@
   background-position: center;
 }
 
-/* //newsroom */
+.item-content {
+  width: 100%;
+  height: fit-content;
+  background-color: #f7f6f6;
+  overflow: hidden;
+  transition: 0.35s;
+  max-height: 0;
+  .txt-wrap {
+    width: 100%;
+    height: fit-content;
+    display: inline-block;
+    padding: 3rem 8rem;
+    box-sizing: border-box;
+    line-height: 1.6;
+    border-bottom: 2px solid $gray_04;
+  }
 
+  &.active {
+    max-height: 200px;
+  }
+}
 /* //Investors & Partners */

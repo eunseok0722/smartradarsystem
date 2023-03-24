@@ -101,6 +101,24 @@ const popClose = function () {
 
 /* //awards */
 
+/* Investors & Partners */
+const tableItemActive = function (that) {
+    const tableItems = document.getElementsByClassName('item-content');
+    const target = that.parentElement.nextElementSibling;
+
+    if (target.classList.contains('active')) {
+        for (let i = 0; i < tableItems.length; i++ ) {
+            tableItems[i].classList.remove('active');
+        }
+    }else {
+        for (let i = 0; i < tableItems.length; i++ ) {
+            tableItems[i].classList.remove('active');
+        }
+        target.classList.add('active');
+    }
+}
+/* //Investors & Partners */
+
 /* footer */
 const wrapper = document.getElementById("wrapper");
 

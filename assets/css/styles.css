@@ -278,6 +278,8 @@ body { font-family: "Garet", sans-serif; scroll-behavior: smooth; }
 
 .ico-linkedin { background-image: url("../images/ico_linkedin_001.png"); background-size: 3rem 3rem; }
 
+.ico-youtube { background-image: url("../images/ico_youtube_001.png"); background-size: 3rem 3rem; }
+
 .ico-arrow-top { background-image: url("../images/ico_arrow_001.png"); background-size: 2.5rem 1.4rem; background-color: #008aff; border: 1px solid #0054a6; }
 
 /* //icon style */
@@ -770,13 +772,15 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 
 /* //about main */
 /* Contacts */
-.container .cont-head-content .txt-sec { display: flex; margin-top: 10rem; gap: 5%; justify-content: space-between; }
+.container .cont-head-content .txt-sec { display: flex; gap: 5%; justify-content: space-between; }
 
 .container .cont-head-content .txt-sec .tit-box { flex-basis: 47.5%; }
 
 .container .cont-head-content .txt-sec .add-box { flex-basis: 47.5%; display: flex; flex-direction: column; gap: 6rem; }
 
 .container .cont-head-content .txt-sec .add-box .add { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.add-01 { margin-top: 9rem; }
 
 .phone-num { width: fit-content; padding: 0.4rem 2rem; border: 1px solid #ebebeb; box-sizing: border-box; border-radius: 20px; margin-top: 0.5rem; }
 
@@ -1014,13 +1018,53 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 /* team building & Careers */
 .team-org-content { display: flex; flex-direction: column; gap: 74px; }
 
-.team-org-content .tit-sec { text-align: center; }
-
 .team-org-content section { width: 100%; box-sizing: border-box; padding: 0 3rem; }
 
-.team-org-content section .img-wrap { width: 100%; height: 0; padding-bottom: 48.80%; background-image: url("../images/img_about_team_001.png"); background-repeat: no-repeat; background-size: cover; background-position: center; }
+.org-chart-wrap { position: relative; width: 100%; height: 0; padding-bottom: 48.80%; background-image: url("../images/img_about_team_001.png"); background-repeat: no-repeat; background-size: contain; background-position: center; }
 
-.team-org-content section .img-wrap img { visibility: hidden; }
+.org-chart-wrap .chart-item { position: absolute; width: 168px; height: 48px; border-radius: 6px; overflow: hidden; }
+
+.org-chart-wrap .chart-item a, .org-chart-wrap .chart-item button { display: flex; justify-content: center; align-items: center; text-align: center; width: 100%; height: 100%; font-size: 1.6rem; }
+
+.org-chart-wrap .chart-item.ty01 { background-color: #3081d2; }
+
+.org-chart-wrap .chart-item.ty01 a, .org-chart-wrap .chart-item.ty01 button { color: #fff; }
+
+.org-chart-wrap .chart-item.ty02 { width: 340px; background-color: #44ac81; }
+
+.org-chart-wrap .chart-item.ty02 a, .org-chart-wrap .chart-item.ty02 button { color: #fff; }
+
+.org-chart-wrap .chart-item.ty03 { background-color: #000; }
+
+.org-chart-wrap .chart-item.ty03 a, .org-chart-wrap .chart-item.ty03 button { color: #fff; }
+
+.org-chart-wrap .chart-item.ty04 { background-color: #6a6a73; }
+
+.org-chart-wrap .chart-item.ty04 a, .org-chart-wrap .chart-item.ty04 button { color: #fff; }
+
+.org-chart-wrap .item-01 { left: 439px; }
+
+.org-chart-wrap .item-02 { right: 2px; top: 52px; }
+
+.org-chart-wrap .item-03 { left: 178px; top: 111px; }
+
+.org-chart-wrap .item-04 { left: 530px; top: 111px; }
+
+.org-chart-wrap .item-05 { left: 0; top: 204px; }
+
+.org-chart-wrap .item-06 { left: 264px; top: 204px; }
+
+.org-chart-wrap .item-07 { right: 526px; top: 204px; }
+
+.org-chart-wrap .item-08 { right: 352px; top: 204px; }
+
+.org-chart-wrap .item-09 { right: 177px; top: 204px; }
+
+.org-chart-wrap .item-10 { right: 2px; top: 204px; }
+
+.org-chart-wrap .item-06-01 { left: 175px; top: 270px; }
+
+.org-chart-wrap .item-06-02 { left: 350px; top: 270px; }
 
 /* //team building & Careers */
 /* newsroom */
@@ -1070,7 +1114,7 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 
 .inve-art .desc-table-wrap .desc-table .table-row .table-column .table-item { display: flex; justify-content: center; align-items: center; height: 6rem; line-height: 1.7; border-right: unset; }
 
-.inve-art .desc-table-wrap .desc-table .table-row .table-column .table-item a { font-size: 1.8rem; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.inve-art .desc-table-wrap .desc-table .table-row .table-column .table-item a, .inve-art .desc-table-wrap .desc-table .table-row .table-column .table-item button { font-size: 1.8rem; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; }
 
 .inve-art .desc-table-wrap .desc-table .table-row .table-column .table-item span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
@@ -1082,7 +1126,12 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 
 .btn-pdf { display: block; width: 30px; height: 30px; background-image: url("../images/ico_pdf_001.png"); background-repeat: no-repeat; background-size: 16px 16px; background-position: center; }
 
-/* //newsroom */
+.item-content { width: 100%; height: fit-content; background-color: #f7f6f6; overflow: hidden; transition: 0.35s; max-height: 0; }
+
+.item-content .txt-wrap { width: 100%; height: fit-content; display: inline-block; padding: 3rem 8rem; box-sizing: border-box; line-height: 1.6; border-bottom: 2px solid #d7d7d7; }
+
+.item-content.active { max-height: 200px; }
+
 /* //Investors & Partners */
 /* product lineup */
 .lineup-contents .content-header { display: flex; flex-direction: column; gap: 7.2rem; }
