@@ -784,7 +784,7 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 
 .phone-num { width: fit-content; padding: 0.4rem 2rem; border: 1px solid #ebebeb; box-sizing: border-box; border-radius: 20px; margin-top: 0.5rem; }
 
-.map-sec { width: 100%; height: 480px; border-radius: 2.4rem; overflow: hidden; box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.12); margin-top: -16px; }
+.map-sec { width: 100%; height: 480px; border-radius: 2.4rem; overflow: hidden; box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.12); margin-top: -16px; }
 
 .map-sec iframe { width: 100%; height: 100%; }
 
@@ -1024,11 +1024,11 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 
 .org-chart-wrap .chart-item { position: absolute; width: 168px; height: 48px; border-radius: 6px; overflow: hidden; }
 
-.org-chart-wrap .chart-item a, .org-chart-wrap .chart-item button { display: flex; justify-content: center; align-items: center; text-align: center; width: 100%; height: 100%; font-size: 1.6rem; transition: 0.35s; }
+.org-chart-wrap .chart-item a, .org-chart-wrap .chart-item button { display: flex; justify-content: center; align-items: center; text-align: center; width: 100%; height: 100%; font-size: 1.6rem; transition: 0.15s; }
 
-.org-chart-wrap .chart-item a:hover, .org-chart-wrap .chart-item button:hover { transform: scale(1.1); }
+.org-chart-wrap .chart-item a:hover, .org-chart-wrap .chart-item button:hover { transform: scale(1.12); }
 
-.org-chart-wrap .chart-item .d1-item a, .org-chart-wrap .chart-item .d1-item button { font-size: 1.6rem; }
+.org-chart-wrap .chart-item .chart-d1-item a, .org-chart-wrap .chart-item .chart-d1-item button { font-size: 1.6rem; }
 
 .org-chart-wrap .chart-item.ty01 { background-color: #3081d2; }
 

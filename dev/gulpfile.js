@@ -14,10 +14,10 @@ const ws = require('gulp-webserver');
 const image = require('gulp-image');
 
 gulp.task('extend', function () {
-    return gulp.src('page_dev/**/*.html')
+    return gulp.src('page_dev/**/**/*.html')
         .pipe(extender({annotations: false, verbose: false, root: "../"}))
         .pipe(plumber())
-        .pipe(gulp.dest('../pages/'));
+        .pipe(gulp.dest('../'));
 });
 
 

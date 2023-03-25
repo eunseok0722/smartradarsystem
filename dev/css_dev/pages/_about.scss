@@ -103,7 +103,7 @@
   height: 480px;
   border-radius: 2.4rem;
   overflow: hidden;
-  box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.12);
   margin-top: -16px;
 
   iframe {
@@ -835,12 +835,12 @@
       width: 100%;
       height: 100%;
       font-size: $font-16r;
-      transition: 0.35s;
+      transition: 0.15s;
       &:hover {
-        transform: scale(1.1);
+        transform: scale(1.12);
       }
     }
-    .d1-item {
+    .chart-d1-item {
       a,
       button {
         font-size: $font-16r;
