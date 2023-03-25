@@ -2,21 +2,21 @@
 
 @font-face {
   font-family: 'NanumSquareRound';
-  src: url('../../../assets/font/Nanum-SquareRound-L.woff2') format('woff2'),
-  url('../../../assets/font/Nanum-SquareRound-L.woff') format('woff'),
-  url('../../../assets/font/Nanum-SquareRound-L.ttf') format('truetype'),
-  url('../../../assets/font/Nanum-SquareRound-L.otf') format('opentype');
+  src: url('../../../assets/font/NanumSquareRoundL.woff2') format('woff2'),
+  url('../../../assets/font/NanumSquareRoundL.woff') format('woff'),
+  url('../../../assets/font/NanumSquareRoundL.ttf') format('truetype'),
+  url('../../../assets/font/NanumSquareRoundL.otf') format('opentype');
   font-weight: $l;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'NanumSquareRound';
-  src: url('../../../assets/font/Nanum-SquareRound-R.woff2') format('woff2'),
-  url('../../../assets/font/Nanum-SquareRound-R.woff') format('woff'),
-  url('../../../assets/font/Nanum-SquareRound-R.ttf') format('truetype'),
-  url('../../../assets/font/Nanum-SquareRound-R.otf') format('opentype');
-  font-weight: $l;
+  src: url('../../../assets/font/NanumSquareRoundR.woff2') format('woff2'),
+  url('../../../assets/font/NanumSquareRoundR.woff') format('woff'),
+  url('../../../assets/font/NanumSquareRoundR.ttf') format('truetype'),
+  url('../../../assets/font/NanumSquareRoundR.otf') format('opentype');
+  font-weight: $r;
   font-style: normal;
 }
 
