@@ -3,8 +3,8 @@
 ## 프로젝트 개요
 - 개요 : 스마트레이더시스템 홈페이지 리뉴얼 (PC버전)
 - 기간 : 2022.11.07. ~ 2022.12.31.
-- 퍼블가이드 : [markup_guide](https://eunseok0722.github.io/srstobe/markup_guide/index.html)
-- 퍼블리스트: [index.html](https://eunseok0722.github.io/srstobe/index.html)
+- 퍼블가이드 : [markup_guide](https://eunseok0722.github.io/smartradarsystem/markup_guide/index.html)
+- 퍼블리스트: [index.html](https://eunseok0722.github.io/smartradarsystem/index.html)
 
 기본가이드
 ---
