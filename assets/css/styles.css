@@ -155,11 +155,11 @@ address { font-style: normal; }
 
 @font-face { font-family: 'Poppins'; src: url("../font/Poppins-ExtraBold.woff2") format("woff2"), url("../font/Poppins-ExtraBold.woff") format("woff"), url("../font/Poppins-ExtraBold.ttf") format("truetype"), url("../font/Poppins-ExtraBold.eot") format("opentype"); font-weight: 800; font-style: normal; }
 
-@font-face { font-family: 'NanumSquareRound'; src: url("../font/Nanum-SquareRound-B.woff2") format("woff2"), url("../font/Nanum-SquareRound-B.woff") format("woff"), url("../font/Nanum-SquareRound-B.ttf") format("truetype"), url("../font/Nanum-SquareRound-B.eot") format("opentype"); font-weight: 700; font-style: normal; }
+@font-face { font-family: 'NanumSquareRound'; src: url("../font/NanumSquareRoundB.woff2") format("woff2"), url("../font/NanumSquareRoundB.woff") format("woff"), url("../font/NanumSquareRoundB.ttf") format("truetype"), url("../font/NanumSquareRoundB.eot") format("opentype"); font-weight: 700; font-style: normal; }
 
-@font-face { font-family: 'NanumSquareRound'; src: url("../font/Nanum-SquareRound-R.woff2") format("woff2"), url("../font/Nanum-SquareRound-R.woff") format("woff"), url("../font/Nanum-SquareRound-R.ttf") format("truetype"), url("../font/Nanum-SquareRound-R.eot") format("opentype"); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'NanumSquareRound'; src: url("../font/NanumSquareRoundR.woff2") format("woff2"), url("../font/NanumSquareRoundR.woff") format("woff"), url("../font/NanumSquareRoundR.ttf") format("truetype"), url("../font/NanumSquareRoundR.eot") format("opentype"); font-weight: 400; font-style: normal; }
 
-@font-face { font-family: 'NanumSquareRound'; src: url("../font/Nanum-SquareRound-L.woff2") format("woff2"), url("../font/Nanum-SquareRound-L.woff") format("woff"), url("../font/Nanum-SquareRound-L.ttf") format("truetype"), url("../font/Nanum-SquareRound-L.eot") format("opentype"); font-weight: 300; font-style: normal; }
+@font-face { font-family: 'NanumSquareRound'; src: url("../font/NanumSquareRoundL.woff2") format("woff2"), url("../font/NanumSquareRoundL.woff") format("woff"), url("../font/NanumSquareRoundL.ttf") format("truetype"), url("../font/NanumSquareRoundL.eot") format("opentype"); font-weight: 300; font-style: normal; }
 
 #wrapper { width: 100%; }
 
@@ -217,11 +217,13 @@ body { font-family: "Garet", "NanumSquareRound", sans-serif; scroll-behavior: sm
 
 .tit-r { font-family: "Poppins", "NanumSquareRound", sans-serif; font-size: 1.4rem; }
 
+.tit-r.ty02 { font-family: "NanumSquareRound", sans-serif; }
+
 .tit-m { font-family: "Poppins", "NanumSquareRound", sans-serif; font-size: 1.3rem; }
 
 .tit-s { font-family: "Poppins", "NanumSquareRound", sans-serif; font-size: 1.2rem; }
 
-.txt-el { font-size: 2rem; }
+.txt-el { font-size: 2rem; word-break: keep-all; }
 
 .txt-l { font-size: 1.6rem; }
 
@@ -230,6 +232,8 @@ body { font-family: "Garet", "NanumSquareRound", sans-serif; scroll-behavior: sm
 .txt-r { font-size: 1.3rem; }
 
 .txt-m { font-size: 1.1rem; }
+
+.txt-m.ty02 { font-size: 1.25rem; letter-spacing: -0.045em; }
 
 .txt-s { font-size: 1.05rem; }
 
@@ -251,13 +255,15 @@ body { font-family: "Garet", "NanumSquareRound", sans-serif; scroll-behavior: sm
 
 .tit-art-03 { font-size: 2rem; font-family: "Poppins", "NanumSquareRound", sans-serif; }
 
+.tit-art-03.ty02 { font-size: 1.8rem; font-weight: 300; letter-spacing: -0.045em; line-height: 1.6; }
+
 .tit-art-04 { font-size: 2.8rem; font-family: "Poppins", "NanumSquareRound", sans-serif; }
 
 .tit-art-04.ty02 { word-break: keep-all; letter-spacing: -0.045em; font-size: 2.2rem; font-family: "NanumSquareRound", sans-serif; line-height: 1.4; }
 
 .tit-head { font-size: 5.4rem; font-family: "Poppins", "NanumSquareRound", sans-serif; }
 
-.tit-head.ty02 { font-size: 5rem; letter-spacing: -0.045em; word-break: keep-all; font-family: "NanumSquareRound", sans-serif; }
+.tit-head.ty02 { font-size: 5rem; letter-spacing: -0.045em; word-break: keep-all; font-family: "NanumSquareRound", sans-serif; line-height: 1.25; }
 
 .txt-cont { font-size: 1.8rem; line-height: 1.5; }
 
@@ -712,7 +718,7 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 /* new main */
 .main-banner { width: 100%; height: 0; padding-bottom: 46.61%; overflow: hidden; position: relative; }
 
-.main-banner .banner-list { width: 100%; height: fit-content; position: absolute; top: 0; animation-name: banner-slide; animation-duration: 9s; animation-iteration-count: infinite; animation-fill-mode: backwards; animation-timing-function: ease-in-out; }
+.main-banner .banner-list { width: 100%; height: fit-content; position: absolute; top: 0; animation-name: banner-slide; animation-duration: 12s; animation-iteration-count: infinite; animation-fill-mode: backwards; animation-timing-function: ease-in-out; }
 
 .banner-img { position: relative; width: 100%; padding-bottom: 46.61%; height: 0; background-size: cover; background-position: center; background-repeat: no-repeat; }
 
@@ -728,15 +734,23 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 
 .banner-txt-list .ban-tit { font-size: 7rem; font-family: "Poppins", "NanumSquareRound", sans-serif; font-weight: 400; letter-spacing: 1.4px; }
 
+.banner-txt-list .ban-tit.ty02 { font-size: 6.2rem; font-family: "NanumSquareRound", sans-serif; letter-spacing: -0.045em; }
+
 .banner-txt-list .ban-sub-tit { font-size: 3.6rem; font-family: "Poppins", "NanumSquareRound", sans-serif; font-weight: 200; letter-spacing: 0.72px; }
 
+.banner-txt-list .ban-sub-tit.ty02 { font-size: 4rem; font-family: "NanumSquareRound", sans-serif; font-weight: 400; letter-spacing: -0.045em; }
+
 .banner-txt-list .ban-slogan { margin-top: 3.5rem; font-size: 2.6rem; font-family: "Garet", "NanumSquareRound", sans-serif; font-weight: 400; letter-spacing: 0.52px; }
+
+.banner-txt-list .ban-slogan.ty02 { font-size: 2.4rem; font-family: "NanumSquareRound", sans-serif; letter-spacing: -0.045em; }
 
 .concept-content { width: 100%; height: fit-content; }
 
 .concept-content .content-header { width: 100%; max-width: 1220px; height: 420px; margin: 0 auto; padding: 7rem 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 4rem; }
 
 .concept-content .content-header .tit-head { line-height: 1.1; }
+
+.concept-content .content-header .tit-head span { display: block; margin-bottom: 0.5rem; }
 
 .concept-content .content-header .txt-list { display: flex; flex-direction: column; gap: 1.2rem; }
 
@@ -1108,9 +1122,9 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 
 .org-chart-wrap .item-06-01-05 { left: 174px; top: 545px; }
 
-.org-chart-wrap .item-06-02-01 { left: 348px; top: 325px; }
+.org-chart-wrap .item-06-02-01 { left: 350px; top: 325px; }
 
-.org-chart-wrap .item-06-02-02 { left: 348px; top: 379px; }
+.org-chart-wrap .item-06-02-02 { left: 350px; top: 379px; }
 
 .org-chart-wrap .item-06-02-03 { left: 526px; top: 295px; }
 
@@ -1195,6 +1209,8 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 .main-img-banner .img-wrap { width: 100%; height: 420px; background-color: #f4f4f7; background-image: url("../images/img_prod_main_001.png"); background-repeat: no-repeat; background-size: auto 100%; background-position: center; position: relative; overflow: hidden; }
 
 .main-img-banner .banner-tit { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 6rem; }
+
+.main-img-banner .banner-tit.ty02 { font-size: 5.2rem; font-weight: 300; }
 
 .lineup-table-wrap { width: 100%; height: fit-content; }
 
@@ -1459,6 +1475,8 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 
 .uas-img p { display: block; width: 550px; font-size: 2.6rem; font-weight: 300; }
 
+.uas-img p.ty02 { width: 100%; font-size: 1.8rem; }
+
 .uas-img a { display: block; font-size: 2rem; font-weight: 700; border-bottom: 1px solid #fff; }
 
 .lasso-iradar-contents .prod-head-cont .tit-box .tit-head { width: 75%; }
@@ -1470,30 +1488,6 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 .lasso-iradar-contents .feat-list { position: relative; }
 
 .lasso-iradar-contents .feat-list .btn-learn-more { position: absolute; right: 3rem; bottom: 5rem; }
-
-.swap-contents .swap-sec { width: 100%; height: 1024px; background-image: url("../images/img_tech_swap_002.png"); background-size: contain; background-position: center; background-repeat: no-repeat; box-sizing: border-box; padding: 6rem 2.5rem 2.5rem; box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.12); border-radius: 2.4rem; display: flex; flex-direction: column; gap: 64rem; justify-content: center; align-items: center; }
-
-.swap-contents .swap-sec .tit-art { color: #fff; text-align: center; line-height: 1.5; display: flex; width: 75%; }
-
-.swap-contents .swap-sec .app-list-wrap .app-list { display: flex; gap: 1.5rem; }
-
-.swap-contents .swap-sec .app-list-wrap .app-list .app-list-item { flex-basis: calc((100% - 4.5rem) / 4); }
-
-.swap-contents .swap-sec .app-item { width: 298px; height: 240px; background-color: #fff; border-radius: 2.5rem; box-shadow: 2.6px 3px 8px 0 rgba(0, 0, 0, 0.12); overflow: hidden; }
-
-.swap-contents .swap-sec .app-item .lb-tit-r { padding: 1.5rem 4rem 1rem; color: #fff; }
-
-.swap-contents .swap-sec .app-item .lb-tit-r.ty01 { background-color: #359dc3; }
-
-.swap-contents .swap-sec .app-item .lb-tit-r.ty02 { background-color: #f07723; }
-
-.swap-contents .swap-sec .app-item .lb-tit-r.ty03 { background-color: #ef19a7; }
-
-.swap-contents .swap-sec .app-item .lb-tit-r.ty04 { background-color: #1ca55c; }
-
-.swap-contents .swap-sec .app-item .app-dtl-list { padding: 2.5rem 4rem 0; display: flex; flex-direction: column; gap: 1.2rem; }
-
-.swap-contents .swap-sec .app-item .app-dtl-item { color: #252525; width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 .img-cont { display: flex; flex-direction: row-reverse; justify-content: space-between; gap: 6rem; }
 
@@ -1692,6 +1686,8 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 
 .tech-contents .head-content .content-header .sub-tit { font-size: 3.2rem; font-family: "Poppins", "NanumSquareRound", sans-serif; font-weight: 300; text-align: center; line-height: 1.4; }
 
+.tech-contents .head-content .content-header .sub-tit.ty02 { font-size: 2.8rem; font-family: "NanumSquareRound", sans-serif; letter-spacing: -0.045em; }
+
 .tech-contents .head-content .tech-img-wrap { width: 100%; max-width: 1160px; margin: 0 auto; }
 
 .tech-contents .head-content .tech-img-wrap img { width: 100%; height: 100%; object-fit: contain; }
@@ -1700,21 +1696,29 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 /* Technology Roadmap */
 .road-sec { width: 100%; height: fit-content; }
 
-.road-sec img { width: 100%; height: auto; }
+.road-sec img { width: 100%; height: auto; object-fit: contain; }
 
 /* //Technology Roadmap */
 /* software defined imaging rader */
 .soft-contents .soft-sec { width: 100%; height: 1105px; border-radius: 24px; box-shadow: 2.6px 3px 8px 0 rgba(0, 0, 0, 0.12); border: solid 1px #ebebeb; background-color: #fff; padding: 5rem 3rem; display: flex; flex-direction: column; gap: 6rem; justify-content: flex-start; box-sizing: border-box; }
 
+.soft-contents .soft-sec .sec-header { display: flex; flex-direction: column; gap: 3rem; }
+
 .soft-contents .soft-sec .tit-head { display: block; width: 57%; }
+
+.soft-contents .soft-sec .tit-head.ty02 { width: 70%; }
 
 .soft-contents .soft-sec .text-wrap { margin-left: 3.5rem; }
 
 .soft-contents .soft-sec .img-wrap { margin-top: auto; width: 100%; padding-bottom: 40%; background-image: url("../images/img_tech_soft_001.png"); background-repeat: no-repeat; background-position: center; background-size: contain; }
 
+.soft-contents .soft-sec .img-wrap.ty02 { background-image: url("../images/img_tech_soft_002.png"); }
+
 .soft-contents .soft-sec .text-list { display: flex; flex-direction: column; gap: 3rem; }
 
 .soft-contents .soft-sec .tit-art-03 { display: flex; width: 85%; line-height: 1.5; }
+
+.soft-contents .soft-sec .tit-art-03.ty02 { line-height: 1.6; }
 
 .soft-contents .prod-dtl-cont .dtl-list { flex-wrap: wrap; row-gap: 3rem; column-gap: 1.5rem; }
 
@@ -1725,11 +1729,15 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 .soft-contents .dtl-item .img-box img { object-fit: contain; transform: unset; }
 
 /* //software defined imaging rader */
+.dataset-contents .sec-header { display: flex; flex-direction: column; gap: 3rem; }
+
 .dataset-contents .soft-sec { width: 100%; height: 870px; border-radius: 24px; box-shadow: 2.6px 3px 8px 0 rgba(0, 0, 0, 0.12); border: solid 1px #ebebeb; background-color: #fff; padding: 9rem 8rem; display: flex; flex-direction: column; gap: 5rem; justify-content: flex-start; box-sizing: border-box; }
 
 .dataset-contents .text-list { display: flex; gap: 4.5rem; }
 
 .dataset-contents .tit-art-03 { line-height: 1.5; }
+
+.dataset-contents .tit-art-03.ty02 { line-height: 1.6; }
 
 .dataset-contents .img-wrap { width: 500px; height: 400px; background-image: url("../images/img_tech_4d_001.png"); }
 
@@ -1756,5 +1764,42 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 .btn-learn-more:hover { border: 1px solid #008aff; }
 
 .btn-learn-more.ty02 { font-weight: 700; }
+
+/* swap sensor */
+.swap-contents .swap-sec { width: 100%; height: 1024px; background-image: url("../images/img_tech_swap_002.png"); background-size: contain; background-position: center; background-repeat: no-repeat; box-sizing: border-box; padding: 6rem 2.5rem 2.5rem; box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.12); border-radius: 2.4rem; display: flex; flex-direction: column; gap: 64rem; justify-content: center; align-items: center; }
+
+.swap-contents .swap-sec.ty02 { gap: 58rem; }
+
+.swap-contents .swap-sec .sec-header { text-align: center; display: flex; flex-direction: column; gap: 3rem; align-items: center; }
+
+.swap-contents .swap-sec .sec-header .sub-tit { font-size: 2.6rem; color: #fff; }
+
+.swap-contents .swap-sec .tit-art { color: #fff; text-align: center; line-height: 1.5; width: 75%; }
+
+.swap-contents .swap-sec .tit-art.ty02 { font-size: 1.6rem; width: 100%; text-align: right; }
+
+.swap-contents .swap-sec .tit-art .tit-r { display: block; }
+
+.swap-contents .swap-sec .app-list-wrap .app-list { display: flex; gap: 1.5rem; }
+
+.swap-contents .swap-sec .app-list-wrap .app-list .app-list-item { flex-basis: calc((100% - 4.5rem) / 4); }
+
+.swap-contents .swap-sec .app-item { width: 298px; height: 240px; background-color: #fff; border-radius: 2.5rem; box-shadow: 2.6px 3px 8px 0 rgba(0, 0, 0, 0.12); overflow: hidden; }
+
+.swap-contents .swap-sec .app-item .lb-tit-r { padding: 1.5rem 4rem 1rem; color: #fff; }
+
+.swap-contents .swap-sec .app-item .lb-tit-r.ty01 { background-color: #359dc3; }
+
+.swap-contents .swap-sec .app-item .lb-tit-r.ty02 { background-color: #f07723; }
+
+.swap-contents .swap-sec .app-item .lb-tit-r.ty03 { background-color: #ef19a7; }
+
+.swap-contents .swap-sec .app-item .lb-tit-r.ty04 { background-color: #1ca55c; }
+
+.swap-contents .swap-sec .app-item .app-dtl-list { padding: 2.5rem 4rem 0; display: flex; flex-direction: column; gap: 1.2rem; }
+
+.swap-contents .swap-sec .app-item .app-dtl-item { color: #252525; width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* //swap sensor */
 
 /*# sourceMappingURL=../css/styles.css.map */

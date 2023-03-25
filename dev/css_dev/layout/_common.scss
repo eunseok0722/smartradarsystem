@@ -22,6 +22,9 @@ body {
   font-family: $point_font;
   //font-weight: $b;
   font-size: $font-14r;
+  &.ty02 {
+    font-family: $kr_font;
+  }
 }
 .tit-m {
   font-family: $point_font;
@@ -36,6 +39,7 @@ body {
 
 .txt-el {
   font-size: $font-20r;
+  word-break: keep-all;
 }
 
 .txt-l {
@@ -54,6 +58,10 @@ body {
 .txt-m {
   font-size: $font-11r;
   //font-weight: $r;
+  &.ty02 {
+    font-size: 1.25rem;
+    letter-spacing: -0.045em;
+  }
 }
 .txt-s {
   font-size: $font-10r;
@@ -105,6 +113,12 @@ body {
   font-size: $font-20r;
   font-family: $point_font;
   //font-weight: $r;
+  &.ty02 {
+    font-size: $font-18r;
+    font-weight: $l;
+    letter-spacing: -0.045em;
+    line-height: 1.6;
+  }
 }
 .tit-art-04 {
   font-size: $font-28r;
@@ -127,6 +141,7 @@ body {
     letter-spacing: -0.045em;
     word-break: keep-all;
     font-family: $kr_font;
+    line-height: 1.25;
   }
 }
 .txt-cont {

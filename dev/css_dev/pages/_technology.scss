@@ -6,6 +6,7 @@
       background-image: url('../images/img_tech_main_001.png');
       background-repeat: repeat-x;
     }
+
     .banner-tit {
       width: 100%;
       max-width: 1280px;
@@ -13,8 +14,10 @@
       text-align: center;
     }
   }
+
   .head-content {
     padding-top: 8rem;
+
     .content-header {
       .sub-tit {
         font: {
@@ -24,12 +27,21 @@
         }
         text-align: center;
         line-height: 1.4;
+        &.ty02 {
+          font: {
+            size: $font-28r;
+            family: $kr_font;
+          }
+          letter-spacing: -0.045em;
+        }
       }
     }
+
     .tech-img-wrap {
       width: 100%;
       max-width: 1160px;
       margin: 0 auto;
+
       img {
         width: 100%;
         height: 100%;
@@ -39,6 +51,7 @@
   }
 
 }
+
 /* //technology main */
 
 
@@ -50,12 +63,11 @@
   img {
     width: 100%;
     height: auto;
+    object-fit: contain;
   }
 }
 
 /* //Technology Roadmap */
-
-
 
 
 /* software defined imaging rader */
@@ -77,9 +89,17 @@
     justify-content: flex-start;
     box-sizing: border-box;
 
+    .sec-header {
+      @include flex-col(3rem);
+    }
+
     .tit-head {
       display: block;
       width: 57%;
+
+      &.ty02 {
+        width: 70%;
+      }
     }
 
     .text-wrap {
@@ -95,6 +115,10 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
+
+      &.ty02 {
+        background-image: url("../images/img_tech_soft_002.png");
+      }
     }
 
     .text-list {
@@ -105,6 +129,10 @@
       display: flex;
       width: 85%;
       line-height: 1.5;
+
+      &.ty02 {
+        line-height: 1.6;
+      }
     }
   }
 
@@ -136,6 +164,10 @@
 /* //software defined imaging rader */
 
 .dataset-contents {
+  .sec-header {
+    @include flex-col(3rem);
+  }
+
   .soft-sec {
     width: 100%;
     height: 870px;
@@ -148,13 +180,20 @@
     justify-content: flex-start;
     box-sizing: border-box;
   }
+
   .text-list {
     display: flex;
     gap: 4.5rem;
   }
+
   .tit-art-03 {
     line-height: 1.5;
+
+    &.ty02 {
+      line-height: 1.6;
+    }
   }
+
   .img-wrap {
     width: 500px;
     height: 400px;
@@ -166,31 +205,38 @@
   .data-list {
     display: flex;
     height: 100%;
+
     .list-item {
       height: 100%;
       flex-basis: 33.33%;
       @include bdr(1px, $gray_04);
       padding: 2rem 3rem 1rem;
       box-sizing: border-box;
-      @include  flex-col();
+      @include flex-col();
+
       &:last-child {
         border-right: unset;
       }
+
       .tit-box {
         @include flex-col();
+
         .tit-head {
           flex-basis: 145px;
         }
+
         .txt-l {
           line-height: 1.5;
         }
       }
+
       .data-item {
         @include flex-col(3rem);
         justify-content: space-between;
         height: fit-content;
         min-height: 300px;
       }
+
       .btn-learn-more {
         margin-top: auto;
       }
@@ -215,6 +261,7 @@
     size: $font-14r;
     family: $point_font;
   };
+
   &::after {
     display: flex;
     content: '';
@@ -225,10 +272,123 @@
     background-position: center;
     background-repeat: no-repeat;
   }
+
   &:hover {
     border: 1px solid $blue_l;
   }
+
   &.ty02 {
     font-weight: $b;
   }
 }
+
+/* swap sensor */
+.swap-contents {
+  .swap-sec {
+
+    width: 100%;
+    height: 1024px;
+    background-image: url("../images/img_tech_swap_002.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    padding: 6rem 2.5rem 2.5rem;
+    box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 2.4rem;
+
+    @include flex-col(64rem);
+    justify-content: center;
+    align-items: center;
+    &.ty02 {
+      gap: 58rem;
+    }
+    .sec-header {
+      text-align: center;
+      @include flex-col(3rem);
+      align-items: center;
+
+      .sub-tit {
+        font-size: $font-26r;
+        color: $white;
+      }
+    }
+
+    .tit-art {
+      color: $white;
+      text-align: center;
+      line-height: 1.5;
+      width: 75%;
+
+      &.ty02 {
+        font-size: $font-16r;
+        width: 100%;
+        text-align: right;
+      }
+
+      .tit-r {
+        display: block;
+
+      }
+
+    }
+
+    .app-list-wrap {
+      .app-list {
+        display: flex;
+        gap: 1.5rem;
+
+        .app-list-item {
+          flex-basis: calc((100% - 4.5rem) / 4);
+        }
+      }
+    }
+
+    .app-item {
+      width: 298px;
+      height: 240px;
+      background-color: #fff;
+      border-radius: 2.5rem;
+      box-shadow: 2.6px 3px 8px 0 rgba(0, 0, 0, 0.12);
+      overflow: hidden;
+
+      .lb-tit-r {
+        padding: 1.5rem 4rem 1rem;
+        color: $white;
+
+        &.ty01 {
+          background-color: #359dc3;
+        }
+
+        &.ty02 {
+          background-color: #f07723;
+        }
+
+        &.ty03 {
+          background-color: #ef19a7;
+        }
+
+        &.ty04 {
+          background-color: #1ca55c;
+        }
+      }
+
+      .app-dtl-list {
+        padding: 2.5rem 4rem 0;
+        @include flex-col(1.2rem);
+
+        .app-dtl-list-item {
+
+        }
+      }
+
+      .app-dtl-item {
+        color: #252525;
+        width: 220px;
+        @include ln-1;
+      }
+    }
+  }
+}
+
+/* //swap sensor */

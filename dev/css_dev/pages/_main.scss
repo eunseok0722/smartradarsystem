@@ -275,7 +275,7 @@
     position: absolute;
     top: 0;
     animation-name: banner-slide;
-    animation-duration: 9s;
+    animation-duration: 12s;
     animation-iteration-count: infinite;
     animation-fill-mode: backwards;
     animation-timing-function: ease-in-out;
@@ -329,6 +329,14 @@
       weight: $r;
     }
     letter-spacing: 1.4px;
+
+    &.ty02 {
+      font: {
+        size: 6.2rem;
+        family: $kr_font;
+      }
+      letter-spacing: -0.045em;
+    }
   }
 
   .ban-sub-tit {
@@ -338,6 +346,14 @@
       weight: $el;
     }
     letter-spacing: 0.72px;
+    &.ty02 {
+      font: {
+        size: 4rem;
+        family: $kr_font;
+        weight: $r;
+      }
+      letter-spacing: -0.045em;
+    }
   }
 
   .ban-slogan {
@@ -348,6 +364,14 @@
       weight: $r;
     }
     letter-spacing: 0.52px;
+    &.ty02 {
+      font: {
+        size: $font-24r;
+        family: $kr_font;
+      }
+      letter-spacing: -0.045em;
+
+    }
   }
 }
 
@@ -365,6 +389,10 @@
 
     .tit-head {
       line-height: 1.1;
+      span {
+        display: block;
+        margin-bottom: 0.5rem;
+      }
     }
     .txt-list {
       @include flex-col(1.2rem);

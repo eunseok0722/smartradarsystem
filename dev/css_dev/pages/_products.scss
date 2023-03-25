@@ -29,6 +29,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: $font-60r;
+    &.ty02 {
+      font-size: $font-52r;
+      font-weight: $l;
+    }
   }
 }
 
@@ -929,6 +933,10 @@
     width: 550px;
     font-size: $font-26r;
     font-weight: $l;
+    &.ty02 {
+      width: 100%;
+      font-size: $font-18r;
+    }
   }
 
   a {
@@ -966,86 +974,3 @@
   }
 }
 
-.swap-contents {
-  .swap-sec {
-
-    width: 100%;
-    height: 1024px;
-    background-image: url("../images/img_tech_swap_002.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    box-sizing: border-box;
-    padding: 6rem 2.5rem 2.5rem;
-    box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.12);
-    border-radius: 2.4rem;
-
-    @include flex-col(64rem);
-    justify-content: center;
-    align-items: center;
-
-    .tit-art {
-      color: $white;
-      text-align: center;
-      line-height: 1.5;
-      display: flex;
-      width: 75%;
-    }
-
-    .app-list-wrap {
-      .app-list {
-        display: flex;
-        gap: 1.5rem;
-
-        .app-list-item {
-          flex-basis: calc((100% - 4.5rem) / 4);
-        }
-      }
-    }
-
-    .app-item {
-      width: 298px;
-      height: 240px;
-      background-color: #fff;
-      border-radius: 2.5rem;
-      box-shadow: 2.6px 3px 8px 0 rgba(0, 0, 0, 0.12);
-      overflow: hidden;
-
-      .lb-tit-r {
-        padding: 1.5rem 4rem 1rem;
-        color: $white;
-
-        &.ty01 {
-          background-color: #359dc3;
-        }
-
-        &.ty02 {
-          background-color: #f07723;
-        }
-
-        &.ty03 {
-          background-color: #ef19a7;
-        }
-
-        &.ty04 {
-          background-color: #1ca55c;
-        }
-      }
-
-      .app-dtl-list {
-        padding: 2.5rem 4rem 0;
-        @include flex-col(1.2rem);
-
-        .app-dtl-list-item {
-
-        }
-      }
-
-      .app-dtl-item {
-        color: #252525;
-        width: 220px;
-        @include ln-1;
-      }
-    }
-  }
-}
