@@ -41,6 +41,11 @@ body {
 .txt-l {
   font-size: $font-16r;
   //font-weight: $r;
+  &.ty02 {
+    font-size: $font-18r;
+    letter-spacing: -0.045em;
+    word-break: keep-all;
+  }
 }
 .txt-r {
   font-size: $font-13r;
@@ -83,6 +88,13 @@ body {
   font-size: $font-22r;
   font-family: $point_font;
   //font-weight: $r;
+  &.ty02 {
+    word-break: keep-all;
+    font-size: $font-20r;
+    letter-spacing: -0.045em;
+    line-height: 1.7;
+    font-family: $kr_font;
+  }
 }
 .tit-art-02 {
   font-size: $font-24r;
@@ -97,11 +109,25 @@ body {
 .tit-art-04 {
   font-size: $font-28r;
   font-family: $point_font;
+  &.ty02 {
+    word-break: keep-all;
+    letter-spacing: -0.045em;
+    font-size: $font-22r;
+    font-family: $kr_font;
+    line-height: 1.4;
+  }
 }
 .tit-head {
   font-size: $font-54r;
   font-family: $point_font;
   //font-weight: $r;
+
+  &.ty02 {
+    font-size: $font-50r;
+    letter-spacing: -0.045em;
+    word-break: keep-all;
+    font-family: $kr_font;
+  }
 }
 .txt-cont {
   font-size: $font-18r;
@@ -134,6 +160,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.ls-45 {
+  letter-spacing: -0.045em;
+  word-break: keep-all;
+}
 
 .blue-d {
   background-color: $blue_d;

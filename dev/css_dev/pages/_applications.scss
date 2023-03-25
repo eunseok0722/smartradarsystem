@@ -26,11 +26,17 @@
 
         .tit-head {
           line-height: 1.1;
+          &.ty02 {
+            line-height: 1.2;
+          }
         }
 
         .tit-art {
           font-weight: $l;
           line-height: 1.4;
+          &.ty02 {
+            line-height: 1.7;
+          }
         }
       }
     }
@@ -465,6 +471,9 @@
 
           &:last-child {
             border-right: unset
+          }
+          &.ty02 {
+            font-size: $font-13r;
           }
 
           .circle {

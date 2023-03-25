@@ -88,3 +88,32 @@
   font-weight: $eb;
   font-style: normal;
 }
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url('../font/Nanum-SquareRound-B.woff2') format('woff2'),
+  url('../font/Nanum-SquareRound-B.woff') format('woff'),
+  url('../font/Nanum-SquareRound-B.ttf') format('truetype'),
+  url('../font/Nanum-SquareRound-B.eot') format('opentype');
+  font-weight: $b;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url('../font/Nanum-SquareRound-R.woff2') format('woff2'),
+  url('../font/Nanum-SquareRound-R.woff') format('woff'),
+  url('../font/Nanum-SquareRound-R.ttf') format('truetype'),
+  url('../font/Nanum-SquareRound-R.eot') format('opentype');
+  font-weight: $r;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url('../font/Nanum-SquareRound-L.woff2') format('woff2'),
+  url('../font/Nanum-SquareRound-L.woff') format('woff'),
+  url('../font/Nanum-SquareRound-L.ttf') format('truetype'),
+  url('../font/Nanum-SquareRound-L.eot') format('opentype');
+  font-weight: $l;
+  font-style: normal;
+}

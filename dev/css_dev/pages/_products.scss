@@ -33,7 +33,6 @@
 }
 
 
-
 .lineup-table-wrap {
   width: 100%;
   height: fit-content;
@@ -80,6 +79,7 @@
             &:nth-child(1) {
               background-color: unset;
             }
+
             a {
               display: flex;
               width: 100%;
@@ -87,6 +87,7 @@
               box-sizing: border-box;
               transition: 0.35s;
               border: 1px solid $white;
+
               &:hover {
                 border: 1px solid $blue_l;
               }
@@ -151,7 +152,6 @@
 /* //product lineup */
 
 
-
 .prod-bg-wrap {
   width: 100%;
   background-size: contain;
@@ -194,6 +194,7 @@
 .bg-se68-51 {
   background-image: url("../images/img_se68_51_001.png");
 }
+
 .bg-lasso-iradar {
   background-image: url("../images/img_lasso_iradar_001.png");
 }
@@ -232,6 +233,7 @@
     padding: 3rem 0 5rem;
     margin-bottom: 16.8rem;
   }
+
   .btn-learn-more {
     color: #16aae5;
   }
@@ -285,26 +287,32 @@
       transform: scale(0.9);
       object-fit: cover;
     }
+
     &.ty02 {
       padding-bottom: 43.6rem;
+
       img {
         transform: unset;
       }
     }
   }
 }
+
 .container .content.prod-use-content {
   gap: 3.5rem;
 }
+
 .prod-use-content {
   .tit-cont {
     font-family: $point_font;
   }
 }
+
 .use-img-wrap {
   background-color: $gray_05;
   padding: 3.5rem 3rem;
   border-radius: 1rem;
+
   img {
     width: 100%;
     height: auto;
@@ -395,12 +403,15 @@
     border-top: 1px solid #e1e1e1;
     padding-top: 3.5rem;
   }
+
   .feat-info-list {
     display: flex;
     flex-wrap: wrap;
     row-gap: 3rem;
+
     .list-item {
       flex-basis: 12.5%;
+
       .feat-info-item {
         margin: 0 auto;
       }
@@ -427,6 +438,7 @@
   @include bdrs(2rem);
   background-color: $gray_01;
   transition: 0.3s;
+
   .ces-box {
     @include flex-col(1.5rem);
   }
@@ -669,6 +681,7 @@
       .img-wrap {
         width: fit-content;
         height: fit-content;
+
         .img-box {
           width: 18rem;
           height: 25rem;
@@ -694,6 +707,7 @@
               text-align: center;
 
               @include bdt(2px, $blue_l);
+
               .table-column {
                 .table-item {
                   font: {
@@ -748,6 +762,7 @@
     }
   }
 }
+
 .prod-purc-content {
   .purc-img-wrap {
     width: 100%;
@@ -756,12 +771,19 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
     .uas-img {
       gap: 1rem;
+
       p {
         font-size: 2.4rem;
         font-weight: $el;
+        &.ty02 {
+          font-size: 2rem;
+          font-weight: $r;
+        }
       }
+
       a {
         font-weight: $md;
         font-size: 1.8rem;
@@ -774,28 +796,51 @@
   .img-content {
     section {
       @include flex-col(8.2rem);
+
       .prod-head-cont {
         .tit-box {
           gap: 1rem;
+
           .tit-head {
             width: 80%;
           }
+
           p {
             font-weight: $l;
           }
         }
       }
+
       .prod-img-wrap {
         width: 100%;
         height: fit-content;
+        position: relative;
+
         img {
           width: 100%;
           height: 100%;
           object-fit: contain;
         }
+
+        .process-list {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: flex;
+          width: 100%;
+          .process-item {
+            flex-basis: 25%;
+            p {
+              padding: 3rem 2.5rem;
+              box-sizing: border-box;
+              line-height: 1.4;
+            }
+          }
+        }
       }
     }
   }
+
   .prod-spec-content {
     padding-top: unset;
   }
@@ -804,6 +849,7 @@
 .prod-contents {
   .str-content {
     gap: 2rem;
+
     .str-sec {
       display: flex;
       gap: 6rem;
@@ -812,10 +858,12 @@
       border-radius: 3rem;
       padding: 3rem 5rem;
     }
+
     .art-header {
       flex-basis: 190px;
       width: fit-content;
       min-width: 190px;
+
       h4 {
         font: {
           size: $font-28r;
@@ -824,9 +872,11 @@
         }
       }
     }
+
     .str-list {
       display: flex;
       gap: 3rem;
+
       .list-item {
 
       }
@@ -837,14 +887,17 @@
 .retina-for-uas-contents {
   section {
     @include flex-col(6rem);
+
     .prod-head-cont {
       .tit-box {
         gap: 5rem;
+
         .tit-head {
           width: 80%;
         }
       }
     }
+
     .prod-img-wrap {
       width: 1220px;
       height: 325px;
@@ -853,11 +906,10 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-
-
     }
   }
 }
+
 .uas-img {
   width: 100%;
   height: 100%;
@@ -865,17 +917,20 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+
   p,
   a {
     color: $white;
     font-family: $point_font;
   }
+
   p {
     display: block;
     width: 550px;
     font-size: $font-26r;
     font-weight: $l;
   }
+
   a {
     display: block;
     font-size: $font-20r;
@@ -888,16 +943,20 @@
   .prod-head-cont .tit-box .tit-head {
     width: 75%;
   }
+
   .prod-dtl-content {
     padding: 7rem 0;
+
     .dtl-item {
       .img-box {
         padding-bottom: 36.4rem;
       }
     }
   }
+
   .feat-list {
     position: relative;
+
     .btn-learn-more {
       position: absolute;
       right: 3rem;
@@ -906,6 +965,7 @@
     }
   }
 }
+
 .swap-contents {
   .swap-sec {
 
@@ -923,6 +983,7 @@
     @include flex-col(64rem);
     justify-content: center;
     align-items: center;
+
     .tit-art {
       color: $white;
       text-align: center;
@@ -930,15 +991,18 @@
       display: flex;
       width: 75%;
     }
-    .app-list-wrap  {
+
+    .app-list-wrap {
       .app-list {
         display: flex;
         gap: 1.5rem;
+
         .app-list-item {
-          flex-basis: calc((100% - 4.5rem ) / 4);
+          flex-basis: calc((100% - 4.5rem) / 4);
         }
       }
     }
+
     .app-item {
       width: 298px;
       height: 240px;
@@ -946,29 +1010,37 @@
       border-radius: 2.5rem;
       box-shadow: 2.6px 3px 8px 0 rgba(0, 0, 0, 0.12);
       overflow: hidden;
+
       .lb-tit-r {
         padding: 1.5rem 4rem 1rem;
         color: $white;
+
         &.ty01 {
           background-color: #359dc3;
         }
+
         &.ty02 {
           background-color: #f07723;
         }
+
         &.ty03 {
           background-color: #ef19a7;
         }
+
         &.ty04 {
           background-color: #1ca55c;
         }
       }
+
       .app-dtl-list {
         padding: 2.5rem 4rem 0;
         @include flex-col(1.2rem);
+
         .app-dtl-list-item {
 
         }
       }
+
       .app-dtl-item {
         color: #252525;
         width: 220px;

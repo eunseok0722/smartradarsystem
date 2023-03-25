@@ -16,12 +16,15 @@
     justify-content: space-between;
     border-bottom: 1px solid $gray_04;
     padding-bottom: 3rem;
+    gap: 2rem;
 
     .art-addr {
+      flex-basis: 33.33%;
       @include flex-col(1rem);
 
       address {
         font-style: normal;
+        line-height: 1.4;
         @include flex-col(0.7rem);
 
         span {
@@ -49,6 +52,7 @@
           &:nth-child(4) {
             flex-basis: 16.67%;
             width: 16.67%;
+            gap: 4rem;
           }
 
           .tit-l {
