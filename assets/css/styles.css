@@ -1024,7 +1024,11 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 
 .org-chart-wrap .chart-item { position: absolute; width: 168px; height: 48px; border-radius: 6px; overflow: hidden; }
 
-.org-chart-wrap .chart-item a, .org-chart-wrap .chart-item button { display: flex; justify-content: center; align-items: center; text-align: center; width: 100%; height: 100%; font-size: 1.6rem; }
+.org-chart-wrap .chart-item a, .org-chart-wrap .chart-item button { display: flex; justify-content: center; align-items: center; text-align: center; width: 100%; height: 100%; font-size: 1.6rem; transition: 0.35s; }
+
+.org-chart-wrap .chart-item a:hover, .org-chart-wrap .chart-item button:hover { transform: scale(1.1); }
+
+.org-chart-wrap .chart-item .d1-item a, .org-chart-wrap .chart-item .d1-item button { font-size: 1.6rem; }
 
 .org-chart-wrap .chart-item.ty01 { background-color: #3081d2; }
 
@@ -1042,6 +1046,12 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 
 .org-chart-wrap .chart-item.ty04 a, .org-chart-wrap .chart-item.ty04 button { color: #fff; }
 
+.org-chart-wrap .chart-item.ty05 { border: 1px solid #d7d7d7; background-color: #fff; }
+
+.org-chart-wrap .chart-item.ty06 { background-color: #e1e1e1; }
+
+.org-chart-wrap .chart-d2 .chart-item a, .org-chart-wrap .chart-d2 .chart-item button { font-family: "Poppins", sans-serif; font-size: 1.3rem; }
+
 .org-chart-wrap .item-01 { left: 439px; }
 
 .org-chart-wrap .item-02 { right: 2px; top: 52px; }
@@ -1051,6 +1061,12 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 .org-chart-wrap .item-04 { left: 530px; top: 111px; }
 
 .org-chart-wrap .item-05 { left: 0; top: 204px; }
+
+.org-chart-wrap .item-05-01 { left: 0; top: 270px; }
+
+.org-chart-wrap .item-05-02 { left: 0; top: 325px; }
+
+.org-chart-wrap .item-05-03 { left: 0; top: 380px; }
 
 .org-chart-wrap .item-06 { left: 264px; top: 204px; }
 
@@ -1062,9 +1078,31 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 
 .org-chart-wrap .item-10 { right: 2px; top: 204px; }
 
-.org-chart-wrap .item-06-01 { left: 175px; top: 270px; }
+.org-chart-wrap .item-06-01 { left: 174px; top: 270px; }
 
-.org-chart-wrap .item-06-02 { left: 350px; top: 270px; }
+.org-chart-wrap .item-06-02 { left: 349px; top: 270px; }
+
+.org-chart-wrap .item-06-01-01 { left: 174px; top: 325px; }
+
+.org-chart-wrap .item-06-01-02 { left: 174px; top: 379px; }
+
+.org-chart-wrap .item-06-01-03 { left: 174px; top: 435px; }
+
+.org-chart-wrap .item-06-01-04 { left: 174px; top: 490px; }
+
+.org-chart-wrap .item-06-01-05 { left: 174px; top: 545px; }
+
+.org-chart-wrap .item-06-02-01 { left: 348px; top: 325px; }
+
+.org-chart-wrap .item-06-02-02 { left: 348px; top: 379px; }
+
+.org-chart-wrap .item-06-02-03 { left: 526px; top: 295px; }
+
+.org-chart-wrap .item-10-01 { right: 0; top: 270px; }
+
+.org-chart-wrap .item-10-02 { right: 0; top: 325px; }
+
+.career-content section { display: flex; flex-direction: column; gap: 3rem; }
 
 /* //team building & Careers */
 /* newsroom */
@@ -1130,7 +1168,7 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 
 .item-content .txt-wrap { width: 100%; height: fit-content; display: inline-block; padding: 3rem 8rem; box-sizing: border-box; line-height: 1.6; border-bottom: 2px solid #d7d7d7; }
 
-.item-content.active { max-height: 200px; }
+.item-content.active { max-height: 500px; }
 
 /* //Investors & Partners */
 /* product lineup */
