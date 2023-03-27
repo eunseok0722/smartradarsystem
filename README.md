@@ -29,7 +29,8 @@
 - assets : 컴파일된 css, font, image, 동작구현용 js
 - dev : gulp 구동을 위한 자료 모음
 - markup_guide : 마크업 가이드 자료 모음
-- pages : 컴파일된 html 파일
+- en : 컴파일 된 html 영문페이지
+- kr : 컴파일 된 html 한글페이지
 - index.html : 마크업리스트
 
 
