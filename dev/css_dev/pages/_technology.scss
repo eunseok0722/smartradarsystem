@@ -297,7 +297,7 @@
     box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.12);
     border-radius: 2.4rem;
 
-    @include flex-col(64rem);
+    @include flex-col(60rem);
     justify-content: center;
     align-items: center;
     &.ty02 {
