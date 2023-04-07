@@ -117,3 +117,50 @@
   font-weight: $l;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../font/Pretendard-Light.woff2') format('woff2'),
+  url('../font/Pretendard-Light.woff') format('woff'),
+  url('../font/Pretendard-Light.ttf') format('truetype'),
+  url('../font/Pretendard-Light.eot') format('opentype');
+  font-weight: $l;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../font/Pretendard-Regular.woff2') format('woff2'),
+  url('../font/Pretendard-Regular.woff') format('woff'),
+  url('../font/Pretendard-Regular.ttf') format('truetype'),
+  url('../font/Pretendard-Regular.eot') format('opentype');
+  font-weight: $r;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../font/Pretendard-Medium.woff2') format('woff2'),
+  url('../font/Pretendard-Medium.woff') format('woff'),
+  url('../font/Pretendard-Medium.ttf') format('truetype'),
+  url('../font/Pretendard-Medium.eot') format('opentype');
+  font-weight: $md;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../font/Pretendard-SemiBold.woff2') format('woff2'),
+  url('../font/Pretendard-SemiBold.woff') format('woff'),
+  url('../font/Pretendard-SemiBold.ttf') format('truetype'),
+  url('../font/Pretendard-SemiBold.eot') format('opentype');
+  font-weight: $sb;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../font/Pretendard-Bold.woff2') format('woff2'),
+  url('../font/Pretendard-Bold.woff') format('woff'),
+  url('../font/Pretendard-Bold.ttf') format('truetype'),
+  url('../font/Pretendard-Bold.eot') format('opentype');
+  font-weight: $b;
+  font-style: normal;
+}
