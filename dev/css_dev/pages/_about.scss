@@ -281,9 +281,10 @@
           size: $font-12r;
           weight: $l;
           family: $point_font;
-
         };
-
+        @include t-l {
+          font-family: $mo_font;
+        }
         .table-column {
           .table-item {
             background-color: unset !important;
@@ -488,6 +489,9 @@
         font-weight: $md;
         font-family: $point_font;
         color: $blue_l;
+        @include t-l {
+          font-family: $mo_font;
+        }
       }
     }
   }
@@ -889,6 +893,9 @@
       button {
         font-family: $point_font;
         font-size: $font-13r;
+        @include t-l {
+          font-family: $mo_font;
+        }
       }
     }
   }
@@ -1099,6 +1106,9 @@
               }
               line-height: 1;
               color: $red;
+              @include t-l {
+                font-family: $mo_font;
+              }
             }
           }
         }

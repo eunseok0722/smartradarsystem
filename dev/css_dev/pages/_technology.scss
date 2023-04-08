@@ -25,14 +25,21 @@
           family: $point_font;
           weight: $l;
         }
+
         text-align: center;
         line-height: 1.4;
+        @include t-l {
+          font-family: $mo_font;
+        }
         &.ty02 {
           font: {
             size: $font-28r;
             family: $kr_font;
           }
           letter-spacing: -0.045em;
+          @include t-l {
+            font-family: $mo_font;
+          }
         }
       }
     }
@@ -279,6 +286,9 @@
 
   &.ty02 {
     font-weight: $b;
+  }
+  @include t-l {
+    font-family: $mo_font;
   }
 }
 

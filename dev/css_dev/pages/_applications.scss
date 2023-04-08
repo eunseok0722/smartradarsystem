@@ -287,6 +287,18 @@
       background-image: url("../images/ico_appl_feat_024.png");
     }
   }
+  @include t-s {
+    width: 8rem;
+    .ico-box {
+      width: 6.5rem;
+      height: 6.5rem;
+      background-size: 60%;
+      @include bdrs (1rem);
+    }
+    .tit-l {
+      @include font-set($font-13r, $l, inherit, 0.78px, inherit);
+    }
+  }
 }
 
 .auto-vehi-cont {
@@ -349,6 +361,9 @@
           border: 1px dashed $gray_02;
           box-sizing: border-box;
           transition: 0.3s;
+          @include t-l {
+            font-family: $mo_font;
+          }
         }
       }
     }
@@ -430,6 +445,9 @@
           weight: $r;
           family: $point_font;
         };
+        @include t-l {
+          font-family: $mo_font;
+        }
 
         .table-column {
           .table-item {
@@ -483,6 +501,9 @@
             }
             line-height: 1;
             color: $red;
+            @include t-l {
+              font-family: $mo_font;
+            }
           }
           span {
             display: block;

@@ -29,6 +29,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: $font-60r;
+
     &.ty02 {
       font-size: $font-52r;
       font-weight: $l;
@@ -69,6 +70,9 @@
               background-color: $gray_05;
             }
 
+            @include t-l {
+              font-family: $mo_font;
+            }
           }
         }
       }
@@ -161,6 +165,14 @@
   background-size: contain;
   background-position: 100% 50%;
   background-repeat: no-repeat;
+  @include t-l {
+    box-sizing: border-box;
+    padding: 0 2rem;
+    background-position: 100% 100%;
+  }
+  @include t-s {
+    padding: 5rem 2rem 0;
+  }
 }
 
 .bg-retina-next-gen {
@@ -203,16 +215,27 @@
   background-image: url("../images/img_lasso_iradar_001.png");
 }
 
+.container {
+  .img-content {
+    .content-header {
+      @include flex-col(1rem);
 
-.img-content {
-  .content-header {
-    @include flex-col(1rem);
+      .txt-r {
+        color: $blue_l;
+      }
+    }
 
-    .txt-r {
-      color: $blue_l;
+    @include t-s {
+      padding-bottom: 80%;
+      .content-header {
+        .tit-cont {
+          @include font-set($font-30r, $l, inherit, 0.58px, 1);
+        }
+      }
     }
   }
 }
+
 
 .prod-head-cont {
   .tit-box {
@@ -230,16 +253,66 @@
       width: 50%;
     }
   }
+
+  @include t-l {
+    .tit-box {
+      .tit-head {
+        width: 85%;
+      }
+
+      .txt-l {
+        width: 75%;
+        width: 75%;
+      }
+    }
+  }
+  @include t-s {
+    .tit-box {
+      gap: 3rem;
+
+      .tit-head {
+        width: 100%;
+        @include font-set($font-30r, $el, inherit, -1.35px, 1.2);
+      }
+
+      .txt-l {
+        width: 100%;
+        @include font-set($font-16r, $el, inherit, -0.72px, 1.6);
+      }
+    }
+  }
 }
 
 .prod-contents {
+  .prod-bg-wrap.gray {
+    margin-bottom: 16.8rem;
+    padding-bottom: 5rem;
+  }
+
   .prod-dtl-content {
     padding: 3rem 0 5rem;
-    margin-bottom: 16.8rem;
   }
 
   .btn-learn-more {
-    color: #16aae5;
+    color: $blue_l;
+  }
+
+  @include t-l {
+
+    .prod-bg-wrap.gray {
+      padding-top: 5rem;
+    }
+    .prod-dtl-content {
+      width: 100%;
+      padding: unset;
+    }
+  }
+  @include t-s {
+    padding-bottom: 12rem;
+    .prod-bg-wrap.gray {
+      margin-bottom: unset;
+      overflow: scroll;
+    }
   }
 }
 
@@ -252,6 +325,31 @@
     .list-item {
       flex: 1 1 30%;
     }
+  }
+
+  @include t-l {
+    min-width: 768px;
+    &.ty02 {
+      min-width: 512px;
+    }
+
+    .dtl-list {
+      gap: 3rem;
+    }
+  }
+  @include t-s {
+    padding-right: 2rem;
+    &.ty03 {
+      min-width: 1280px;
+      .dtl-list {
+        .list-item {
+          flex: 1 1 15%;
+          display: flex;
+          align-items: flex-end;
+        }
+      }
+    }
+
   }
 }
 
@@ -300,15 +398,35 @@
       }
     }
   }
+
+  @include t-l {
+    .img-box {
+      padding-bottom: 100%;
+    }
+  }
+  @include t-s {
+    .tit-box {
+      width: 12rem;
+    }
+    .img-box.ty02 {
+      padding-bottom: 100%;
+    }
+  }
 }
 
 .container .content.prod-use-content {
   gap: 3.5rem;
+  @include t-s {
+    gap: 2rem;
+  }
 }
 
 .prod-use-content {
   .tit-cont {
     font-family: $point_font;
+    @include t-l {
+      font-family: $mo_font;
+    }
   }
 }
 
@@ -322,6 +440,10 @@
     height: auto;
     object-fit: contain;
   }
+
+  @include t-s {
+    padding: 1rem;
+  }
 }
 
 .spec-content {
@@ -331,7 +453,22 @@
     align-items: flex-end;
 
     .tit-cont {
-      font-family: "Poppins", sans-serif;
+      font-family: $point_font;
+    }
+  }
+
+  @include t-l {
+    .content-header {
+      .tit-cont {
+        font-family: $mo_font;
+      }
+    }
+  }
+  @include t-s {
+    .content-header {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: flex-start;
     }
   }
 }
@@ -369,6 +506,30 @@
       }
     }
   }
+
+  @include t-l {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+  }
+  @include t-s {
+    grid-template-columns: 1fr 1fr;
+    .list-item {
+      height: 65px;
+
+      &:first-child .spec-item .spec-box .tit-art-03 {
+        font-size: $font-22r;
+      }
+    }
+  }
+  @include m-l {
+    grid-template-columns: 1fr;
+    grid-gap: 0.5rem;
+    .list-item {
+      &.span {
+        grid-column: unset;
+      }
+    }
+  }
 }
 
 .spec-item {
@@ -392,15 +553,23 @@
     line-height: 1.2;
     color: $black_02;
   }
+
+  @include t-s {
+    @include bdrs(0.5rem);
+  }
 }
 
 .container .content.prod-feat-content {
   gap: 3rem;
+  @include t-s {
+    gap: 2rem;
+  }
 }
 
 .prod-feat-content {
   .tit-cont {
     font-family: $point_font;
+
   }
 
   .feat-sec {
@@ -418,6 +587,33 @@
 
       .feat-info-item {
         margin: 0 auto;
+      }
+    }
+  }
+
+  @include t-l {
+    .tit-cont {
+      font-family: $mo_font;
+    }
+    .feat-sec {
+      padding-top: 2rem;
+    }
+    .feat-info-list {
+      gap: 2rem 0.5rem;
+    }
+    .feat-list {
+      gap: 2rem;
+      justify-content: space-between;
+      .list-item {
+        flex-basis: calc((100% - 2rem) / 2);
+      }
+    }
+  }
+  @include t-s {
+    .feat-list {
+      .list-item {
+        flex-basis: unset;
+        width: 100%;
       }
     }
   }
@@ -624,6 +820,54 @@
     //  }
     //}
   }
+  @include t-l {
+    padding: 2rem 2.5rem;
+    .tit-box {
+      gap: 2rem;
+      p {
+        display: inline-block;
+        width: calc(100% - 105px );
+      }
+    }
+  }
+  @include t-s {
+    flex-direction: column;
+    min-height: unset;
+    .tit-box {
+      gap: 1rem;
+      &::before {
+        width: 3.6rem;
+        height: 3.6rem;
+        @include bdrs(1.2rem);
+        background-size: 50%;
+      }
+      p {
+        @include font-set($font-16r, $r, inherit, -0.32px, 1.2);
+        width: calc(100% - 46px);
+      }
+
+    }
+    .cont-box {
+      margin: 2rem 0 0;
+      padding: 0 1rem;
+
+      .txt-l {
+        display: flex;
+        flex-wrap : wrap;
+        justify-content: flex-start;
+        gap: 0 1rem;
+        @include font-set($font-13r, $r, inherit, -0.26px, 1.2);
+        span {
+          flex-basis: 180px;
+        }
+      }
+    }
+    .ty02 {
+      .tit-box {
+        padding: 2rem 2.5rem;
+      }
+    }
+  }
 }
 
 .video-content {
@@ -636,6 +880,9 @@
     font-family: $point_font;
     font-weight: $l;
     line-height: 1.25;
+    @include t-l {
+      font-family: $mo_font;
+    }
   }
 
   section {
@@ -649,7 +896,7 @@
     width: 60%;
     height: 0;
     padding-bottom: 33.75%;
-    min-width: 738px;
+    //min-width: 738px;
     overflow: hidden;
     position: relative;
 
@@ -661,6 +908,15 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
+    }
+  }
+  @include t-s {
+    .tit-cont {
+      @include font-set($font-20r, $r, inherit, 0.8px, 1.2);
+    }
+    .img-wrap {
+      width: 100%;
+      padding-bottom: 56.25%;
     }
   }
 }
@@ -677,11 +933,15 @@
     .tit-box {
       .tit-head {
         width: 75%;
+        @include t-l {
+          width: inherit;
+          word-break: keep-all;
+        }
       }
     }
   }
+
   .prod-feat-content {
-    margin-top: 16.8rem;
 
     .cont-box {
       display: flex;
@@ -728,6 +988,9 @@
                   };
                   background-color: $gray_07;
                   height: 3.5rem;
+                  @include t-l {
+                    font-family: $mo_font;
+                  }
                 }
               }
             }
@@ -752,6 +1015,11 @@
                 line-height: 1.7;
                 transition: background-color 0.3s;
                 @include bdr(1px, $gray_04);
+                &.pc-s {
+                  @include t-s {
+                    display: none;
+                  }
+                }
 
                 &:last-child {
                   border-right: unset
@@ -764,11 +1032,36 @@
                   }
                   line-height: 1;
                   color: $red;
+                  @include t-l {
+                    font-family: $mo_font;
+                  }
+                }
+                @include t-s {
+                  height: fit-content;
+                  padding: 1rem 2.5rem;
+                  border-right: unset;
                 }
               }
             }
           }
         }
+      }
+    }
+  }
+  @include t-l {
+    .prod-feat-content {
+      .cont-box {
+        margin: 3rem 0;
+        padding: 0 2.5rem;
+        gap: 4rem;
+      }
+    }
+  }
+  @include t-s {
+    .prod-feat-content {
+      .cont-box {
+        flex-direction: column;
+        align-items: center;
       }
     }
   }
@@ -778,8 +1071,12 @@
   .content-header {
     .tit-cont {
       font-family: $point_font;
+      @include t-l {
+        font-family: $mo_font;
+      }
     }
   }
+
   .purc-img-wrap {
     width: 100%;
     height: 140px;
@@ -787,6 +1084,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
+    @include bdrs(3rem);
 
     .uas-img {
       gap: 1rem;
@@ -794,6 +1093,7 @@
       p {
         font-size: 2.4rem;
         font-weight: $el;
+
         &.ty02 {
           font-size: 2rem;
           font-weight: $r;
@@ -803,6 +1103,20 @@
       a {
         font-weight: $md;
         font-size: 1.8rem;
+      }
+    }
+  }
+  @include t-s {
+    .purc-img-wrap {
+      @include bdrs (2rem);
+      .uas-img {
+        p.ty02,
+        p {
+          @include font-set($font-15r, $r, inherit, inherit, 1.4);
+        }
+        a {
+          @include font-set($font-16r, $r, inherit, 0.32px, 1);
+        }
       }
     }
   }
@@ -844,8 +1158,10 @@
           left: 0;
           display: flex;
           width: 100%;
+
           .process-item {
             flex-basis: 25%;
+
             p {
               padding: 3rem 2.5rem;
               box-sizing: border-box;
@@ -859,6 +1175,41 @@
 
   .prod-spec-content {
     padding-top: unset;
+  }
+
+  @include t-l {
+    .img-content {
+      section {
+        .prod-head-cont .tit-box .tit-head {
+          width: 100%;
+        }
+        .prod-img-wrap .process-list .process-item p {
+          padding: 2rem;
+          @include font-set($font-14r, $r, inherit, -0.28px, 1.2);
+        }
+      }
+    }
+  }
+  @include t-s {
+    .img-content {
+      padding-bottom: unset;
+      section {
+        gap: 2rem;
+        .prod-img-wrap {
+          img {
+            width: 100%;
+            max-width: 324px;
+            height: auto;
+            margin: 0 auto;
+          }
+          .process-list {
+            flex-direction: column;
+            visibility: hidden;
+            font-size: 0;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -885,6 +1236,9 @@
           size: $font-28r;
           family: $point_font;
           weight: $l;
+        }
+        @include t-l {
+          font-family: $mo_font;
         }
       }
     }
@@ -922,6 +1276,34 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+      overflow: hidden;
+      @include bdrs(2rem);
+    }
+  }
+
+  @include t-l {
+    section {
+      .prod-img-wrap {
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
+  }
+  @include t-s {
+    .img-content {
+      padding-bottom: unset;
+    }
+    section {
+      gap: 2rem;
+
+      .prod-head-cont {
+        .tit-box {
+          gap: 2rem;
+        }
+      }
+      .prod-img-wrap {
+        height: 200px;
+      }
     }
   }
 }
@@ -938,13 +1320,18 @@
   a {
     color: $white;
     font-family: $point_font;
+    @include t-l {
+      font-family: $mo_font;
+      line-height: 1.4;
+    }
   }
 
   p {
     display: block;
-    width: 550px;
+    width: 75%;
     font-size: $font-26r;
     font-weight: $l;
+
     &.ty02 {
       width: 100%;
       font-size: $font-18r;
@@ -956,6 +1343,14 @@
     font-size: $font-20r;
     font-weight: $b;
     @include bdb(1px, $white)
+  }
+  @include t-s {
+    p {
+      @include font-set ($font-15r, $r, inherit, -0.68px, 1.4);
+    }
+    a {
+      @include font-set ($font-16r, $sb, inherit, 0.32px, 1);
+    }
   }
 }
 
@@ -982,6 +1377,35 @@
       right: 3rem;
       bottom: 5rem;
 
+    }
+  }
+  @include t-l {
+    .prod-head-cont .tit-box .tit-head {
+      width: 100%;
+    }
+    .prod-dtl-content {
+      padding: unset;
+      .dtl-item {
+        .img-box {
+          padding-bottom: 100%;
+        }
+      }
+    }
+  }
+  @include t-s {
+    .feat-list {
+      .btn-learn-more {
+        margin-top: 2rem;
+        position: relative;
+        right: unset;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+      }
+    }
+    .feat-item .cont-box .txt-l span {
+      flex-basis: 100%;
     }
   }
 }

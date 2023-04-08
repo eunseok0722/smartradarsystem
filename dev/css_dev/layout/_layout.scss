@@ -11,10 +11,6 @@
 
 .container {
   overflow: hidden;
-  //width: 90%;
-  //max-width: 1920px;
-  //margin: 0 auto;
-  //min-width: 1280px;
   .content {
     width: $pc-min;
     margin: 0 auto;
@@ -27,6 +23,21 @@
 
   .head-content {
     padding-top: 5rem;
+  }
+  @include t-l {
+    width: 100%;
+    .content {
+      width: 100%;
+    }
+  }
+  @include t-s {
+    .content {
+      gap: 3rem;
+      padding-bottom: unset;
+    }
+    .head-content {
+      padding-top: unset;
+    }
   }
 }
 

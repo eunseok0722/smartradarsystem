@@ -117,16 +117,16 @@
 //  }
 //}
 //
-//@mixin m-l {
-//  @media (max-width: $m-l) {
-//    @content;
-//  }
-//}
-//@mixin t-s {
-//  @media (max-width: $t-s) {
-//    @content;
-//  }
-//}
+@mixin m-l {
+  @media (max-width: $m-l) {
+    @content;
+  }
+}
+@mixin t-s {
+  @media (max-width: $t-s) {
+    @content;
+  }
+}
 @mixin t-l {
   @media (max-width: $t-l) {
     @content;
@@ -144,3 +144,13 @@
 //    @content;
 //  }
 //}
+
+@mixin font-set($sz : 1.6rem, $w : $r, $f : $default_font, $ls : 0, $lh : 1, ) {
+  font : {
+    size: $sz;
+    weight: $w;
+    family: $f;
+  }
+  letter-spacing: $ls;
+  line-height: $lh;
+}

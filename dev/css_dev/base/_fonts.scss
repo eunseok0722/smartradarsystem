@@ -58,7 +58,6 @@
   font-style: normal;
 }
 
-
 @font-face {
   font-family: 'Poppins';
   src: url('../font/Poppins-SemiBold.woff2') format('woff2'),
@@ -88,25 +87,6 @@
   font-weight: $eb;
   font-style: normal;
 }
-@font-face {
-  font-family: 'NanumSquareRound';
-  src: url('../font/NanumSquareRoundB.woff2') format('woff2'),
-  url('../font/NanumSquareRoundB.woff') format('woff'),
-  url('../font/NanumSquareRoundB.ttf') format('truetype'),
-  url('../font/NanumSquareRoundB.eot') format('opentype');
-  font-weight: $b;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'NanumSquareRound';
-  src: url('../font/NanumSquareRoundR.woff2') format('woff2'),
-  url('../font/NanumSquareRoundR.woff') format('woff'),
-  url('../font/NanumSquareRoundR.ttf') format('truetype'),
-  url('../font/NanumSquareRoundR.eot') format('opentype');
-  font-weight: $r;
-  font-style: normal;
-}
 
 @font-face {
   font-family: 'NanumSquareRound';
@@ -117,7 +97,35 @@
   font-weight: $l;
   font-style: normal;
 }
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url('../font/NanumSquareRoundR.woff2') format('woff2'),
+  url('../font/NanumSquareRoundR.woff') format('woff'),
+  url('../font/NanumSquareRoundR.ttf') format('truetype'),
+  url('../font/NanumSquareRoundR.eot') format('opentype');
+  font-weight: $r;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url('../font/NanumSquareRoundB.woff2') format('woff2'),
+  url('../font/NanumSquareRoundB.woff') format('woff'),
+  url('../font/NanumSquareRoundB.ttf') format('truetype'),
+  url('../font/NanumSquareRoundB.eot') format('opentype');
+  font-weight: $b;
+  font-style: normal;
+}
 
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../font/Pretendard-ExtraLight.woff2') format('woff2'),
+  url('../font/Pretendard-ExtraLight.woff') format('woff'),
+  url('../font/Pretendard-ExtraLight.ttf') format('truetype'),
+  url('../font/Pretendard-ExtraLight.eot') format('opentype');
+  font-weight: $el;
+  font-style: normal;
+}
 @font-face {
   font-family: 'Pretendard';
   src: url('../font/Pretendard-Light.woff2') format('woff2'),

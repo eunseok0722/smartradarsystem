@@ -280,7 +280,19 @@
     animation-fill-mode: backwards;
     animation-timing-function: ease-in-out;
   }
+  @include t-s {
+    padding-bottom: 500px;
+    .banner-list {
+      display: flex;
+      width: 400%;
+      animation-name: banner-slide-mo;
+      .list-item {
+        width: 100%;
+      }
+    }
+  }
 }
+
 
 .banner-img {
   position: relative;
@@ -302,7 +314,9 @@
   &.banner-img-03 {
     background-image: url('../images/img_main_001.png');
   }
-
+  @include t-s {
+    padding-bottom: 500px;
+  }
 }
 
 .banner-txt-list {
@@ -329,7 +343,6 @@
       weight: $r;
     }
     letter-spacing: 1.4px;
-
     &.ty02 {
       font: {
         size: 6.2rem;
@@ -346,6 +359,9 @@
       weight: $el;
     }
     letter-spacing: 0.72px;
+    @include t-l {
+      font-family: $mo_font;
+    }
     &.ty02 {
       font: {
         size: 4rem;
@@ -373,6 +389,45 @@
 
     }
   }
+  @include t-s {
+    left: 2rem;
+    top: 7.5rem;
+    transform: unset;
+    text-align: left;
+    width: calc(100% - 4rem);
+    align-items: flex-start;
+    h4,
+    h5,
+    p {
+      color: #fff;
+    }
+    .ban-tit,
+    .ban-tit.ty02 {
+      font : {
+        size: $font-22r;
+        weight: $b;
+        family: $mo_font;
+      }
+      letter-spacing: -0.99px;
+    }
+    .ban-sub-tit,
+    .ban-sub-tit.ty02 {
+      font : {
+        size: 3.2rem;
+        weight: $el;
+        family: $mo_font;
+      }
+      letter-spacing: -1.49px;
+      line-height: 1.2;
+    }
+    .ban-slogan {
+      margin-top: 0.5rem;
+    }
+    .ban-slogan,
+    .ban-slogan.ty02 {
+      @include font-set (1.5rem, $r, $mo_font, -0.68px, 1.2);
+    }
+  }
 }
 
 .concept-content {
@@ -392,10 +447,14 @@
       span {
         display: block;
         margin-bottom: 0.5rem;
+        &.tbl-s {
+          display: inline;
+        }
       }
     }
     .txt-list {
       @include flex-col(1.2rem);
+      line-height: 1.2;
     }
   }
   &.ty02 {
@@ -406,6 +465,59 @@
       .txt-list {
         @include flex-col(1.2rem);
         align-items: flex-end;
+      }
+    }
+  }
+  @include t-l {
+    .content-header {
+      padding: 6rem 2rem;
+      box-sizing: border-box;
+    }
+  }
+  @include t-s {
+    height: 100vh;
+    overflow: hidden;
+    .content-header {
+      height: fit-content;
+      min-height: 50%;
+      .tit-head,
+      .tit-head.ty02 {
+        @include font-set (2.8rem, $sb, $mo_font, -1.26px);
+        span {
+          font-weight: $el;
+          &.tbl-s {
+            display: inline;
+          }
+        }
+      }
+      .txt-list {
+        gap: unset;
+        p {
+          @include font-set(1.5rem, $el, $mo_font, -0.68px, 1.4);
+        }
+        .emp {
+          margin-top: 3rem;
+          font-weight: $r;
+        }
+        .fw-r {
+          font-weight: $r;
+        }
+      }
+    }
+    .concept-img-wrap {
+      height: 100%;
+      .concept-img {
+        height: 100%;
+      }
+    }
+    &.ty02 {
+      .content-header {
+        align-items: flex-start;
+        text-align: left;
+        .txt-list {
+          //gap: unset;
+          align-items: flex-start;
+        }
       }
     }
   }
@@ -458,6 +570,30 @@
   }
   100% {
     top: -300%;
+  }
+}
+
+@keyframes banner-slide-mo {
+  0% {
+    left: 0;
+  }
+  23.33% {
+    left: 0;
+  }
+  33.33% {
+    left: -100%;
+  }
+  56.66% {
+    left: -100%;
+  }
+  66.66% {
+    left: -200%;
+  }
+  90.00% {
+    left: -200%;
+  }
+  100% {
+    left: -300%;
   }
 }
 

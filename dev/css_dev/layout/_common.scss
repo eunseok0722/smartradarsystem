@@ -2,6 +2,9 @@
 body {
   font-family: $default_font;
   scroll-behavior: smooth;
+  @include t-l {
+    font-family: $mo_font;
+  }
 }
 
 //// 웹접근성용 안내 문구 숨김
@@ -10,6 +13,29 @@ body {
   position: absolute;
   text-indent: -9999px;
 }
+.tbl-l {
+  display: none;
+  @include t-l {
+    display: block;
+  }
+}
+
+.tbl-s {
+  display: none;
+  @include t-s {
+    display: block;
+  }
+}
+.pc-s {
+  @include t-s {
+    display: none;
+  }
+}
+.pc-m {
+  @include t-l {
+    display: none;
+  }
+}
 
 //// font 설정
 
@@ -17,6 +43,9 @@ body {
   font-family: $point_font;
   //font-weight: $r;
   font-size: $font-16r;
+  @include t-l {
+    font-family: $mo_font;
+  }
 }
 .tit-r {
   font-family: $point_font;
@@ -24,17 +53,29 @@ body {
   font-size: $font-14r;
   &.ty02 {
     font-family: $kr_font;
+    @include t-l {
+      font-family: $mo_font;
+    }
+  }
+  @include t-l {
+    font-family: $mo_font;
   }
 }
 .tit-m {
   font-family: $point_font;
   //font-weight: $sb;
   font-size: $font-13r;
+  @include t-l {
+    font-family: $mo_font;
+  }
 }
 .tit-s {
   font-family: $point_font;
   //font-weight: $r;
   font-size: $font-12r;
+  @include t-l {
+    font-family: $mo_font;
+  }
 }
 
 .txt-el {
@@ -74,7 +115,6 @@ body {
   //font-weight: $sb;
 }
 .lb-txt-r {
-  font-family: $default_font;
   font-size: $font-14r;
   //font-weight: $r;
 }
@@ -82,15 +122,24 @@ body {
 .tit-cont {
   font-size: $font-42r;
   //font-weight: $r;
+  @include t-s {
+    @include font-set($font-26r, $r, inherit, 0.52px, 1);
+  }
 }
 .tit-sec {
   font-family: $point_font;
   font-size: $font-48r;
   //font-weight: $r;
+  @include t-l {
+    font-family: $mo_font;
+  }
 }
 .tit-sec-02 {
   font-family: $point_font;
   font-size: $font-32r;
+  @include t-l {
+    font-family: $mo_font;
+  }
 }
 .tit-art {
   font-size: $font-22r;
@@ -102,12 +151,21 @@ body {
     letter-spacing: -0.045em;
     line-height: 1.7;
     font-family: $kr_font;
+    @include t-l {
+      font-family: $mo_font;
+    }
+  }
+  @include t-l {
+    font-family: $mo_font;
   }
 }
 .tit-art-02 {
   font-size: $font-24r;
   font-family: $point_font;
   //font-weight: $md;
+  @include t-l {
+    font-family: $mo_font;
+  }
 }
 .tit-art-03 {
   font-size: $font-20r;
@@ -119,6 +177,12 @@ body {
     letter-spacing: -0.045em;
     line-height: 1.6;
   }
+  @include t-l {
+    font-family: $mo_font;
+  }
+  @include t-s {
+    font-weight: $r;
+  }
 }
 .tit-art-04 {
   font-size: $font-28r;
@@ -129,6 +193,12 @@ body {
     font-size: $font-22r;
     font-family: $kr_font;
     line-height: 1.4;
+    @include t-l {
+      font-family: $mo_font;
+    }
+  }
+  @include t-l {
+    font-family: $mo_font;
   }
 }
 .tit-head {
@@ -142,6 +212,12 @@ body {
     word-break: keep-all;
     font-family: $kr_font;
     line-height: 1.25;
+    @include t-l {
+      font-family: $mo_font;
+    }
+  }
+  @include t-l {
+    font-family: $mo_font;
   }
 }
 .txt-cont {
@@ -230,6 +306,17 @@ body {
   background-size: 2.5rem 1.4rem;
   background-color: $blue_l;
   border: 1px solid $blue_d;
+}
+@include t-l {
+  .ico-facebook {
+    background-image: url("../images/ico_facebook_002.png");
+  }
+  .ico-linkedin {
+    background-image: url("../images/ico_linkedin_002.png");
+  }
+  .ico-youtube {
+    background-image: url("../images/ico_youtube_002.png");
+  }
 }
 
 

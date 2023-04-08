@@ -197,7 +197,6 @@
     justify-content: space-between;
     border-top: 1px solid $gray_04;
     padding-top: 2rem;
-
     .ico-list {
       display: flex;
       gap: 1rem;
@@ -221,6 +220,35 @@
     &.active {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+  @include t-l {
+    background-color: #252525;
+    color: $gray_04;
+    .footer-wrap {
+      width: 100%;
+      padding: 3rem 2rem;
+      gap: 2rem;
+      .sec-addr {
+        flex-wrap: wrap;
+        padding-bottom: unset;
+        border-bottom: unset;
+        .art-addr {
+          flex-basis: 320px;
+        }
+      }
+      .sec-map {
+        display: none;
+      }
+      .sec-copy {
+        flex-wrap : wrap;
+        gap: 1.8rem;
+        .art-copy {
+          display: flex;
+          align-items: center;
+          order: 2;
+        }
+      }
     }
   }
 }
