@@ -133,6 +133,9 @@ body {
   @include t-l {
     font-family: $mo_font;
   }
+  @include t-s {
+    @include font-set(2.3rem, $r, inherit, 0.46px, 1.2);
+  }
 }
 .tit-sec-02 {
   font-family: $point_font;
@@ -165,6 +168,9 @@ body {
   //font-weight: $md;
   @include t-l {
     font-family: $mo_font;
+  }
+  @include t-s {
+    @include font-set($font-15r, $r, inherit, 0.3px, 1.2);
   }
 }
 .tit-art-03 {
@@ -227,6 +233,9 @@ body {
   font-size: $font-18r;
   //font-weight: $r;
   line-height: 1.5;
+  @include t-s {
+    @include font-set($font-14r, $r, inherit, -0.63px, 1.2);
+  }
 }
 
 .fw-l {

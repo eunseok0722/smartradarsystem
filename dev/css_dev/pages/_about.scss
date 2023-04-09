@@ -1,5 +1,5 @@
 /* about main */
-.about-contents {
+.about-main-contents {
   .main-img-banner {
     .img-wrap {
       background-color: unset;
@@ -83,9 +83,36 @@
       }
     }
   }
+  @include t-s {
+    .cont-head-content {
+      .txt-sec {
+        flex-direction: column;
+        gap: 2rem;
+        .tit-box {
+          flex-basis: unset;
+        }
+        .add-box {
+          flex-basis: unset;
+          .add {
+            gap: 1rem;
+            position: relative;
+            .phone-num {
+              position: absolute;
+              right: 0;
+              bottom: 0;
+            }
+          }
+        }
+      }
+
+    }
+  }
 }
 .add-01 {
   margin-top: 9rem;
+  @include t-s {
+    margin-top: unset;
+  }
 }
 
 .phone-num {
@@ -110,6 +137,18 @@
     width: 100%;
     height: 100%;
   }
+  @include t-s {
+    height: fit-content;
+    padding-bottom: 100%;
+    position: relative;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
 }
 .map-list {
   display: flex;
@@ -128,6 +167,14 @@
       margin-top: unset;
     }
   }
+  @include m-l {
+    flex-direction: column;
+    gap: 3rem;
+    .list-item {
+      flex-basis: unset;
+      gap: 1.5rem;
+    }
+  }
 }
 
 /* // Contacts */
@@ -139,6 +186,12 @@
 .pate-sec {
   margin-top: 10rem;
   @include flex-col(4rem);
+  @include t-l {
+    margin-top: unset;
+  }
+  @include t-s {
+    gap: 2rem;
+  }
 }
 
 .pate-box {
@@ -147,6 +200,9 @@
   border-radius: 24px;
   box-shadow: 2.6px 3px 8px 0 rgba(0, 0, 0, 0.12);
   border: solid 1px $gray_05;
+  @include t-s {
+    border-radius: 2rem;
+  }
 }
 
 .pate-list {
@@ -161,6 +217,29 @@
 
     &:last-child {
       border-right: unset;
+    }
+  }
+  @include t-l {
+    flex-wrap: wrap;
+    > .list-item {
+      flex-basis: calc(50% - 1px);
+      border-right: 1px solid #e1e1e1;
+
+      &:nth-child(2n) {
+        border-right: unset;
+      }
+      &:nth-child(n+3) {
+        border-top: 1px solid #e1e1e1;
+      }
+    }
+  }
+  @include m-s {
+    > .list-item {
+      flex-basis: 100%;
+      border-right: unset;
+      &:nth-child(n+2) {
+        border-top: 1px solid #e1e1e1;
+      }
     }
   }
 }
@@ -189,31 +268,28 @@
         background-position: center;
         background-repeat: no-repeat;
       }
-
       &.ty01 {
         &::before {
           background-image: url('../images/ico_about_pate_01.png');
         }
       }
-
       &.ty02 {
         &::before {
           background-image: url('../images/ico_about_pate_02.png');
         }
       }
-
       &.ty03 {
         &::before {
           background-image: url('../images/ico_about_pate_03.png');
         }
       }
-
       &.ty04 {
         &::before {
           background-image: url('../images/ico_about_pate_04.png');
         }
       }
     }
+
   }
 
   .situ-box {
@@ -245,7 +321,27 @@
       }
     }
   }
+  @include t-l {
+    margin: unset;
 
+  }
+  @include t-s {
+    .situ-box {
+      padding: 2rem 0;
+      .situ-list {
+        gap: 0.5rem;
+        .list-item {
+          gap: 0.5rem;
+          .num {
+            width: 66px;
+            height: 66px;
+            border-radius: 20px;
+            @include font-set($font-32r, $l, inherit, 0.64px, 1);
+          }
+        }
+      }
+    }
+  }
 }
 
 .cert-sec {
@@ -259,6 +355,21 @@
 
       .list-item {
         flex-basis: 50%;
+      }
+    }
+  }
+  @include t-l {
+    .table-box {
+      .table-list {
+        gap : 2rem;
+      }
+    }
+  }
+  @include t-s {
+    gap : 2rem;
+    .table-box {
+      .table-list {
+        flex-direction: column;
       }
     }
   }
@@ -306,6 +417,7 @@
           line-height: 3.5rem;
           @include bdr(1px, $gray_04);
           flex-basis: 33.33%;
+          @include ln-1;
 
           &:nth-child(1) {
             background-color: $light_gray;
@@ -317,6 +429,56 @@
         }
       }
     }
+  }
+  @include t-l {
+    .cert-table {
+      .table-row {
+        .table-column {
+          .table-item {
+            padding: 0 1rem;
+          }
+        }
+      }
+    }
+    &.table01 {
+      .cert-table {
+        .table-row {
+          .table-column {
+            .table-item {
+              &:nth-child(1) {
+                flex-basis: 25%;
+              }
+              &:nth-child(2) {
+                flex-basis: 45%;
+              }
+              &:nth-child(3) {
+                flex-basis: 30%;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.table02 {
+      .cert-table {
+        .table-row {
+          .table-column {
+            .table-item {
+              &:nth-child(1) {
+                flex-basis: 40%;
+              }
+              &:nth-child(2) {
+                flex-basis: 30%;
+              }
+              &:nth-child(3) {
+                flex-basis: 30%;
+              }
+            }
+          }
+        }
+      }
+    }
+
   }
 }
 
@@ -447,7 +609,26 @@
       height: auto;
     }
   }
+  @include t-l {
+    column-gap: calc((100% - 80%) / 4);
+    row-gap: 5rem;
 
+    .list-item {
+      padding: 1rem;
+      width: 20%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  @include t-s {
+    column-gap: calc((100% - 90%) / 3);
+    row-gap: 2rem;
+    .list-item {
+      width: 30%;
+      border-radius: 1rem;
+    }
+  }
 }
 
 .award-history-content {
@@ -786,6 +967,25 @@
     }
     &.active {
       display: flex;
+    }
+  }
+  @include t-l {
+    .btn-x {
+      top: 15%;
+      right: 15%;
+    }
+  }
+  @include m-l {
+    .popup {
+      .img-box {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 2rem;
+      }
+    }
+    .btn-x {
+      top: 2rem;
+      right: 2rem;
     }
   }
 }
@@ -1141,6 +1341,19 @@
   .list-item {
     flex-basis: 25%;
   }
+  @include t-l {
+    justify-content: center;
+    .list-item {
+      flex-basis: 33%;
+    }
+  }
+  @include t-s {
+    gap: 2rem;
+    .list-item {
+      flex-basis: calc((100% - 2rem) / 2);
+      flex-shrink: 1;
+    }
+  }
 }
 
 .inve-item {
@@ -1154,6 +1367,22 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  @include t-l {
+    width: 220px;
+  }
+  @include t-s {
+    width: 100%;
+    img {
+      transform: scale(0.75);
+    }
+  }
+  @include m-l {
+    height: 65px;
+    border-radius: 12px;
+    img {
+      transform: scale(0.5);
+    }
+  }
 }
 
 .inve-contents {
@@ -1164,7 +1393,11 @@
       @include flex-col(2rem);
     }
   }
-
+ @include t-l {
+   .inve-gest-content {
+     width: 100%;
+   }
+ }
 
 }
 
@@ -1293,3 +1526,12 @@
   }
 }
 /* //Investors & Partners */
+
+/* mobile */
+
+.about-contents {
+  @include t-s {
+    padding-bottom : 12rem;
+  }
+}
+/* mobile */

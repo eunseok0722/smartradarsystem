@@ -105,11 +105,11 @@
 //}
 
 // media query
-//@mixin m-s {
-//  @media (max-width: $m-s) {
-//    @content;
-//  }
-//}
+@mixin m-s {
+  @media (max-width: $m-s) {
+    @content;
+  }
+}
 //
 //@mixin m-m {
 //  @media (max-width: $m-m) {
