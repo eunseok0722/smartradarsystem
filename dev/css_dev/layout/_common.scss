@@ -200,6 +200,9 @@ body {
   @include t-l {
     font-family: $mo_font;
   }
+  @include t-s {
+    @include font-set($font-16r, $sb, inherit, -0.72px, 1.2);
+  }
 }
 .tit-head {
   font-size: $font-54r;
@@ -285,7 +288,13 @@ body {
     width: 5.2rem;
     height: 5.2rem;
     border-radius: 1.3rem;
+    @include t-s {
+      width: 4.7rem;
+      height: 4.7rem;
+      border-radius: 1rem;
+    }
   }
+
 }
 
 

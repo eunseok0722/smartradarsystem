@@ -514,8 +514,6 @@
   @include t-s {
     grid-template-columns: 1fr 1fr;
     .list-item {
-      height: 65px;
-
       &:first-child .spec-item .spec-box .tit-art-03 {
         font-size: $font-22r;
       }
@@ -525,6 +523,7 @@
     grid-template-columns: 1fr;
     grid-gap: 0.5rem;
     .list-item {
+      height: fit-content;
       &.span {
         grid-column: unset;
       }

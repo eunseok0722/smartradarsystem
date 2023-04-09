@@ -1,5 +1,5 @@
 /* technology main */
-.tech-contents {
+.tech-main-contents {
   .main-img-banner {
     .img-wrap {
       background-color: unset;
@@ -56,7 +56,6 @@
       }
     }
   }
-
 }
 
 /* //technology main */
@@ -71,6 +70,12 @@
     width: 100%;
     height: auto;
     object-fit: contain;
+  }
+  @include t-s {
+    img {
+      max-width: 320px;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -141,8 +146,8 @@
         line-height: 1.6;
       }
     }
-  }
 
+  }
 
   .prod-dtl-cont {
     .dtl-list {
@@ -163,6 +168,84 @@
       img {
         object-fit: contain;
         transform: unset;
+      }
+    }
+  }
+  @include t-l {
+    .prod-dtl-cont {
+      min-width: unset;
+      .dtl-list {
+        .list-item {
+          flex : 1 1 40%;
+        }
+      }
+    }
+  }
+  @include t-s {
+    .soft-sec {
+      height: fit-content;
+      padding: unset;
+      box-shadow: unset;
+      border : unset;
+      border-radius: unset;
+      gap: 4rem;
+      .sec-header {
+        .tit-art-04 {
+          @include font-set($font-16r, $sb, inherit, -0.72px, 1.2);
+        }
+        .tit-head {
+          width: 100%;
+          @include font-set($font-30r, $el, inherit, -1.35px, 1.2);
+          span {
+            font-weight: $sb;
+          }
+        }
+      }
+      .text-wrap {
+        margin : unset;
+        .tit-art-03 {
+          width: 100%;
+          @include font-set($font-16r, $el, inherit, -0.72px, 1.6);
+        }
+      }
+      .img-wrap {
+        padding-bottom : unset;
+        background: unset;
+        .soft-img-list {
+          width: 100%;
+          display: flex;
+          gap: 1rem;
+          justify-content: center;
+          align-items: center;
+          .list-item {
+            width: 100%;
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+
+        }
+      }
+    }
+    .dtl-item {
+      .img-box {
+        padding-bottom: 100%;
+      }
+    }
+    .prod-dtl-cont {
+      padding-right: unset;
+      .dtl-list {
+        gap: 1rem;
+      }
+    }
+  }
+  @include m-l {
+    .soft-sec {
+      .img-wrap {
+        .soft-img-list {
+          flex-direction: column;
+        }
       }
     }
   }
@@ -206,6 +289,46 @@
     height: 400px;
     background-image: url('../images/img_tech_4d_001.png');
   }
+  @include t-l {
+    .soft-sec {
+      height: fit-content;
+      padding: 5rem 2.5rem;
+    }
+    .text-list {
+      .list-item {
+        width: 100%;
+      }
+    }
+    .img-wrap {
+      width: 100%;
+      height: auto;
+      padding-bottom: 80%;
+      background-size: contain;
+    }
+  }
+  @include t-s {
+    .soft-sec {
+      padding: 3rem 2rem;
+      .tit-head {
+        @include font-set($font-30r, $el, inherit, -1.35px, 1.2);
+      }
+      .tit-art-03 {
+        @include font-set($font-16r, $el, inherit, -0.72px, 1.6);
+      }
+    }
+  }
+  @include m-l{
+    .soft-sec {
+      padding: unset;
+      box-shadow: unset;
+      border: unset;
+      gap: 4rem;
+
+    }
+    .text-list {
+      flex-direction: column-reverse;
+    }
+  }
 }
 
 .data-dtl-cont {
@@ -246,6 +369,34 @@
 
       .btn-learn-more {
         margin-top: auto;
+      }
+    }
+  }
+  @include t-l {
+    .data-list {
+      .list-item {
+        padding: 2rem 2rem 0;
+      }
+    }
+  }
+  @include t-s {
+    .data-list {
+      flex-direction: column;
+      gap: 5rem;
+      .list-item {
+        padding: unset;
+        border-right: unset;
+        flex-basis: unset;
+        .tit-box {
+          gap: 1rem;
+          .tit-head {
+            flex-basis: unset;
+            @include font-set($font-26r, $l, inherit, -1.17px, 1.2);
+          }
+        }
+        .data-item {
+          min-height: unset;
+        }
       }
     }
   }
@@ -310,9 +461,11 @@
     @include flex-col(60rem);
     justify-content: center;
     align-items: center;
+
     &.ty02 {
       gap: 58rem;
     }
+
     .sec-header {
       text-align: center;
       @include flex-col(3rem);
@@ -399,6 +552,120 @@
       }
     }
   }
+
+  @include t-l {
+    .swap-sec,
+    .swap-sec.ty02 {
+      height: fit-content;
+      gap: 4rem;
+      background: unset;
+      box-shadow: unset;
+      border: unset;
+      padding: unset;
+
+      .sub-tit,
+      .tit-art {
+        color: #000;
+      }
+      .tit-art.ty02 {
+        text-align: center;
+      }
+
+      .app-list-wrap {
+        .app-list {
+          flex-wrap: wrap;
+
+          .app-list-item {
+            flex-basis: calc((100% - 1.5rem) / 2);
+          }
+        }
+      }
+
+      .app-item {
+        width: 100%;
+
+      }
+    }
+    .img-wrap {
+      width: 80%;
+      height: 0;
+      padding-bottom: 64%;
+      background-image: url("../images/img_tech_swap_002.png");
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+    }
+  }
+  @include t-s {
+    .img-wrap {
+      width: 100%;
+      padding-bottom: 80%;
+    }
+    .swap-sec,
+    .swap-sec.ty02 {
+      .sec-header {
+        align-items: flex-start;
+        gap: 2rem;
+        .sub-tit {
+          text-align: left;
+          @include font-set($font-30r, $el, inherit, -1.35px, 1.2);
+        }
+
+        .tit-art {
+          text-align: left;
+          width: 100%;
+          .tit-r {
+            margin-top: 1rem;
+          }
+        }
+      }
+
+      .app-list-wrap {
+        .app-list {
+          flex-wrap: wrap;
+
+          .app-list-item {
+            flex-basis: 100%;
+          }
+        }
+      }
+
+      .app-item {
+        height: fit-content;
+        border-radius: 2rem;
+
+        .lb-tit-r {
+          padding: 1.5rem 3rem 1rem;
+          @include font-set($font-16r, $sb, inherit, 0.32px, inherit);
+        }
+
+        .app-dtl-list {
+          padding: 1.5rem 3rem;
+          box-sizing: border-box;
+        }
+
+        .app-dtl-item {
+          @include font-set($font-14r, $l, inherit, 0.28px, inherit);
+        }
+      }
+    }
+  }
 }
 
 /* //swap sensor */
+
+/* Mobile def */
+
+.content-pd-wrap {
+  @include t-l {
+    padding: 0 2rem;
+  }
+  @include t-s {
+    padding: 5rem 2rem 0;
+  }
+}
+.tech-contents {
+  @include t-s {
+    padding-bottom : 12rem;
+  }
+}

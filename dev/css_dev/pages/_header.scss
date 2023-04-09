@@ -765,6 +765,9 @@ select {
   }
   @include t-s {
     height: 6.5rem;
+    h3 {
+      font-size: 25px;
+    }
   }
 }
 .header-fix-div {
