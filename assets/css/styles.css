@@ -2034,7 +2034,8 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 
 .soft-contents .dtl-item .img-box img { object-fit: contain; transform: unset; }
 
-@media (max-width: 1279px) { .soft-contents .prod-dtl-cont { min-width: unset; }
+@media (max-width: 1279px) { .soft-contents .soft-sec .tit-head { width: 70%; }
+  .soft-contents .prod-dtl-cont { min-width: unset; }
   .soft-contents .prod-dtl-cont .dtl-list .list-item { flex: 1 1 40%; } }
 
 @media (max-width: 767px) { .soft-contents .soft-sec { height: fit-content; padding: unset; box-shadow: unset; border: unset; border-radius: unset; gap: 4rem; }

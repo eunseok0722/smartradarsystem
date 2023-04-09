@@ -172,6 +172,11 @@
     }
   }
   @include t-l {
+    .soft-sec {
+      .tit-head {
+        width: 70%;
+      }
+    }
     .prod-dtl-cont {
       min-width: unset;
       .dtl-list {
