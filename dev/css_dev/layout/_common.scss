@@ -142,9 +142,10 @@ body {
   font-size: $font-32r;
   @include t-l {
     font-family: $mo_font;
+    word-break: keep-all;
   }
   @include t-s {
-
+    @include font-set(2.3rem, $r, inherit, 0.46px, 1.2);
   }
 }
 .tit-art {
@@ -364,6 +365,9 @@ body {
       display: flex;
       gap: 1rem;
     }
+    @include t-s {
+      gap: 1rem;
+    }
   }
 }
 
@@ -385,6 +389,13 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
+  }
+  @include t-s {
+    width: 3rem;
+    height: 3rem;
+    .tit-l {
+      @include font-set($font-14r, $r, inherit, 0.28px, 1);
+    }
   }
 }
 
@@ -409,6 +420,11 @@ body {
     width: 100%;
     height: 100%;
   }
+  @include t-s {
+    width: 3rem;
+    height: 3rem;
+    background-size: 13px 25px;
+  }
 }
 
 .btn-ty01 {
@@ -428,6 +444,13 @@ body {
     height: 100%;
     font-weight: $r;
     padding: 1.8rem 1.4rem;
+  }
+  @include t-s {
+    width: 100%;
+    a {
+      @include font-set($font-14r, $r, inherit, 0.28px, 1);
+      padding: 1.5rem 2rem;
+    }
   }
 }
 

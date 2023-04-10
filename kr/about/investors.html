@@ -1,4 +1,11 @@
-<?php include $_SERVER["DOCUMENT_ROOT"]."/inc/https.php";?>
+<?php include $_SERVER["DOCUMENT_ROOT"]."/inc/https.php";
+include $_SERVER["DOCUMENT_ROOT"]."/inc/enviconfig.php";
+include $_SERVER["DOCUMENT_ROOT"]."/lib/lib.class.php";
+include $_SERVER["DOCUMENT_ROOT"]."/lib/lib.string.php";
+$bidx=2;
+$sql="select * from board_".$bidx." where delyn='N' and first_not='0' and gubun='kor'";
+$sql.=" order by indexes desc";
+$result=mysqli_query($db,$sql);?>
 <!DOCTYPE HTML>
 <html lang='ko'>
 <head>
@@ -9,7 +16,7 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui"
           name="viewport">
     <meta content="telephone=no" name="format-detection">
-    <meta name="google-site-verification" content="n8WmOxXJlO0SLLJOI2Ep8K3MXczAOXWaJMfy6EhXohM" />
+    <meta name="google-site-verification" content="n8WmOxXJlO0SLLJOI2Ep8K3MXczAOXWaJMfy6EhXohM"/>
     <!-- og-tag -->
     <meta content="Smart Radar System" property="og:title">
     <meta content="http://srs.ai/en/index.html" property="og:url">
@@ -18,7 +25,7 @@
     <meta content="" property="og:image">
     <!-- //og-tag -->
     <title>Smart Radar System</title>
-<!--    <link rel="shortcut icon" href="../assets/images/favicon.png">-->
+    <!--    <link rel="shortcut icon" href="../assets/images/favicon.png">-->
     <link href="../../assets/css/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -467,9 +474,9 @@
                             <li class="list-item">
                                 <div class="inve-item">
                                     <img src="../../assets/images/img_ci_005.png"
-                                                            alt="HUNDAI INVESTMENT PARTNERS" class="pc-s">
+                                         alt="HUNDAI INVESTMENT PARTNERS" class="pc-s">
                                     <img src="../../assets/images/m_img_ci_005.png"
-                                                            alt="HUNDAI INVESTMENT PARTNERS" class="tbl-s">
+                                         alt="HUNDAI INVESTMENT PARTNERS" class="tbl-s">
                                 </div>
                             </li>
                             <li class="list-item">
@@ -493,15 +500,15 @@
                             <li class="list-item">
                                 <div class="inve-item">
                                     <img src="../../assets/images/img_ci_009.png"
-                                                            alt="Toyota Tsusho Nexty Electronics" class="pc-s">
+                                         alt="Toyota Tsusho Nexty Electronics" class="pc-s">
                                     <img src="../../assets/images/m_img_ci_009.png"
-                                                            alt="Toyota Tsusho Nexty Electronics" class="tbl-s">
+                                         alt="Toyota Tsusho Nexty Electronics" class="tbl-s">
                                 </div>
                             </li>
                             <li class="list-item">
                                 <div class="inve-item">
                                     <img src="../../assets/images/img_ci_010.png"
-                                                            alt="GU Equity Partners" class="pc-s">
+                                         alt="GU Equity Partners" class="pc-s">
                                     <img src="../../assets/images/m_img_ci_010.png"
                                          alt="GU Equity Partners" class="tbl-s">
                                 </div>
@@ -509,7 +516,8 @@
                             <li class="list-item">
                                 <div class="inve-item">
                                     <img src="../../assets/images/img_ci_011.png" alt="Korea Investment" class="pc-s">
-                                    <img src="../../assets/images/m_img_ci_011.png" alt="Korea Investment" class="tbl-s">
+                                    <img src="../../assets/images/m_img_ci_011.png" alt="Korea Investment"
+                                         class="tbl-s">
                                 </div>
                             </li>
                             <li class="list-item">
@@ -537,90 +545,40 @@
                                             <li class="table-item">LINK</li>
                                         </ul>
                                     </li>
+                                    <?php
+								while ($rows=mysqli_fetch_array($result)){
+								$title_str=TextDecode($rows["title"]);
+								//첨부파일 확인
+								$fsql="select filedir,idx from board_attach where bidx='".$bidx."' and bno='".$rows["idx"]."' order by bord asc";
+								$fresult=mysqli_query($db,$fsql);
+								$filecnt=mysqli_num_rows($fresult);
+								$frows=mysqli_fetch_assoc($fresult);?>
                                     <li class="table-row">
                                         <ul class="table-column">
                                             <li class="table-item" onclick="tableItemActive(this)">
-                                                <button target="_blank">gestion announce 2022</button>
+                                                <p><?=$title_str?></p>
                                             </li>
                                             <li class="table-item">
                                                 <div class="btn-wrap">
-                                                    <a href="#" class="btn-pdf" target="_blank" title="download pdf">
-                                                    </a>
+                                                    <?php if($filecnt){?><a href="/data/board/<?=$bidx?>/<?=$frows["filedir"]?>" class="btn-pdf" target="_blank" title="download pdf"></a><?php }?>
                                                 </div>
                                             </li>
                                         </ul>
                                         <div class="item-content">
-                                            <p class="txt-wrap txt-l">As the company decided to divide 1 share worth 5,000 won per share to 10 shares worth 500 won per share by
-                                                resolution of the general meeting of shareholders (March 30th 2022), shareholders and pledgees who are holding
-                                                old stock certificates please submit your old stock certificates to the company within 1 month.
-                                            </p>
+                                            <p class="txt-wrap txt-l"><?=TextDecode($rows["content"],true);?></p>
                                         </div>
                                     </li>
-                                    <li class="table-row">
-                                        <ul class="table-column">
-                                            <li class="table-item" onclick="tableItemActive(this)">
-                                                <button target="_blank">gestion announce 2021</button>
-                                            </li>
-                                            <li class="table-item">
-                                                <div class="btn-wrap">
-                                                    <a href="#" class="btn-pdf" target="_blank" title="download pdf">
-                                                    </a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <div class="item-content">
-                                            <p class="txt-wrap txt-l">As the company decided to divide 1 share worth 5,000 won per share to 10 shares worth 500 won per share by
-                                                resolution of the general meeting of shareholders (March 30th 2022), shareholders and pledgees who are holding
-                                                old stock certificates please submit your old stock certificates to the company within 1 month.
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li class="table-row">
-                                        <ul class="table-column">
-                                            <li class="table-item" onclick="tableItemActive(this)">
-                                                <button target="_blank">gestion announce 2020</button>
-                                            </li>
-                                            <li class="table-item">
-                                                <div class="btn-wrap">
-                                                    <a href="#" class="btn-pdf" target="_blank" title="download pdf">
-                                                    </a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <div class="item-content">
-                                            <p class="txt-wrap txt-l">As the company decided to divide 1 share worth 5,000 won per share to 10 shares worth 500 won per share by
-                                                resolution of the general meeting of shareholders (March 30th 2022), shareholders and pledgees who are holding
-                                                old stock certificates please submit your old stock certificates to the company within 1 month.
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li class="table-row">
-                                        <ul class="table-column">
-                                            <li class="table-item" onclick="tableItemActive(this)">
-                                                <button target="_blank">gestion announce 2019</button>
-                                            </li>
-                                            <li class="table-item">
-                                                <div class="btn-wrap">
-                                                    <a href="#" class="btn-pdf" target="_blank" title="download pdf">
-                                                    </a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <div class="item-content">
-                                            <p class="txt-wrap txt-l">As the company decided to divide 1 share worth 5,000 won per share to 10 shares worth 500 won per share by
-                                                resolution of the general meeting of shareholders (March 30th 2022), shareholders and pledgees who are holding
-                                                old stock certificates please submit your old stock certificates to the company within 1 month.
-                                            </p>
-                                        </div>
-                                    </li>
+                                    <?php }?>
+
                                 </ul>
+
                             </div>
                         </article>
                     </section>
                 </div>
             </div>
         </div>
-
+    </div>
 <!-- footer -->
 <div id="footer">
     <div class="footer-wrap">
@@ -922,14 +880,8 @@
     </div>
 </div>
 <!-- //footer -->
-
-    </div>
-
 </div>
 <!--end Contents-->
-
-
-
 
 <!-- 퍼블리싱 동작 구현 script.js -->
 <script src="../../assets/js/script.js"></script>

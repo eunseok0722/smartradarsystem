@@ -616,6 +616,21 @@
       }
     }
   }
+  @include m-l {
+    .feat-info-list {
+      gap: 2rem 0;
+      .list-item {
+        flex-basis: 25%;
+      }
+    }
+  }
+  @include m-s {
+    .feat-info-list {
+      .list-item {
+        flex-basis: 33.33%;
+      }
+    }
+  }
 }
 
 .feat-list {

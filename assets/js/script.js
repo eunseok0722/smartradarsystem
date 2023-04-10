@@ -103,6 +103,17 @@ const popClose = function () {
 
 /* Investors & Partners */
 const tableItemActive = function (that) {
+    const li = document.getElementsByClassName('table-item');
+    if(that.classList.contains('active')) {
+        for(let j = 0; j < li.length; j++ ) {
+            li[j].classList.remove('active');
+        }
+    }else {
+        for(let j = 0; j < li.length; j++ ) {
+            li[j].classList.remove('active');
+        }
+        that.classList.add('active');
+    }
     const tableItems = document.getElementsByClassName('item-content');
     const target = that.parentElement.nextElementSibling;
 

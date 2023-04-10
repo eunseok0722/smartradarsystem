@@ -40,10 +40,10 @@ $result=mysqli_query($db,$sql);?>
 
 <!--start Contents-->
 <div id="wrapper">
+    <!--   @@include /dev/page_include/sub_header.html     -->
     <div id="container" class="container">
-        <!--   @@include /dev/page_include/sub_header.html     -->
 
-        <div class="news-contents">
+        <div class="news-contents about-contents">
             <!--  breadcrumb -->
             <div class="breadcrumb-wrap">
                 <div class="breadcrumb">
@@ -118,53 +118,52 @@ $result=mysqli_query($db,$sql);?>
                 </div>
             </div>
             <!--  //breadcrumb -->
-            <div class="content news-content head-content">
-                <div class="content-header">
-                    <div class="header-fix-div">
-                        <h3 class="tit-cont">Newsroom</h3>
+            <div class="content-pd-wrap">
+                <div class="content news-content head-content">
+                    <div class="content-header">
+                        <div class="header-fix-div">
+                            <h3 class="tit-cont">Newsroom</h3>
+                        </div>
                     </div>
-                </div>
-                <section>
-                    <article class="newsroom-art">
-                        <div class="desc-table-wrap">
-                            <ul class="desc-table">
-                                <li class="table-row">
-                                    <ul class="table-column">
-                                        <li class="table-item">NO</li>
-                                        <li class="table-item">TITLE</li>
-                                        <li class="table-item">DATE</li>
-                                    </ul>
-                                </li>
-                                <?php $fnum=$numrows-(($page-1)*$pg); //번호 계산
+                    <section>
+                        <article class="newsroom-art">
+                            <div class="desc-table-wrap">
+                                <ul class="desc-table">
+                                    <li class="table-row">
+                                        <ul class="table-column">
+                                            <li class="table-item">NO</li>
+                                            <li class="table-item">TITLE</li>
+                                            <li class="table-item">DATE</li>
+                                        </ul>
+                                    </li>
+                                    <?php $fnum=$numrows-(($page-1)*$pg); //번호 계산
 								while ($rows=mysqli_fetch_array($result)){
 								$wdate=substr($rows["w_date"],0,-9); // 날짜 처리
 								$title_str=TextDecode($rows["title"]);?>
-                                <li class="table-row">
-                                    <ul class="table-column">
-                                        <li class="table-item"><span><?=$fnum?></span></li>
-                                        <li class="table-item"><a href="./newsroom_view.html?idx=<?=$rows["idx"]?>&page=<?=$page?>"><?=$title_str?></a></li>
-                                        <li class="table-item"><span><?=$wdate?></span></li>
-                                    </ul>
-                                </li>
-                                <?php $fnum--;
+                                    <li class="table-row">
+                                        <ul class="table-column">
+                                            <li class="table-item"><span><?=$fnum?></span></li>
+                                            <li class="table-item"><a href="./newsroom_view.html?idx=<?=$rows["idx"]?>&page=<?=$page?>"><?=$title_str?></a></li>
+                                            <li class="table-item"><span><?=$wdate?></span></li>
+                                        </ul>
+                                    </li>
+                                    <?php $fnum--;
 								}?>
 
-                            </ul>
-                        </div>
-                    </article>
-                    <article class="pagination-wrap">
-                        <div class="pagination">
-                            <?php PageListViewNewUser($linkstart,$linklast,$page,$tt,$nextlink,$previouslink);//페이징?>
-                        </div>
-                    </article>
-                </section>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="pagination-wrap">
+                            <div class="pagination">
+                                <?php PageListViewNewUser($linkstart,$linklast,$page,$tt,$nextlink,$previouslink);//페이징?>
+                            </div>
+                        </article>
+                    </section>
+                </div>
             </div>
         </div>
-
-
-        <!--   @@include /dev/page_include/footer.html     -->
-
     </div>
+    <!--   @@include /dev/page_include/footer.html     -->
 
 </div>
 <!--end Contents-->
