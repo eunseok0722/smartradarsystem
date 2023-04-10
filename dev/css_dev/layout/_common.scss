@@ -143,6 +143,9 @@ body {
   @include t-l {
     font-family: $mo_font;
   }
+  @include t-s {
+
+  }
 }
 .tit-art {
   font-size: $font-22r;

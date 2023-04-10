@@ -1395,11 +1395,12 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 
 @media (max-width: 1279px) { .inve-item { width: 220px; } }
 
-@media (max-width: 767px) { .inve-item { width: 100%; }
-  .inve-item img { transform: scale(0.75); } }
+@media (max-width: 767px) { .inve-item { width: 100%; } }
 
-@media (max-width: 640px) { .inve-item { height: 65px; border-radius: 12px; }
-  .inve-item img { transform: scale(0.5); } }
+@media (max-width: 640px) { .inve-item { height: 65px; border-radius: 12px; position: relative; overflow: hidden; }
+  .inve-item img { position: absolute; transform: scale(0.6666); } }
+
+@media (max-width: 359px) { .inve-item img { transform: scale(0.5); } }
 
 .inve-contents .inve-gest-content { width: 1200px; }
 
@@ -1426,6 +1427,10 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 .inve-art .desc-table-wrap .desc-table .table-row .table-column .table-item:nth-child(2) { flex-basis: 30%; text-align: center; }
 
 .inve-art .desc-table-wrap .desc-table .table-row .table-column .table-item:last-child { border-right: unset; }
+
+@media (max-width: 1279px) { .inve-art { margin-bottom: unset; }
+  .inve-art .desc-table-wrap .desc-table .table-row .table-column .table-item { padding: 0 1rem; overflow: hidden; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .inve-art .desc-table-wrap .desc-table .table-row .table-column .table-item:nth-child(1) { padding: 0 1rem; } }
 
 .btn-pdf { display: block; width: 30px; height: 30px; background-image: url("../images/ico_pdf_001.png"); background-repeat: no-repeat; background-size: 16px 16px; background-position: center; }
 
