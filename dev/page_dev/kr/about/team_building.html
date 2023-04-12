@@ -1,14 +1,41 @@
-<!-- @@master /dev/layout_sub_template.html -->
-
-<!-- @@block root_content -->
-
+<?php include $_SERVER["DOCUMENT_ROOT"]."/inc/https.php";
+include $_SERVER["DOCUMENT_ROOT"]."/inc/enviconfig.php";
+include $_SERVER["DOCUMENT_ROOT"]."/lib/lib.class.php";
+include $_SERVER["DOCUMENT_ROOT"]."/lib/lib.string.php";
+$bidx=3;
+$sql="select * from board_".$bidx." where delyn='N' and first_not='0' and gubun='kor'";
+$sql.=" order by indexes desc";
+$result=mysqli_query($db,$sql);?>
+<!DOCTYPE HTML>
+<html lang='ko'>
+<head>
+    <meta charset="UTF-8">
+    <meta content="text/javascript" http-equiv="Content-Script-Type">
+    <meta content="text/css" http-equiv="Content-Style-Type">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui"
+          name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="google-site-verification" content="n8WmOxXJlO0SLLJOI2Ep8K3MXczAOXWaJMfy6EhXohM" />
+    <!-- og-tag -->
+    <meta content="Smart Radar System" property="og:title">
+    <meta content="http://srs.ai/en/index.html" property="og:url">
+    <meta content="website" property="og:type">
+    <meta content="Smart Radar System Main page" property="og:description">
+    <meta content="" property="og:image">
+    <!-- //og-tag -->
+    <title>Smart Radar System</title>
+    <!--    <link rel="shortcut icon" href="../assets/images/favicon.png">-->
+    <link href="../../assets/css/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
 
 <!--start Contents-->
 <div id="wrapper">
+    <!--   @@include /dev/page_include/sub_header_kr.html     -->
     <div id="container" class="container">
-        <!--   @@include /dev/page_include/sub_header_kr.html     -->
 
-        <div class="team-contents">
+        <div class="team-contents about-contents">
             <!--  breadcrumb -->
             <div class="breadcrumb-wrap">
                 <div class="breadcrumb">
@@ -83,306 +110,260 @@
                 </div>
             </div>
             <!--  //breadcrumb -->
-            <div class="content team-head-content head-content">
-                <div class="content-header">
-                    <div class="header-fix-div">
-                        <h3 class="tit-cont">Team building &amp; Careers</h3>
+            <div class="content-pd-wrap">
+                <div class="content team-head-content head-content">
+                    <div class="content-header">
+                        <div class="header-fix-div">
+                            <h3 class="tit-cont">Team building &amp; Careers</h3>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="content team-org-content">
-                <div class="content-header"><h3 class="tit-sec">Team building</h3></div>
-                <section>
-                    <div class="org-chart-wrap">
-                        <div class="chart-item ty01 item-01">
-                            <a href="https://www.linkedin.com/in/paul-yonghwan-kim-6a8a8056/" target="_blank">
-                                CEO
-                            </a>
-                        </div>
-                        <ul class="chart-d1">
-                            <li class="chart-d1-item">
-                                <div class="chart-item ty02 item-03">
-                                    <button>
-                                        Chief Scientist
-                                    </button>
-                                </div>
-                            </li>
-                            <li class="chart-d1-item">
-                                <div class="chart-item ty02 item-04">
-                                    <button>
-                                        Auditor
-                                    </button>
-                                </div>
-                            </li>
-                            <li class="chart-d1-item">
-                                <div class="chart-item ty01 item-05">
-                                    <a href="https://www.linkedin.com/in/yunkwon-jung-31474276/" target="_blank">
-                                        COO
-                                    </a>
-                                </div>
-                                <ul class="chart-d2">
-                                    <li class="chart-d2-item">
-                                        <div class="chart-item ty05 item-05-01">
-                                            <button>
-                                                Tech Support
-                                            </button>
-                                        </div>
-                                    </li>
-                                    <li class="chart-d2-item">
-                                        <div class="chart-item ty05 item-05-02">
-                                            <button>
-                                                Quality Assurance
-                                            </button>
-                                        </div>
-                                    </li>
-                                    <li class="chart-d2-item">
-                                        <div class="chart-item ty05 item-05-03">
-                                            <button>
-                                                Production Support
-                                            </button>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="chart-d1-item">
-                                <div class="chart-item ty01 item-06">
-                                    <a href="https://www.linkedin.com/in/yong-jae-kim-8108343/" target="_blank">
-                                        CTO
-                                    </a>
-                                </div>
-                                <ul class="chart-d2">
-                                    <li class="chart-d2-item">
-                                        <div class="chart-item ty04 item-06-01">
-                                            <a href="https://www.linkedin.com/in/yong-gyoon-yoon-%EC%9C%A4%EC%9A%A9%EA%B7%A0-9b865920" target="_blank">
-                                                Central Lab
-                                            </a>
-                                        </div>
-                                        <ul class="chart-d3">
-                                            <li class="chart-d3-item">
-                                                <div class="chart-item ty05 item-06-01-01">
-                                                    <button>
-                                                        S/W 1
-                                                    </button>
-                                                </div>
-                                            </li>
-                                            <li class="chart-d3-item">
-                                                <div class="chart-item ty05 item-06-01-02">
-                                                    <button>
-                                                        S/W 2
-                                                    </button>
-                                                </div>
-                                            </li>
-                                            <li class="chart-d3-item">
-                                                <div class="chart-item ty05 item-06-01-03">
-                                                    <button>
-                                                        S/W 3
-                                                    </button>
-                                                </div>
-                                            </li>
-                                            <li class="chart-d3-item">
-                                                <div class="chart-item ty05 item-06-01-04">
-                                                    <button>
-                                                        System
-                                                    </button>
-                                                </div>
-                                            </li>
-                                            <li class="chart-d3-item">
-                                                <div class="chart-item ty05 item-06-01-05">
-                                                    <button>
-                                                        H/W
-                                                    </button>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="chart-d2-item">
-                                        <div class="chart-item ty04 item-06-02">
-                                            <button>
-                                                Alpha Lab
-                                            </button>
-                                        </div>
-                                        <ul class="chart-d3">
-                                            <li class="chart-d3-item">
-                                                <div class="chart-item ty05 item-06-02-01">
-                                                    <button>
-                                                        S/W 1
-                                                    </button>
-                                                </div>
-                                            </li>
-                                            <li class="chart-d3-item">
-                                                <div class="chart-item ty05 item-06-02-02">
-                                                    <button>
-                                                        S/W 2
-                                                    </button>
-                                                </div>
-                                            </li>
-                                            <li class="chart-d3-item">
-                                                <div class="chart-item ty06 item-06-02-03">
-                                                    <button>
-                                                        Staff
-                                                    </button>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="chart-d1-item">
-                                <div class="chart-item ty01 item-07">
-                                    <a href="https://www.linkedin.com/in/secheol-oh-70937157/" target="_blank">
-                                        Sales
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="chart-d1-item">
-                                <div class="chart-item ty01 item-08">
-                                    <a href="https://www.linkedin.com/in/ho-joung-kim-74547b116/" target="_blank">
-                                        Marketing
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="chart-d1-item">
-                                <div class="chart-item ty01 item-09">
-                                    <button>
-                                        HR/Planning
-                                    </button>
-                                </div>
-                            </li>
-                            <li class="chart-d1-item">
-                                <div class="chart-item ty01 item-10">
-                                    <button>
-                                        CFO
-                                    </button>
-                                </div>
-                                <ul class="chart-d2">
-                                    <li class="chart-d2-item">
-                                        <div class="chart-item ty05 item-10-01">
-                                            <button>
-                                                IPO/Accounting
-                                            </button>
-                                        </div>
-                                    </li>
-                                    <li class="chart-d3-item">
-                                        <div class="chart-item ty05 item-10-02">
-                                            <button>
-                                                Finance/GA
-                                            </button>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <div class="chart-item ty03 item-02">
-                            <a href="https://www.linkedin.com/in/nara-won/" target="_blank">
-                                US Subs.
-                            </a>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="content career-content">
-                <section>
-                    <div class="section-header">
-                        <h4 class="tit-sec-02">Careers</h4>
-                    </div>
-                    <article class="inve-art">
-                        <div class="desc-table-wrap">
-                            <ul class="desc-table">
-                                <li class="table-row">
-                                    <ul class="table-column">
-                                        <li class="table-item">TITLE</li>
-                                        <li class="table-item">LINK</li>
-                                    </ul>
+            <div class="content-pd-wrap">
+                <div class="content team-org-content">
+                    <div class="content-header"><h3 class="tit-sec">Team building</h3></div>
+                    <section>
+                        <div class="org-chart-wrap">
+                            <div class="chart-item ty01 item-01">
+                                <a href="https://www.linkedin.com/in/paul-yonghwan-kim-6a8a8056/" target="_blank">
+                                    CEO
+                                </a>
+                            </div>
+                            <ul class="chart-d1">
+                                <li class="chart-d1-item">
+                                    <div class="chart-item ty02 item-03">
+                                        <button>
+                                            Chief Scientist
+                                        </button>
+                                    </div>
                                 </li>
-                                <li class="table-row">
-                                    <ul class="table-column">
-                                        <li class="table-item" onclick="tableItemActive(this)">
-                                            <button target="_blank">gestion announce 2022</button>
+                                <li class="chart-d1-item">
+                                    <div class="chart-item ty02 item-04">
+                                        <button>
+                                            Auditor
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="chart-d1-item">
+                                    <div class="chart-item ty01 item-05">
+                                        <a href="https://www.linkedin.com/in/yunkwon-jung-31474276/" target="_blank">
+                                            COO
+                                        </a>
+                                    </div>
+                                    <ul class="chart-d2">
+                                        <li class="chart-d2-item">
+                                            <div class="chart-item ty05 item-05-01">
+                                                <button>
+                                                    Tech Support
+                                                </button>
+                                            </div>
                                         </li>
-                                        <li class="table-item">
-                                            <div class="btn-wrap">
-                                                <a href="#" class="btn-pdf" target="_blank" title="download pdf">
-                                                </a>
+                                        <li class="chart-d2-item">
+                                            <div class="chart-item ty05 item-05-02">
+                                                <button>
+                                                    Quality Assurance
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li class="chart-d2-item">
+                                            <div class="chart-item ty05 item-05-03">
+                                                <button>
+                                                    Production Support
+                                                </button>
                                             </div>
                                         </li>
                                     </ul>
-                                    <div class="item-content">
-                                        <p class="txt-wrap txt-l">As the company decided to divide 1 share worth 5,000 won per share to 10 shares worth 500 won per share by
-                                            resolution of the general meeting of shareholders (March 30th 2022), shareholders and pledgees who are holding
-                                            old stock certificates please submit your old stock certificates to the company within 1 month.
-                                        </p>
+                                </li>
+                                <li class="chart-d1-item">
+                                    <div class="chart-item ty01 item-06">
+                                        <a href="https://www.linkedin.com/in/yong-jae-kim-8108343/" target="_blank">
+                                            CTO
+                                        </a>
+                                    </div>
+                                    <ul class="chart-d2">
+                                        <li class="chart-d2-item">
+                                            <div class="chart-item ty04 item-06-01">
+                                                <a href="https://www.linkedin.com/in/yong-gyoon-yoon-%EC%9C%A4%EC%9A%A9%EA%B7%A0-9b865920" target="_blank">
+                                                    Central Lab
+                                                </a>
+                                            </div>
+                                            <ul class="chart-d3">
+                                                <li class="chart-d3-item">
+                                                    <div class="chart-item ty05 item-06-01-01">
+                                                        <button>
+                                                            S/W 1
+                                                        </button>
+                                                    </div>
+                                                </li>
+                                                <li class="chart-d3-item">
+                                                    <div class="chart-item ty05 item-06-01-02">
+                                                        <button>
+                                                            S/W 2
+                                                        </button>
+                                                    </div>
+                                                </li>
+                                                <li class="chart-d3-item">
+                                                    <div class="chart-item ty05 item-06-01-03">
+                                                        <button>
+                                                            S/W 3
+                                                        </button>
+                                                    </div>
+                                                </li>
+                                                <li class="chart-d3-item">
+                                                    <div class="chart-item ty05 item-06-01-04">
+                                                        <button>
+                                                            System
+                                                        </button>
+                                                    </div>
+                                                </li>
+                                                <li class="chart-d3-item">
+                                                    <div class="chart-item ty05 item-06-01-05">
+                                                        <button>
+                                                            H/W
+                                                        </button>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="chart-d2-item">
+                                            <div class="chart-item ty04 item-06-02">
+                                                <button>
+                                                    Alpha Lab
+                                                </button>
+                                            </div>
+                                            <ul class="chart-d3">
+                                                <li class="chart-d3-item">
+                                                    <div class="chart-item ty05 item-06-02-01">
+                                                        <button>
+                                                            S/W 1
+                                                        </button>
+                                                    </div>
+                                                </li>
+                                                <li class="chart-d3-item">
+                                                    <div class="chart-item ty05 item-06-02-02">
+                                                        <button>
+                                                            S/W 2
+                                                        </button>
+                                                    </div>
+                                                </li>
+                                                <li class="chart-d3-item">
+                                                    <div class="chart-item ty06 item-06-02-03">
+                                                        <button>
+                                                            Staff
+                                                        </button>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="chart-d1-item">
+                                    <div class="chart-item ty01 item-07">
+                                        <a href="https://www.linkedin.com/in/secheol-oh-70937157/" target="_blank">
+                                            Sales
+                                        </a>
                                     </div>
                                 </li>
-                                <li class="table-row">
-                                    <ul class="table-column">
-                                        <li class="table-item" onclick="tableItemActive(this)">
-                                            <button target="_blank">gestion announce 2021</button>
+                                <li class="chart-d1-item">
+                                    <div class="chart-item ty01 item-08">
+                                        <a href="https://www.linkedin.com/in/ho-joung-kim-74547b116/" target="_blank">
+                                            Marketing
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="chart-d1-item">
+                                    <div class="chart-item ty01 item-09">
+                                        <button>
+                                            HR / Planning
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="chart-d1-item">
+                                    <div class="chart-item ty01 item-10">
+                                        <button>
+                                            CFO
+                                        </button>
+                                    </div>
+                                    <ul class="chart-d2">
+                                        <li class="chart-d2-item">
+                                            <div class="chart-item ty05 item-10-01">
+                                                <button>
+                                                    IPO / Accounting
+                                                </button>
+                                            </div>
                                         </li>
-                                        <li class="table-item">
-                                            <div class="btn-wrap">
-                                                <a href="#" class="btn-pdf" target="_blank" title="download pdf">
-                                                </a>
+                                        <li class="chart-d3-item">
+                                            <div class="chart-item ty05 item-10-02">
+                                                <button>
+                                                    Finance / GA
+                                                </button>
                                             </div>
                                         </li>
                                     </ul>
-                                    <div class="item-content">
-                                        <p class="txt-wrap txt-l">As the company decided to divide 1 share worth 5,000 won per share to 10 shares worth 500 won per share by
-                                            resolution of the general meeting of shareholders (March 30th 2022), shareholders and pledgees who are holding
-                                            old stock certificates please submit your old stock certificates to the company within 1 month.
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="table-row">
-                                    <ul class="table-column">
-                                        <li class="table-item" onclick="tableItemActive(this)">
-                                            <button target="_blank">gestion announce 2020</button>
-                                        </li>
-                                        <li class="table-item">
-                                            <div class="btn-wrap">
-                                                <a href="#" class="btn-pdf" target="_blank" title="download pdf">
-                                                </a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class="item-content">
-                                        <p class="txt-wrap txt-l">As the company decided to divide 1 share worth 5,000 won per share to 10 shares worth 500 won per share by
-                                            resolution of the general meeting of shareholders (March 30th 2022), shareholders and pledgees who are holding
-                                            old stock certificates please submit your old stock certificates to the company within 1 month.
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="table-row">
-                                    <ul class="table-column">
-                                        <li class="table-item" onclick="tableItemActive(this)">
-                                            <button target="_blank">gestion announce 2019</button>
-                                        </li>
-                                        <li class="table-item">
-                                            <div class="btn-wrap">
-                                                <a href="#" class="btn-pdf" target="_blank" title="download pdf">
-                                                </a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class="item-content">
-                                        <p class="txt-wrap txt-l">As the company decided to divide 1 share worth 5,000 won per share to 10 shares worth 500 won per share by
-                                            resolution of the general meeting of shareholders (March 30th 2022), shareholders and pledgees who are holding
-                                            old stock certificates please submit your old stock certificates to the company within 1 month.
-                                        </p>
-                                    </div>
                                 </li>
                             </ul>
+                            <div class="chart-item ty03 item-02">
+                                <a href="https://www.linkedin.com/in/nara-won/" target="_blank">
+                                    US Subs.
+                                </a>
+                            </div>
                         </div>
-                    </article>
-                </section>
+                    </section>
+                </div>
+            </div>
+            <div class="content-pd-wrap">
+                <div class="content career-content">
+                    <section>
+                        <div class="section-header">
+                            <h4 class="tit-sec-02">Careers</h4>
+                        </div>
+                        <article class="inve-art">
+                            <div class="desc-table-wrap">
+                                <ul class="desc-table">
+                                    <li class="table-row">
+                                        <ul class="table-column">
+                                            <li class="table-item">TITLE</li>
+                                            <li class="table-item">LINK</li>
+                                        </ul>
+                                    </li>
+                                    <?php
+								while ($rows=mysqli_fetch_array($result)){
+								$title_str=TextDecode($rows["title"]);
+								//첨부파일 확인
+								$fsql="select filedir,idx from board_attach where bidx='".$bidx."' and bno='".$rows["idx"]."' order by bord asc";
+								$fresult=mysqli_query($db,$fsql);
+								$filecnt=mysqli_num_rows($fresult);
+								$frows=mysqli_fetch_assoc($fresult);?>
+                                    <li class="table-row">
+                                        <ul class="table-column">
+                                            <li class="table-item" onclick="tableItemActive(this)">
+                                                <p><?=$title_str?></p>
+                                            </li>
+                                            <li class="table-item">
+                                                <div class="btn-wrap">
+                                                    <?php if($filecnt){?><a href="/data/board/<?=$bidx?>/<?=$frows["filedir"]?>" class="btn-pdf" target="_blank" title="download pdf"></a><?php }?>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="item-content">
+                                            <p class="txt-wrap txt-l"><?=TextDecode($rows["content"],true);?></p>
+                                        </div>
+                                    </li>
+                                    <?php }?>
+
+                                </ul>
+                            </div>
+                        </article>
+                    </section>
+                </div>
             </div>
         </div>
-
-        <!--   @@include /dev/page_include/footer_kr.html     -->
-
     </div>
-
+    <!--   @@include /dev/page_include/footer_kr.html     -->
 </div>
 <!--end Contents-->
 
-
-<!-- @@close -->
+<!-- 퍼블리싱 동작 구현 script.js -->
+<script src="../../assets/js/script.js"></script>
+</body>
+</html>

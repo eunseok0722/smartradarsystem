@@ -1049,6 +1049,11 @@
     padding: 0 3rem;
 
   }
+  @include t-l {
+    section {
+      padding: unset;
+    }
+  }
 }
 
 .org-chart-wrap {
@@ -1233,6 +1238,112 @@
   .item-10-02 {
     right: 0;
     top: 325px;
+  }
+  @include t-l {
+    background: unset;
+    height: fit-content;
+    padding-bottom: unset;
+    align-items: center;
+    @include flex-col(1rem);
+    .chart-item {
+      position: unset;
+      width: 100%;
+      a,
+      button {
+        &:hover {
+          transform: unset;
+        }
+      }
+      &.ty02 {
+        width: 100%;
+      }
+    }
+    .chart-d1 {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap : 1rem;
+      .chart-d1-item {
+        flex-basis: calc((100% - 6rem) / 7);
+        @include flex-col(1rem);
+        &:nth-child(1), &:nth-child(2) {
+          //flex-basis: calc((100% - 5rem) / 6);
+          flex-basis: calc((100% - 1rem) / 2 );
+
+          .chart-item {
+            width: calc((100% - 2rem) / 3);
+          }
+        }
+        &:nth-child(1) {
+          align-items: flex-end;
+        }
+        &:nth-child(4) {
+          flex-basis: calc(((100% - 6rem) / 7) * 2 + 1rem);
+          align-items: center;
+          .item-06 {
+            width: calc(((100% - 1rem) / 2));
+          }
+          .chart-d2 {
+            width: 100%;
+            flex-direction: row;
+            .chart-d2-item {
+              width: calc((100% - 1rem) / 2);
+              @include flex-col(1rem);
+            }
+          }
+          .chart-d3 {
+            @include flex-col(0.5rem);
+          }
+        }
+      }
+    }
+    .chart-d2 {
+      @include flex-col(1rem);
+    }
+    .item-01,
+    .item-02 {
+      width: calc((100% - 6rem) / 7);
+    }
+    .item-02 {
+      position: absolute;
+      top: 58px;
+      right: 0;
+    }
+  }
+  @include t-s {
+    gap: 2rem;
+    .chart-d1 {
+      flex-direction: column;
+      gap : 2rem;
+      .chart-d1-item {
+        flex-basis: 100%;
+        @include flex-col(1rem);
+        &:nth-child(1), &:nth-child(2) {
+          flex-basis: 100%;
+          .chart-item {
+            width: 100%;
+          }
+        }
+        &:nth-child(1) {
+          align-items: unset;
+        }
+        &:nth-child(4) {
+          flex-basis: 100%;
+          .item-06 {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .item-01,
+    .item-02 {
+      width: 100%;
+    }
+    .item-02 {
+      position: unset;
+      top: unset;
+      right: unset;
+    }
   }
 }
 .career-content {
