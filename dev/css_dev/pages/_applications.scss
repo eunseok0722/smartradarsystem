@@ -1,4 +1,15 @@
 
+.container {
+  .app-contents {
+    @include t-s {
+      .img-content {
+        padding-bottom: unset;
+      }
+    }
+  }
+}
+
+
 .img-cont {
   display: flex;
   flex-direction: row-reverse;
@@ -123,6 +134,96 @@
       }
     }
   }
+  @include t-l {
+    gap: 2rem;
+    .img-box {
+      gap: 2rem;
+      flex-basis: calc((100% - 2rem) / 2);
+      width: calc((100% - 2rem) / 2);
+    }
+    .tit-box {
+      flex-basis: calc((100% - 2rem) / 2);
+      width: calc((100% - 2rem) / 2);
+      gap: 6rem;
+      .head-sec {
+        .txt-wrap {
+          //gap : 2rem;
+          .tit-head {
+            @include font-set($font-40r, $r, inherit, -1px, 1.2);
+          }
+          .tit-art {
+            //@include font-set($font-16r, $el, inherit, -0.72px, 1.6);
+          }
+        }
+      }
+      .feat-sec {
+        padding: 0;
+        margin-left: unset;
+        .feat-info-list {
+          //column-gap: 0;
+        }
+      }
+    }
+  }
+  @include t-s {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 4rem;
+    .img-box {
+      flex-basis: 100%;
+      width: 100%;
+      max-width: 400px;
+      .sub-img {
+        display: none;
+      }
+    }
+    .tit-box {
+      flex-basis: 100%;
+      width: 100%;
+      .head-sec {
+        .txt-wrap {
+          gap: 2rem;
+          .tit-head {
+            @include font-set($font-30r, $el, inherit, -1.35px, 1.2);
+          }
+          .tit-art {
+            @include font-set($font-16r, $el, inherit, -0.72px, 1.6);
+          }
+        }
+      }
+      .feat-sec {
+        .feat-info-list {
+          column-gap: unset;
+          row-gap: 2rem;
+          .list-item {
+            flex-basis: 20%;
+          }
+        }
+      }
+    }
+  }
+  @include m-l {
+    .tit-box {
+      .feat-sec {
+        .feat-info-list {
+          .list-item {
+            flex-basis: 25%;
+          }
+        }
+      }
+    }
+  }
+  @include m-s {
+    .tit-box {
+      .feat-sec {
+        .feat-info-list {
+          .list-item {
+            flex-basis: 33.33%;
+          }
+        }
+      }
+    }
+  }
 }
 
 .prod-img {
@@ -187,6 +288,56 @@
     &.ty03 {
       padding-bottom: 100%;
     }
+  }
+  @include t-s {
+
+    .img-wrap {
+      .img-tag {
+        .tag-link {
+          @include font-set($font-16r, $l, inherit, 0.96px, 1);
+          &::after {
+            background-size: 16px 13px;
+          }
+        }
+      }
+    }
+  }
+  @include m-l {
+    flex-direction: column;
+    gap: 4rem;
+    .prod-img-item {
+      flex-basis: unset;
+    }
+    .img-wrap {
+      overflow: visible;
+      margin-bottom: 40px;
+      .img-tag {
+        right: 50%;
+        bottom: -40px;
+        width: max-content;
+        transform: translateX(50%);
+      }
+    }
+  }
+}
+
+
+.feat-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem 6rem;
+
+  .list-item {
+    flex-basis: calc((100% - 6rem) / 2);
+  }
+  @include t-l {
+    gap: 2rem;
+    .list-item {
+      flex-basis: calc((100% - 2rem) / 2);
+    }
+  }
+  @include t-s {
+    flex-direction: column;
   }
 }
 
@@ -289,6 +440,7 @@
   }
   @include t-s {
     width: 8rem;
+    margin: 0 auto;
     .ico-box {
       width: 6.5rem;
       height: 6.5rem;
@@ -419,6 +571,17 @@
         .table-column {
           .table-item {
             @include flex-col();
+            height: 100%;
+            min-height: 4.5rem;
+            @include t-s {
+              padding: 0 0.5rem;
+              span {
+                font-size: 1rem;
+              }
+              .circle {
+                font-size: 2rem;
+              }
+            }
           }
         }
       }
@@ -571,5 +734,11 @@
 .drone-contents {
   .uas-img {
     position: absolute;
+  }
+}
+
+.app-contents {
+  @include t-s {
+    padding-bottom: 12rem;
   }
 }

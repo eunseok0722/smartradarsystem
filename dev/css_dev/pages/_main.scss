@@ -389,6 +389,34 @@
 
     }
   }
+  @include t-l {
+    h4,
+    h5,
+    p {
+      color: #fff;
+    }
+    .ban-tit,
+    .ban-tit.ty02 {
+      font : {
+        size: $font-22r;
+        weight: $b;
+        family: $mo_font;
+      }
+      letter-spacing: -0.99px;
+    }
+    .ban-sub-tit,
+    .ban-sub-tit.ty02 {
+      font : {
+        size: 3.2rem;
+        weight: $el;
+        family: $mo_font;
+      }
+    }
+    .ban-slogan,
+    .ban-slogan.ty02 {
+      @include font-set (2rem, $r, $mo_font, -0.68px, 1.2);
+    }
+  }
   @include t-s {
     left: 2rem;
     top: 7.5rem;
@@ -465,13 +493,30 @@
       .txt-list {
         @include flex-col(1.2rem);
         align-items: flex-end;
+        @include t-l {
+          gap: 0.5rem;
+        }
       }
+
     }
   }
   @include t-l {
     .content-header {
       padding: 6rem 2rem;
       box-sizing: border-box;
+      .tit-head,
+      .tit-head.ty02 {
+        @include font-set (3rem, $sb, $mo_font, -1.26px, 1.2);
+        span {
+          font-weight: $el;
+        }
+      }
+      .txt-list {
+        gap: unset;
+        p {
+          @include font-set(2rem, $el, $mo_font, -0.68px, 1.6);
+        }
+      }
     }
   }
   @include t-s {

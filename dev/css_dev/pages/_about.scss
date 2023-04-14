@@ -531,6 +531,15 @@
       .post-txt {
         @include flex-col(5rem);
       }
+      .txt-cont {
+        p {
+          iframe,
+          img {
+            display: block;
+            margin: 0 auto;
+          }
+        }
+      }
     }
 
     .btn-list-wrap {
@@ -563,6 +572,15 @@
             .txt-l {
               @include font-set($font-13r, $md, inherit, normal, 1);
               text-align: right;
+            }
+          }
+        }
+        .txt-cont {
+          p {
+            iframe,
+            img {
+              width: 100%;
+              overflow: hidden;
             }
           }
         }
