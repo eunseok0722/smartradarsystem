@@ -4,6 +4,7 @@
     @include t-s {
       .img-content {
         padding-bottom: unset;
+        gap: 4rem;
       }
     }
   }
@@ -103,8 +104,8 @@
       width: 100%;
       height: 0;
       padding-bottom: 72.5%;
-      overflow: hidden;
-      @include bdrs(2.8rem);
+      //@include bdrs(2.8rem);
+      //overflow: hidden;
       position: relative;
 
       img {
@@ -160,7 +161,12 @@
         padding: 0;
         margin-left: unset;
         .feat-info-list {
-          //column-gap: 0;
+          column-gap: 0;
+          justify-content: space-evenly;
+          .list-item {
+            flex-basis: 25%;
+
+          }
         }
       }
     }
@@ -176,7 +182,20 @@
       .sub-img {
         display: none;
       }
+      .main-img {
+        img {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+      &.ty03,
+      &.ty04 {
+        .main-img {
+          padding-bottom: 97%;
+        }
+      }
     }
+
     .tit-box {
       flex-basis: 100%;
       width: 100%;
@@ -189,12 +208,16 @@
           .tit-art {
             @include font-set($font-16r, $el, inherit, -0.72px, 1.6);
           }
+          .txt-inner-wrap {
+            gap: 1rem;
+          }
         }
       }
       .feat-sec {
         .feat-info-list {
           column-gap: unset;
           row-gap: 2rem;
+          justify-content: flex-start;
           .list-item {
             flex-basis: 20%;
           }
@@ -206,6 +229,7 @@
     .tit-box {
       .feat-sec {
         .feat-info-list {
+
           .list-item {
             flex-basis: 25%;
           }
@@ -438,9 +462,11 @@
       background-image: url("../images/ico_appl_feat_024.png");
     }
   }
+  @include t-l {
+    margin: 0 auto;
+  }
   @include t-s {
     width: 8rem;
-    margin: 0 auto;
     .ico-box {
       width: 6.5rem;
       height: 6.5rem;
@@ -574,13 +600,16 @@
             height: 100%;
             min-height: 4.5rem;
             @include t-s {
-              padding: 0 0.5rem;
+              padding: 0 1rem;
               span {
                 font-size: 1rem;
               }
               .circle {
                 font-size: 2rem;
               }
+            }
+            @include m-l {
+              padding: 0 0.5rem;
             }
           }
         }
@@ -716,6 +745,9 @@
 .const-vehi-contents {
   .img-cont .tit-box {
     gap: 10rem;
+    @include t-s {
+      gap: 6rem;
+    }
   }
 }
 
@@ -728,6 +760,9 @@
 .home-contents {
   .img-cont .tit-box {
     gap: 4rem;
+    @include t-s {
+      gap: 6rem;
+    }
   }
 }
 

@@ -36,6 +36,11 @@ body {
     display: none;
   }
 }
+.pc-xs {
+  @include m-l {
+    display: none;
+  }
+}
 
 //// font 설정
 
