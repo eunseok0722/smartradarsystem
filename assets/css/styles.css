@@ -538,6 +538,8 @@ body { font-family: "Garet", "NanumSquareRound", sans-serif; scroll-behavior: sm
 
 .sub-header .gnb-wrap .gnb-inner-wrap .nav-list .list-item .tit-l .nav-item { display: block; width: 100%; height: 100%; padding: 1.7rem 3.2rem; box-sizing: border-box; }
 
+.sub-header .gnb-wrap .gnb-inner-wrap .nav-list .list-item .tit-l button.nav-item { /* 모바일 버튼 */ display: none; }
+
 .sub-header .gnb-wrap .gnb-inner-wrap .nav-list .list-item .tit-l:hover { background-color: #008aff; }
 
 .sub-header .gnb-wrap .gnb-inner-wrap .nav-list .list-item .tit-l:hover a { color: #fff; }
@@ -681,15 +683,45 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 @media (max-width: 768px) { .header-fix-padding { height: 3rem; } }
 
 /* //handleScroll Event Class */
-@media (max-width: 1279px) { .sub-header .gnb-wrap { height: 7.7rem; padding: 10px 0; box-sizing: border-box; }
-  .sub-header .gnb-wrap .gnb-inner-wrap { min-width: 320px; width: 100%; padding: 0 2rem; box-sizing: border-box; }
-  .sub-header .gnb-wrap .gnb-inner-wrap .ci { width: 63px; height: 30px; margin: unset; }
+@media (max-width: 1279px) { .sub-header .gnb-wrap { display: flex; height: 6.5rem; box-sizing: border-box; align-items: flex-start; padding: 17px 0 0; }
+  .sub-header .gnb-wrap .gnb-inner-wrap { min-width: 260px; width: 100%; padding: 0 2rem; box-sizing: border-box; }
+  .sub-header .gnb-wrap .gnb-inner-wrap::after { content: ''; display: block; width: 2.5rem; height: 2.5rem; background-image: url("../images/ico_gnb_003.png"); -webkit-background-size: contain; background-size: contain; background-position: center center; background-repeat: no-repeat; cursor: pointer; order: 4; }
+  .sub-header .gnb-wrap .gnb-inner-wrap .ci { flex-basis: unset; width: 63px; height: 30px; margin: unset; }
   .sub-header .gnb-wrap .gnb-inner-wrap .ci a img { width: 63px; height: 30px; }
-  .sub-header .gnb-wrap .gnb-inner-wrap .change-lang { margin: unset; }
-  .sub-header .gnb-wrap .gnb-inner-wrap .nav-list .list-item { flex-basis: 25%; } }
-
-@media (max-width: 768px) { .sub-header .gnb-wrap { height: 6.5rem; display: flex; align-items: center; }
-  .sub-header .gnb-wrap .gnb-inner-wrap .nav-list { display: none; } }
+  .sub-header .gnb-wrap .gnb-inner-wrap .change-lang { display: none; }
+  .sub-header .gnb-wrap .gnb-inner-wrap .nav-list { display: none; }
+  .sub-header .gnb-wrap .gnb-inner-wrap .nav-list .list-item { flex-basis: 25%; }
+  .sub-header .gnb-wrap.active { position: fixed; top: 0; height: 100vh; background: linear-gradient(180deg, #008aff 6.5rem, #fff 6.5rem); background-size: 100%; }
+  .sub-header .gnb-wrap.active .gnb-inner-wrap { gap: 3rem; }
+  .sub-header .gnb-wrap.active .gnb-inner-wrap::after { width: 20px; height: 20px; background-image: url("../images/ico_x_002.png"); }
+  .sub-header .gnb-wrap.active .gnb-inner-wrap .ci a { width: 63px; height: 30px; background-image: url("../images/ico_srs_ci_w.png"); -webkit-background-size: contain; background-size: contain; background-repeat: no-repeat; }
+  .sub-header .gnb-wrap.active .gnb-inner-wrap .ci a img { display: none; }
+  .sub-header .gnb-wrap.active .gnb-inner-wrap .change-lang { display: flex; flex-basis: unset; margin: 0 0 0 auto; }
+  .sub-header .gnb-wrap.active .gnb-inner-wrap .change-lang .btn-lang { background-image: url("../images/ico_lang_w.png"); }
+  .sub-header .gnb-wrap.active .gnb-inner-wrap .change-lang .lang-list-wrap { height: fit-content; }
+  .sub-header .gnb-wrap.active .gnb-inner-wrap .change-lang .lang-list-wrap .lang-list { position: relative; background-color: #fff; border-radius: 5px; border: 1px solid #0054a6; }
+  .sub-header .gnb-wrap.active .gnb-inner-wrap .change-lang .lang-list-wrap .lang-list::after { content: ''; display: block; position: absolute; left: 50%; height: 100%; width: 1px; background-color: #0054a6; }
+  .sub-header .gnb-wrap.active .gnb-inner-wrap .change-lang .lang-list-wrap .lang-list .list-item .tit-l { font-size: 1.3rem; font-weight: 600; font-family: inherit; letter-spacing: 0.34px; line-height: 1; padding: 0.8rem 1rem; }
+  .sub-header .gnb-wrap.active .gnb-inner-wrap .change-lang .lang-list-wrap .lang-list .list-item.active a::after { content: unset; }
+  .sub-header .gnb-wrap.active .gnb-inner-wrap .nav-list { position: absolute; left: 0; top: 6.5rem; display: flex; flex-direction: column; justify-content: flex-start; width: 25%; min-width: 14rem; height: 100%; /* mo gnb vertical line */ /* mo gnb vertical line */ }
+  .sub-header .gnb-wrap.active .gnb-inner-wrap .nav-list .list-item { flex-basis: unset; }
+  .sub-header .gnb-wrap.active .gnb-inner-wrap .nav-list .list-item .tit-l a.nav-item { display: none; }
+  .sub-header .gnb-wrap.active .gnb-inner-wrap .nav-list .list-item .tit-l button.nav-item { display: block; }
+  .sub-header .gnb-wrap.active .gnb-inner-wrap .nav-list .list-item .tit-l:hover { background: unset; }
+  .sub-header .gnb-wrap.active .gnb-inner-wrap .nav-list .list-item .tit-l:hover a { color: inherit; }
+  .sub-header .gnb-wrap.active .gnb-inner-wrap .nav-list .list-item .tit-l .nav-item { padding: 3rem 0; }
+  .sub-header .gnb-wrap.active .gnb-inner-wrap .nav-list .d1-item { border-bottom: 1px solid #d7d7d7; }
+  .sub-header .gnb-wrap.active .gnb-inner-wrap .nav-list::before { position: absolute; right: 0; content: ''; display: block; width: 1px; height: 100%; background-color: #d7d7d7; }
+  .sub-header .gnb-wrap .d2-list-wrap { display: none; }
+  .sub-header .d2-list-wrap { display: none; overflow: visible; top: 0; right: unset; left: 100%; flex-direction: column; max-height: unset; padding: 1rem 1rem 0; }
+  .sub-header .d2-list-wrap.active { display: flex; max-height: unset; border-bottom: unset; }
+  .sub-header .d2-list-wrap .d2-section { width: 100%; }
+  .sub-header .d2-list-wrap .d2-section .d2-list { flex-direction: column; width: 100%; height: fit-content; padding: unset; gap: unset; }
+  .sub-header .d2-list-wrap.v1 .d2-section { padding-top: unset; }
+  .sub-header .d2-list-wrap.v1 .d2-section .d2-section-tit { display: none; }
+  .sub-header .d2-list-wrap.v1 .d2-section.d2-sec-1, .sub-header .d2-list-wrap.v1 .d2-section.d2-sec-2 { width: 100%; }
+  .sub-header .d2-list-wrap.v1 .d2-section.d2-sec-1 .d2-list, .sub-header .d2-list-wrap.v1 .d2-section.d2-sec-2 .d2-list { width: 100%; }
+  .sub-header .d2-list-wrap .d2-item { width: 100%; } }
 
 #footer { width: 100%; height: fit-content; background-color: #f5f5f5; }
 

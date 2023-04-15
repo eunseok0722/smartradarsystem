@@ -358,10 +358,6 @@
               padding: 1.7rem 3.2rem;
               box-sizing: border-box;
             }
-            button.nav-item {
-              /* 모바일 버튼 */
-              display: none;
-            }
             &:hover {
               background-color: $blue_l;
 
@@ -794,31 +790,15 @@ select {
 @include t-l {
   .sub-header {
     .gnb-wrap {
-      display: flex;
-      height: 6.5rem;
+      height: 7.7rem;
+      padding: 10px 0;
       box-sizing: border-box;
-      align-items: flex-start;
-      padding: 17px 0 0;
       .gnb-inner-wrap {
-        &::after {
-          content: '';
-          display: block;
-          width: 2.5rem;
-          height: 2.5rem;
-          background-image: url('../images/ico_gnb_003.png');
-          -webkit-background-size: contain;
-          background-size: contain;
-          background-position: center center;
-          background-repeat: no-repeat;
-          cursor: pointer;
-          order: 4;
-        }
-        min-width: 260px;
+        min-width: 320px;
         width: 100%;
         padding: 0 2rem;
         box-sizing: border-box;
         .ci {
-          flex-basis: unset;
           width: 63px;
           height: 30px;
           margin: unset;
@@ -830,185 +810,13 @@ select {
           }
         }
         .change-lang {
-          display: none;
+          margin: unset;
         }
         .nav-list {
-          display: none;
           .list-item {
             flex-basis: 25%;
           }
         }
-      }
-      &.active {
-        position: fixed;
-        top: 0;
-        height: 100vh;
-        background: linear-gradient(180deg, $blue_l 6.5rem, $white 6.5rem);
-        background-size: 100%;
-        .gnb-inner-wrap {
-          gap: 3rem;
-          &::after {
-            width: 20px;
-            height: 20px;
-            background-image: url('../images/ico_x_002.png');
-          }
-          .ci {
-            a {
-              width: 63px;
-              height: 30px;
-              background-image: url('../images/ico_srs_ci_w.png'); ;
-              -webkit-background-size: contain;
-              background-size: contain;
-              background-repeat: no-repeat;
-              img {
-                display: none;
-              }
-            }
-          }
-          .change-lang {
-            display: flex;
-            flex-basis: unset;
-            margin: 0 0 0 auto;
-            .btn-lang {
-              background-image: url('../images/ico_lang_w.png');
-            }
-            .lang-list-wrap {
-              //max-width: 75px;
-              height: fit-content;
-              .lang-list {
-                position: relative;
-                background-color: #fff;
-                border-radius: 5px;
-                @include bd(1px, $blue_d);
-                &::after {
-                  content: '';
-                  display: block;
-                  position: absolute;
-                  left: 50%;
-                  height: 100%;
-                  width: 1px;
-                  background-color: $blue_d;
-                }
-                .list-item {
-                  .tit-l {
-                    @include font-set($font-13r, $sb, inherit, 0.34px, 1);
-                    padding: 0.8rem 1rem;
-                  }
-                  &.active {
-                    a {
-                      &::after {
-                        content: unset;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-          .nav-list {
-            position: absolute;
-            left: 0;
-            top: 6.5rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            width: 25%;
-            min-width: 14rem;
-            height: 100%;
-            .list-item {
-              flex-basis: unset;
-              .tit-l {
-                a.nav-item {
-                  display: none;
-                }
-                button.nav-item {
-                  display: block;
-                }
-                &:hover {
-                  background: unset;
-                  a {
-                    color: inherit;
-                  }
-                }
-                .nav-item {
-                  padding: 3rem 0;
-                }
-              }
-            }
-            .d1-item {
-              @include bdb(1px, $gray_04);
-            }
-            /* mo gnb vertical line */
-            &::before {
-              position: absolute;
-              right: 0;
-              content: '';
-              display: block;
-              width: 1px;
-              height: 100%;
-              background-color: $gray_04;
-            }
-            /* mo gnb vertical line */
-          }
-        }
-      }
-      // 임시
-      .d2-list-wrap {
-        display: none;
-      }
-      // //임시
-    }
-    .d2-list-wrap {
-      display: none;
-      // 임시
-      overflow: visible;
-      // //임시
-      top: 0;
-      right: unset;
-      left: 100%;
-      flex-direction: column;
-      max-height: unset;
-      padding: 1rem 1rem 0;
-      &.active {
-        display: flex;
-        max-height: unset;
-        border-bottom: unset;
-      }
-      .d2-section {
-        width: 100%;
-
-        .d2-list {
-          flex-direction: column;
-          width: 100%;
-          height: fit-content;
-          padding: unset;
-          gap: unset;
-        }
-      }
-      &.v1 {
-        .d2-section {
-          //width: 100%;
-          padding-top : unset;
-          .d2-section-tit {
-            display: none;
-          }
-          .d2-list {
-            //flex-direction: column;
-            //width: 100%;
-            //height: fit-content;
-            //gap: unset;
-          }
-          &.d2-sec-1,
-          &.d2-sec-2 {
-            width: 100%;
-            .d2-list {
-              width: 100%;
-            }
-          }
-        }
-      }
-      .d2-item {
-        width: 100%;
       }
     }
   }
@@ -1016,8 +824,13 @@ select {
 @include t-s {
   .sub-header {
     .gnb-wrap {
+      height: 6.5rem;
+      display: flex;
+      align-items: center;
       .gnb-inner-wrap {
         .nav-list {
+          // 임시
+          display: none;
         }
       }
     }
