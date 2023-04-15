@@ -214,9 +214,15 @@ body {
   }
   @include t-l {
     font-family: $mo_font;
+    &.ty02 {
+      font-family: $mo_font;
+    }
   }
   @include t-s {
     @include font-set($font-16r, $sb, inherit, -0.72px, 1.2);
+    &.ty02 {
+      @include font-set($font-16r, $sb, inherit, -0.72px, 1.2);
+    }
   }
 }
 .tit-head {

@@ -329,9 +329,11 @@ body { font-family: "Garet", "NanumSquareRound", sans-serif; scroll-behavior: sm
 
 @media (max-width: 1279px) { .tit-art-04.ty02 { font-family: "Pretendard", sans-serif; } }
 
-@media (max-width: 1279px) { .tit-art-04 { font-family: "Pretendard", sans-serif; } }
+@media (max-width: 1279px) { .tit-art-04 { font-family: "Pretendard", sans-serif; }
+  .tit-art-04.ty02 { font-family: "Pretendard", sans-serif; } }
 
-@media (max-width: 768px) { .tit-art-04 { font-size: 1.6rem; font-weight: 600; font-family: inherit; letter-spacing: -0.72px; line-height: 1.2; } }
+@media (max-width: 768px) { .tit-art-04 { font-size: 1.6rem; font-weight: 600; font-family: inherit; letter-spacing: -0.72px; line-height: 1.2; }
+  .tit-art-04.ty02 { font-size: 1.6rem; font-weight: 600; font-family: inherit; letter-spacing: -0.72px; line-height: 1.2; } }
 
 .tit-head { font-size: 5.4rem; font-family: "Poppins", "NanumSquareRound", sans-serif; }
 
