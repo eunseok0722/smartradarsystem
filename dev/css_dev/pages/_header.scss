@@ -925,7 +925,7 @@ select {
                 &:hover {
                   background: unset;
                   a {
-                    color: inherit;
+                    //color: inherit;
                   }
                 }
                 .nav-item {
@@ -1054,6 +1054,9 @@ select {
           }
           .tit-box {
             padding: 0 4rem 0 0.5rem;
+            &:hover {
+              color: $blue_l;
+            }
           }
           &.active {
             &::after {
@@ -1081,6 +1084,11 @@ select {
           //.tit-box {
           //  width: 100%;
           //}
+          .tit-box {
+            &:hover {
+              color: $blue_l;
+            }
+          }
           .img-box {
             display: none;
           }
@@ -1102,7 +1110,7 @@ select {
           }
           &:hover {
             .tit-box {
-              color: unset;
+              //color: unset;
               background: unset;
             }
           }
