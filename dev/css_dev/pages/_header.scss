@@ -913,14 +913,14 @@ select {
             flex-direction: column;
             justify-content: flex-start;
             width: 100%;
-            min-width: 14rem;
+            min-width: 13rem;
             height: 100%;
             .list-item {
               flex-basis: unset;
               display: flex;
               .tit-l {
                 flex-basis: 25%;
-                min-width: 14rem;
+                min-width: 13rem;
                 @include bdb(1px, $gray_04);
                 @include bdrs(unset);
                 a.nav-item {
@@ -1121,10 +1121,28 @@ select {
 @include t-s {
   .sub-header {
     .gnb-wrap {
+      &.active {
+        .gnb-inner-wrap {
+          .nav-list {
+            &::before {
+              left: 13rem;
+            }
+            .list-item {
+              .tit-l {
+                flex-basis: 13rem;
+              }
+            }
+          }
+        }
+      }
       .gnb-inner-wrap {
         .nav-list {
         }
       }
+    }
+    .d2-list-wrap {
+      left: 13.1rem;
+      width: calc(100% - 13.1rem);
     }
   }
 }

@@ -703,9 +703,9 @@ select:focus, select :focus-visible { outline-color: #008aff; }
   .sub-header .gnb-wrap.active .gnb-inner-wrap .change-lang .lang-list-wrap .lang-list::after { content: ''; display: block; position: absolute; left: 3.7rem; height: 100%; width: 1px; background-color: #0054a6; }
   .sub-header .gnb-wrap.active .gnb-inner-wrap .change-lang .lang-list-wrap .lang-list .list-item .tit-l { font-size: 1.3rem; font-weight: 600; font-family: inherit; letter-spacing: 0.34px; line-height: 1; padding: 0.8rem 1rem; }
   .sub-header .gnb-wrap.active .gnb-inner-wrap .change-lang .lang-list-wrap .lang-list .list-item.active a::after { content: unset; }
-  .sub-header .gnb-wrap.active .gnb-inner-wrap .nav-list { position: absolute; left: 0; top: 6.5rem; display: flex; flex-direction: column; justify-content: flex-start; width: 100%; min-width: 14rem; height: 100%; /* mo gnb vertical line */ /* mo gnb vertical line */ }
+  .sub-header .gnb-wrap.active .gnb-inner-wrap .nav-list { position: absolute; left: 0; top: 6.5rem; display: flex; flex-direction: column; justify-content: flex-start; width: 100%; min-width: 13rem; height: 100%; /* mo gnb vertical line */ /* mo gnb vertical line */ }
   .sub-header .gnb-wrap.active .gnb-inner-wrap .nav-list .list-item { flex-basis: unset; display: flex; }
-  .sub-header .gnb-wrap.active .gnb-inner-wrap .nav-list .list-item .tit-l { flex-basis: 25%; min-width: 14rem; border-bottom: 1px solid #d7d7d7; -webkit-border-radius: unset; -moz-border-radius: unset; border-radius: unset; }
+  .sub-header .gnb-wrap.active .gnb-inner-wrap .nav-list .list-item .tit-l { flex-basis: 25%; min-width: 13rem; border-bottom: 1px solid #d7d7d7; -webkit-border-radius: unset; -moz-border-radius: unset; border-radius: unset; }
   .sub-header .gnb-wrap.active .gnb-inner-wrap .nav-list .list-item .tit-l a.nav-item { display: none; }
   .sub-header .gnb-wrap.active .gnb-inner-wrap .nav-list .list-item .tit-l button.nav-item { display: block; }
   .sub-header .gnb-wrap.active .gnb-inner-wrap .nav-list .list-item .tit-l:hover { background: unset; }
@@ -743,6 +743,10 @@ select:focus, select :focus-visible { outline-color: #008aff; }
   .sub-header .d2-list-wrap.v3 .d2-item, .sub-header .d2-list-wrap.v4 .d2-item { width: 100%; }
   .sub-header .d2-list-wrap.v3 .d2-item .tit-box, .sub-header .d2-list-wrap.v4 .d2-item .tit-box { text-align: left; }
   .sub-header .d2-list-wrap.v3 .d2-item:hover .tit-box, .sub-header .d2-list-wrap.v4 .d2-item:hover .tit-box { color: unset; background: unset; } }
+
+@media (max-width: 768px) { .sub-header .gnb-wrap.active .gnb-inner-wrap .nav-list::before { left: 13rem; }
+  .sub-header .gnb-wrap.active .gnb-inner-wrap .nav-list .list-item .tit-l { flex-basis: 13rem; }
+  .sub-header .d2-list-wrap { left: 13.1rem; width: calc(100% - 13.1rem); } }
 
 #footer { width: 100%; height: fit-content; background-color: #f5f5f5; }
 
