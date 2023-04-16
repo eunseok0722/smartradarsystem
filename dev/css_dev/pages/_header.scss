@@ -800,7 +800,7 @@ select {
       align-items: flex-start;
       padding: 17px 0 0;
       .gnb-inner-wrap {
-        &::after {
+        .btn-mo {
           content: '';
           display: block;
           width: 2.5rem;
@@ -847,7 +847,7 @@ select {
         background-size: 100%;
         .gnb-inner-wrap {
           gap: 3rem;
-          &::after {
+          .btn-mo {
             width: 20px;
             height: 20px;
             background-image: url('../images/ico_x_002.png');
@@ -938,7 +938,7 @@ select {
                 .nav-item {
                   padding: 3rem 0;
                   @include font-set($font-13r, $b, inherit, 0.34px, 1.2);
-                  .active {
+                 &.active {
                     color: $blue_l;
                   }
                 }
@@ -1027,7 +1027,7 @@ select {
           @include bdrs(unset);
           justify-content: center;
           .tit-m {
-            @include font-set($font-15r, $r, inherit, 0.39px, 1.6);
+            @include font-set($font-15r, $r, inherit, 0.39px, 1.15);
           }
         }
 
