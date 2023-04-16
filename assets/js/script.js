@@ -65,13 +65,16 @@ const d2Item = document.querySelectorAll('.d2-item');
     d1Item[i].addEventListener("mouseenter", () => {
       for (let j = 0; j < d1Item.length; j++) {
         d2Wrap[j].classList.remove("active");
+        d1Item[j].querySelector('button.nav-item').classList.remove("active");
       }
       d2Wrap[i].classList.add("active");
+      d1Item[i].querySelector('button.nav-item').classList.add("active");
     });
   }
   subHeader.addEventListener("mouseleave", () => {
     for (let i = 0; i < d1Item.length; i++) {
       d2Wrap[i].classList.remove("active");
+      d1Item[i].querySelector('button.nav-item').classList.remove("active");
     }
   });
 // }
