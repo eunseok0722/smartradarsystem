@@ -650,10 +650,7 @@ body { font-family: "Garet", "NanumSquareRound", sans-serif; scroll-behavior: sm
 
 .breadcrumb-wrap .breadcrumb .bread-list { display: flex; justify-content: flex-end; gap: 2.5rem; }
 
-@media (max-width: 1279px) { .breadcrumb-wrap { padding: 1.3rem 2rem; box-sizing: border-box; }
-  .breadcrumb-wrap .breadcrumb { width: 100%; } }
-
-@media (max-width: 768px) { .breadcrumb-wrap { display: none; } }
+@media (max-width: 1279px) { .breadcrumb-wrap { display: none; } }
 
 /* // breadcrumb CSS */
 select { display: block; padding: 1rem 4.2rem 1rem 1.6rem; border-radius: 3.2rem; font-size: 1.15rem; appearance: none; -moz-appearance: none; -webkit-appearance: none; background-position: calc(100% - 1.5rem) center; background-repeat: no-repeat; }

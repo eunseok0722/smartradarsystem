@@ -695,13 +695,6 @@
     }
   }
   @include t-l {
-    padding: 1.3rem 2rem;
-    box-sizing: border-box;
-    .breadcrumb {
-      width: 100%;
-    }
-  }
-  @include t-s {
     display: none;
   }
 }
