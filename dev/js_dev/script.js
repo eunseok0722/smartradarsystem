@@ -7,7 +7,8 @@ const gnbWrap = document.querySelector(".gnb-wrap");
 const btnMo = document.querySelector(".btn-mo");
 const d2Item = document.querySelectorAll('.d2-item');
 /* header */
-if (window.matchMedia("(max-width: 1279px)").matches) {
+
+// if (window.matchMedia("(max-width: 1279px)").matches) {
   // 모바일 환경 인터렉션 정의
   // 모바일 gnb mo-btn 클릭 동작
   btnMo.addEventListener("click", () => {
@@ -58,7 +59,7 @@ if (window.matchMedia("(max-width: 1279px)").matches) {
     })
   }
 
-} else {
+// } else {
   // pc환경 인터렉션 정의
   for (let i = 0; i < d1Item.length; i++) {
     d1Item[i].addEventListener("mouseenter", () => {
@@ -73,7 +74,7 @@ if (window.matchMedia("(max-width: 1279px)").matches) {
       d2Wrap[i].classList.remove("active");
     }
   });
-}
+// }
 /* header */
 
 /* Application main 동작구현 */
