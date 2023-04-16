@@ -978,8 +978,8 @@ select:focus, select :focus-visible { outline-color: #008aff; }
   .concept-content .content-header .txt-list p { font-size: 1.5rem; font-weight: 200; font-family: "Pretendard", sans-serif; letter-spacing: -0.68px; line-height: 1.4; }
   .concept-content .content-header .txt-list .emp { margin-top: 3rem; font-weight: 400; }
   .concept-content .content-header .txt-list .fw-r { font-weight: 400; }
-  .concept-content .concept-img-wrap { height: 100%; }
-  .concept-content .concept-img-wrap .concept-img { height: 100%; }
+  .concept-content .concept-img-wrap { height: 50%; }
+  .concept-content .concept-img-wrap .concept-img { height: 100%; background-attachment: unset; }
   .concept-content.ty02 .content-header { align-items: flex-start; text-align: left; }
   .concept-content.ty02 .content-header .txt-list { align-items: flex-start; } }
 

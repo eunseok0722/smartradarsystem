@@ -550,9 +550,10 @@
       }
     }
     .concept-img-wrap {
-      height: 100%;
+      height: 50%;
       .concept-img {
         height: 100%;
+        background-attachment: unset;
       }
     }
     &.ty02 {
