@@ -5,7 +5,7 @@
   left: 0;
   width: 100%;
   height: fit-content;
-  z-index: $nav-z-index;
+  z-index: $nav-z-index - 1;
   &::after {
     //content: '';
     //display: block;

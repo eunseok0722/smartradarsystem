@@ -456,7 +456,7 @@ body { font-family: "Garet", "NanumSquareRound", sans-serif; scroll-behavior: sm
 
 /* // Custom Select */
 /* main-header css */
-.main-header-wrap { position: fixed; bottom: 0; left: 0; width: 100%; height: fit-content; z-index: 100; /* header  활성화 */ /* main header  gnb CSS */ /* main header  gnb CSS */ /* main header sub gnb CSS */ /* main header sub gnb CSS */ }
+.main-header-wrap { position: fixed; bottom: 0; left: 0; width: 100%; height: fit-content; z-index: 99; /* header  활성화 */ /* main header  gnb CSS */ /* main header  gnb CSS */ /* main header sub gnb CSS */ /* main header sub gnb CSS */ }
 
 .main-header-wrap.active .gnb-sub-wrap { bottom: 0; }
 
