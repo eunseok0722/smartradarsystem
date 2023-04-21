@@ -566,8 +566,11 @@
             @include bdb(1px, #ccc);
             align-items: unset;
             .tit-cont {
-              @include font-set($font-18r, $l, inherit, -0.81px, 1.2);
+              @include font-set($font-18r, $l, inherit, 0.18px, 1.2);
               text-align: left;
+              &.ty02 {
+                @include font-set($font-18r, $l, inherit, -0.81px, 1.2);
+              }
             }
             .txt-l {
               @include font-set($font-13r, $md, inherit, normal, 1);
@@ -1527,7 +1530,7 @@
               padding: 0 1rem;
               height: fit-content;
               a {
-                @include font-set($font-15r, $l, inherit, -0.68px, 1.4);
+                @include font-set($font-15r, $l, inherit, normal, 1.4);
               }
               span {
                 color: #959595;
@@ -1544,6 +1547,19 @@
 
               &:nth-child(3) {
                 flex-basis: unset;
+              }
+            }
+          }
+        }
+      }
+      &.ty02 {
+        .desc-table {
+          .table-row {
+            .table-column {
+              .table-item {
+                a {
+                  @include font-set($font-15r, $l, inherit, -0.68px, 1.4);
+                }
               }
             }
           }
@@ -1761,7 +1777,7 @@
               padding: 0 1rem;
               a,
               p {
-                @include font-set($font-15r, $l, inherit, -0.68px, 1.4);
+                @include font-set($font-15r, $l, inherit, normal, 1.4);
               }
               p {
                 width: 100%;
@@ -1798,12 +1814,30 @@
           }
         }
       }
+      &.ty02 {
+        .desc-table {
+          .table-row {
+            .table-column {
+              .table-item {
+                a,
+                p {
+                  @include font-set($font-15r, $l, inherit, -0.63px, 1.4);
+                }
+              }
+            }
+          }
+        }
+      }
+
     }
     .item-content .txt-wrap {
       padding: 2rem 3rem;
-      @include font-set($font-14r, $l, inherit, -0.63px, 1.6);
+      @include font-set($font-14r, $l, inherit, normal, 1.6);
       @include ln-b(20);
       overflow: scroll;
+      .ty02 {
+        @include font-set($font-14r, $l, inherit, -0.63px, 1.6);
+      }
     }
   }
 }

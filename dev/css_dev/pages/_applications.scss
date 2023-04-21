@@ -150,7 +150,10 @@
         .txt-wrap {
           //gap : 2rem;
           .tit-head {
-            @include font-set($font-40r, $r, inherit, -1px, 1.2);
+            @include font-set($font-40r, $r, inherit, 0.4px, 1.2);
+            &.ty02 {
+              @include font-set($font-40r, $r, inherit, -1px, 1.2);
+            }
           }
           .tit-art {
             //@include font-set($font-16r, $el, inherit, -0.72px, 1.6);
@@ -203,10 +206,16 @@
         .txt-wrap {
           gap: 2rem;
           .tit-head {
-            @include font-set($font-30r, $el, inherit, -1.35px, 1.2);
+            @include font-set($font-30r, $el, inherit, 0.3px, 1.2);
+            &.ty02 {
+              @include font-set($font-30r, $el, inherit, -1.35px, 1.2);
+            }
           }
           .tit-art {
-            @include font-set($font-16r, $el, inherit, -0.72px, 1.6);
+            @include font-set($font-16r, $el, inherit, 0.16px, 1.6);
+            &.ty02 {
+              @include font-set($font-16r, $el, inherit, -0.72px, 1.6);
+            }
           }
           .txt-inner-wrap {
             gap: 1rem;

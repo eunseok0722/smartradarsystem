@@ -196,11 +196,17 @@
       gap: 4rem;
       .sec-header {
         .tit-art-04 {
-          @include font-set($font-16r, $sb, inherit, -0.72px, 1.2);
+          @include font-set($font-16r, $sb, inherit, 0.16px, 1.2);
+          &.ty02 {
+            @include font-set($font-16r, $sb, inherit, -0.72px, 1.2);
+          }
         }
         .tit-head {
           width: 100%;
-          @include font-set($font-30r, $el, inherit, -1.35px, 1.2);
+          @include font-set($font-30r, $el, inherit, 0.3px, 1.2);
+          &.ty02 {
+            @include font-set($font-30r, $el, inherit, -1.35px, 1.2);
+          }
           span {
             font-weight: $sb;
           }
@@ -210,7 +216,10 @@
         margin : unset;
         .tit-art-03 {
           width: 100%;
-          @include font-set($font-16r, $el, inherit, -0.72px, 1.6);
+          @include font-set($font-16r, $el, inherit, 0.16px, 1.6);
+          &.ty02 {
+            @include font-set($font-16r, $el, inherit, -0.72px, 1.6);
+          }
         }
       }
       .img-wrap {
@@ -315,10 +324,16 @@
     .soft-sec {
       padding: 3rem 2rem;
       .tit-head {
-        @include font-set($font-30r, $el, inherit, -1.35px, 1.2);
+        @include font-set($font-30r, $el, inherit, 0.3px, 1.2);
+        &.ty02 {
+          @include font-set($font-30r, $el, inherit, -1.35px, 1.2);
+        }
       }
       .tit-art-03 {
-        @include font-set($font-16r, $el, inherit, -0.72px, 1.6);
+        @include font-set($font-16r, $el, inherit, 0.16px, 1.6);
+        &.ty02 {
+          @include font-set($font-16r, $el, inherit, -0.72px, 1.6);
+        }
       }
     }
   }
@@ -396,7 +411,10 @@
           gap: 1rem;
           .tit-head {
             flex-basis: unset;
-            @include font-set($font-26r, $l, inherit, -1.17px, 1.2);
+            @include font-set($font-26r, $l, inherit, 0.26px, 1.2);
+            &.ty02 {
+              @include font-set($font-26r, $l, inherit, -1.17px, 1.2);
+            }
           }
         }
         .data-item {
@@ -613,7 +631,10 @@
         gap: 2rem;
         .sub-tit {
           text-align: left;
-          @include font-set($font-30r, $el, inherit, -1.35px, 1.2);
+          @include font-set($font-30r, $el, inherit, 0.3px, 1.2);
+          &.ty02 {
+            @include font-set($font-30r, $el, inherit, -1.35px, 1.2);
+          }
         }
 
         .tit-art {

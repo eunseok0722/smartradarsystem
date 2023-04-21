@@ -92,7 +92,6 @@ body {
   font-size: $font-16r;
   //font-weight: $r;
   &.ty02 {
-    font-size: $font-18r;
     letter-spacing: -0.045em;
     word-break: keep-all;
   }
@@ -219,7 +218,7 @@ body {
     }
   }
   @include t-s {
-    @include font-set($font-16r, $sb, inherit, -0.72px, 1.2);
+    @include font-set($font-16r, $sb, inherit, 0.16px, 1.2);
     &.ty02 {
       @include font-set($font-16r, $sb, inherit, -0.72px, 1.2);
     }
@@ -249,7 +248,10 @@ body {
   //font-weight: $r;
   line-height: 1.5;
   @include t-s {
-    @include font-set($font-14r, $r, inherit, -0.63px, 1.2);
+    @include font-set($font-14r, $r, inherit, 0.14px, 1.2);
+    &.ty02 {
+      @include font-set($font-14r, $r, inherit, -0.63px, 1.2);
+    }
   }
 }
 

@@ -280,12 +280,14 @@
     animation-fill-mode: backwards;
     animation-timing-function: ease-in-out;
   }
+
   @include t-s {
     padding-bottom: 500px;
     .banner-list {
       display: flex;
       width: 400%;
       animation-name: banner-slide-mo;
+
       .list-item {
         width: 100%;
       }
@@ -314,6 +316,7 @@
   &.banner-img-03 {
     background-image: url('../images/img_main_001.png');
   }
+
   @include t-s {
     padding-bottom: 500px;
   }
@@ -343,6 +346,7 @@
       weight: $r;
     }
     letter-spacing: 1.4px;
+
     &.ty02 {
       font: {
         size: 6.2rem;
@@ -362,6 +366,7 @@
     @include t-l {
       font-family: $mo_font;
     }
+
     &.ty02 {
       font: {
         size: 4rem;
@@ -380,6 +385,7 @@
       weight: $r;
     }
     letter-spacing: 0.52px;
+
     &.ty02 {
       font: {
         size: $font-24r;
@@ -389,32 +395,33 @@
 
     }
   }
+
   @include t-l {
     h4,
     h5,
     p {
       color: #fff;
     }
-    .ban-tit,
-    .ban-tit.ty02 {
-      font : {
-        size: $font-22r;
-        weight: $b;
-        family: $mo_font;
+    .ban-tit {
+      @include font-set($font-22r, $b, inherit, 0.22px, 1.2);
+      &.ty02 {
+        @include font-set($font-22r, $b, inherit, -0.99px, 1.2);
       }
-      letter-spacing: -0.99px;
     }
     .ban-sub-tit,
     .ban-sub-tit.ty02 {
-      font : {
+      font: {
         size: 3.2rem;
         weight: $el;
         family: $mo_font;
       }
     }
-    .ban-slogan,
-    .ban-slogan.ty02 {
-      @include font-set (2rem, $r, $mo_font, -0.68px, 1.2);
+    .ban-slogan {
+      @include font-set(2rem, $r, $mo_font, 0.2px, 1.2);
+
+      &.ty02 {
+        @include font-set(2rem, $r, $mo_font, -0.68px, 1.2);
+      }
     }
   }
   @include t-s {
@@ -429,38 +436,36 @@
     p {
       color: #fff;
     }
-    .ban-tit,
-    .ban-tit.ty02 {
-      font : {
-        size: $font-22r;
-        weight: $b;
-        family: $mo_font;
+    .ban-tit  {
+      @include font-set($font-22r, $b, inherit, 0.22px, 1.2);
+      &.ty02 {
+        @include font-set($font-22r, $b, inherit, -0.99px, 1.2);
       }
-      letter-spacing: -0.99px;
     }
-    .ban-sub-tit,
-    .ban-sub-tit.ty02 {
-      font : {
-        size: 3.2rem;
-        weight: $el;
-        family: $mo_font;
+    .ban-sub-tit {
+      @include font-set(3.2rem, $el, inherit, 0.32px, 1.2);
+      &.ty02 {
+        @include font-set(3.2rem, $el, inherit, -1.49px, 1.2);
       }
-      letter-spacing: -1.49px;
-      line-height: 1.2;
     }
     .ban-slogan {
       margin-top: 0.5rem;
     }
-    .ban-slogan,
-    .ban-slogan.ty02 {
-      @include font-set (1.5rem, $r, $mo_font, -0.68px, 1.2);
+    .ban-slogan {
+      @include font-set(1.5rem, $r, $mo_font, 0.15px, 1.2);
+
+      &.ty02 {
+        @include font-set(1.5rem, $r, $mo_font, -0.68px, 1.2);
+      }
     }
+
   }
 }
 
 .concept-content {
   width: 100%;
   height: fit-content;
+
   .content-header {
     width: 100%;
     max-width: 1220px;
@@ -472,24 +477,29 @@
 
     .tit-head {
       line-height: 1.1;
+
       span {
         display: block;
         margin-bottom: 0.5rem;
+
         &.tbl-s {
           display: inline;
         }
       }
     }
+
     .txt-list {
       @include flex-col(1.2rem);
       line-height: 1.2;
     }
   }
+
   &.ty02 {
     .content-header {
       @include flex-col(4rem);
       align-items: flex-end;
       text-align: right;
+
       .txt-list {
         @include flex-col(1.2rem);
         align-items: flex-end;
@@ -500,21 +510,34 @@
 
     }
   }
+
   @include t-l {
     .content-header {
       padding: 6rem 2rem;
       box-sizing: border-box;
-      .tit-head,
-      .tit-head.ty02 {
-        @include font-set (3rem, $sb, $mo_font, -1.26px, 1.2);
+
+      .tit-head {
+        @include font-set(3rem, $sb, $mo_font, 0.3px, 1.2);
+
+        .ty02 {
+          @include font-set(3rem, $sb, $mo_font, -1.26px, 1.2);
+        }
+
         span {
           font-weight: $el;
         }
       }
+
       .txt-list {
         gap: unset;
+
         p {
-          @include font-set(2rem, $el, $mo_font, -0.68px, 1.6);
+          @include font-set(2rem, $el, $mo_font, normal, 1.6);
+        }
+        &.ty02 {
+          p {
+            @include font-set(2rem, $el, $mo_font, -0.68px, 1.6);
+          }
         }
       }
     }
@@ -525,32 +548,46 @@
     .content-header {
       height: fit-content;
       min-height: 50%;
-      .tit-head,
-      .tit-head.ty02 {
-        @include font-set (2.8rem, $sb, $mo_font, -1.26px);
+
+      .tit-head {
+        @include font-set(2.8rem, $sb, $mo_font, normal, 1.2);
+        &.ty02 {
+          @include font-set(2.8rem, $sb, $mo_font, -1.26px, 1.2);
+
+        }
         span {
           font-weight: $el;
+
           &.tbl-s {
             display: inline;
           }
         }
       }
+
       .txt-list {
         gap: unset;
+
         p {
-          @include font-set(1.5rem, $el, $mo_font, -0.68px, 1.4);
+          @include font-set(1.5rem, $el, $mo_font, normal, 1.4);
         }
-        .emp {
-          margin-top: 3rem;
-          font-weight: $r;
-        }
-        .fw-r {
-          font-weight: $r;
+
+        &.ty02 {
+          p {
+            @include font-set(1.5rem, $el, $mo_font, -0.68px, 1.4);
+          }
+          .emp {
+            margin-top: 3rem;
+            font-weight: $r;
+          }
+          .fw-r {
+            font-weight: $r;
+          }
         }
       }
     }
     .concept-img-wrap {
       height: 50%;
+
       .concept-img {
         height: 100%;
         background-attachment: unset;
@@ -560,6 +597,7 @@
       .content-header {
         align-items: flex-start;
         text-align: left;
+
         .txt-list {
           //gap: unset;
           align-items: flex-start;
@@ -568,9 +606,11 @@
     }
   }
 }
+
 .concept-img-wrap {
   width: 100%;
   height: 475px;
+
   .concept-img {
     width: 100%;
     height: 475px;
@@ -578,21 +618,24 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+
     &.concept-img-01 {
       background-image: url('../images/img_main_004.png');
     }
+
     &.concept-img-02 {
       background-image: url('../images/img_main_005.png');
     }
+
     &.concept-img-03 {
       background-image: url('../images/img_main_006.png');
     }
+
     &.concept-img-04 {
       background-image: url('../images/img_main_007.png');
     }
   }
 }
-
 
 
 @keyframes banner-slide {

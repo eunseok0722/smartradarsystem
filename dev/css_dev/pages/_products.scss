@@ -262,7 +262,6 @@
 
       .txt-l {
         width: 75%;
-        width: 75%;
       }
     }
   }
@@ -272,12 +271,18 @@
 
       .tit-head {
         width: 100%;
-        @include font-set($font-30r, $el, inherit, -1.35px, 1.2);
+        @include font-set($font-30r, $el, inherit, 0.3px, 1.2);
+        &.ty02 {
+          @include font-set($font-30r, $el, inherit, -1.35px, 1.2);
+        }
       }
 
       .txt-l {
         width: 100%;
-        @include font-set($font-16r, $el, inherit, -0.72px, 1.6);
+        @include font-set($font-16r, $el, inherit, 0.16px, 1.6);
+        &.ty02 {
+          @include font-set($font-16r, $el, inherit, -0.72px, 1.6);
+        }
       }
     }
   }
@@ -857,8 +862,14 @@
         background-size: 50%;
       }
       p {
-        @include font-set($font-16r, $r, inherit, -0.32px, 1.2);
+        @include font-set($font-16r, $r, inherit, normal, 1.2);
         width: calc(100% - 46px);
+      }
+      &.ty02 {
+        p {
+          @include font-set($font-16r, $r, inherit, -0.32px, 1.2);
+
+        }
       }
 
     }
@@ -871,9 +882,15 @@
         flex-wrap : wrap;
         justify-content: flex-start;
         gap: 0 1rem;
-        @include font-set($font-13r, $r, inherit, -0.26px, 1.2);
+        @include font-set($font-13r, $r, inherit, 0.13px, 1.2);
+
         span {
           flex-basis: 180px;
+        }
+      }
+      &.ty02 {
+        .txt-l {
+          @include font-set($font-13r, $r, inherit, -0.26px, 1.2);
         }
       }
     }
@@ -885,7 +902,13 @@
         margin: 2rem 0;
         padding: 0 2.5rem;
         .lb-tit-r {
-          @include font-set($font-15r, $r, inherit, -0.68px, 1.4);
+          @include font-set($font-15r, $r, inherit, 0.15px, 1.4);
+
+        }
+        &.ty02 {
+          .lb-tit-r {
+            @include font-set($font-15r, $r, inherit, -0.68px, 1.4);
+          }
         }
       }
     }
@@ -1142,9 +1165,12 @@
     .purc-img-wrap {
       @include bdrs (2rem);
       .uas-img {
-        p.ty02,
+
         p {
-          @include font-set($font-15r, $r, inherit, inherit, 1.4);
+          @include font-set($font-15r, $r, inherit, 0.15px, 1.4);
+          &.ty02 {
+            @include font-set($font-15r, $r, inherit, inherit, 1.4);
+          }
         }
         a {
           @include font-set($font-16r, $r, inherit, 0.32px, 1);
@@ -1217,7 +1243,10 @@
         }
         .prod-img-wrap .process-list .process-item p {
           padding: 2rem;
-          @include font-set($font-14r, $r, inherit, -0.28px, 1.2);
+          @include font-set($font-14r, $r, inherit, normal, 1.2);
+          &.ty02 {
+            @include font-set($font-14r, $r, inherit, -0.28px, 1.2);
+          }
         }
       }
     }
@@ -1378,7 +1407,10 @@
   }
   @include t-s {
     p {
-      @include font-set ($font-15r, $r, inherit, -0.68px, 1.4);
+      @include font-set ($font-15r, $r, inherit, normal, 1.4);
+      &.ty02 {
+        @include font-set ($font-15r, $r, inherit, -0.68px, 1.4);
+      }
     }
     a {
       @include font-set ($font-16r, $sb, inherit, 0.32px, 1);
