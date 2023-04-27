@@ -1005,6 +1005,32 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 
 .concept-img-wrap .concept-img.concept-img-04 { background-image: url("../images/img_main_007.png"); }
 
+.main-popup-wrap { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; max-width: 560px; padding: 0 2rem; height: fit-content; box-sizing: border-box; }
+
+.main-popup-wrap .popup { background-color: #fff; }
+
+.main-popup-wrap .popup-001 .pop-content { width: 100%; height: fit-content; background-image: url("../images/img_pop_bg_001.png"); -webkit-background-size: cover; background-size: cover; background-position: center center; position: relative; }
+
+.main-popup-wrap .popup-001 .pop-content a { display: block; width: 100%; height: 100%; padding-bottom: 73.21%; }
+
+.main-popup-wrap .popup-001 .pop-content a p, .main-popup-wrap .popup-001 .pop-content a button { position: absolute; left: 50%; transform: translateX(-50%); }
+
+.main-popup-wrap .popup-001 .pop-content a p { display: block; width: 100%; bottom: 7.5rem; text-align: center; font-size: 42px; font-weight: 300; font-family: "Poppins", "NanumSquareRound", sans-serif; letter-spacing: normal; line-height: 1.2; color: #fff; }
+
+@media (max-width: 640px) { .main-popup-wrap .popup-001 .pop-content a p { bottom: 15%; font-size: 2.4rem; font-weight: 300; font-family: inherit; letter-spacing: normal; line-height: 1.2; } }
+
+.main-popup-wrap .popup-001 .pop-content a button { bottom: 2rem; color: #008aff; }
+
+@media (max-width: 640px) { .main-popup-wrap .popup-001 .pop-content a button { display: none; } }
+
+.main-popup-wrap .popup-001 .pop-footer { display: flex; padding: 1.5rem 2rem; box-sizing: border-box; justify-content: space-between; }
+
+.main-popup-wrap .popup-001 .pop-footer .input-wrap { display: flex; align-items: center; }
+
+.main-popup-wrap .popup-001 .pop-footer .input-wrap input { width: 2rem; height: 2rem; }
+
+.main-popup-wrap .popup-001 .pop-footer .input-wrap label { margin-left: 1rem; font-size: 1.4rem; font-weight: 400; font-family: inherit; letter-spacing: normal; line-height: 1; }
+
 @keyframes banner-slide { 0% { top: 0; }
   23.33% { top: 0; }
   33.33% { top: -100%; }
@@ -1362,6 +1388,8 @@ select:focus, select :focus-visible { outline-color: #008aff; }
   .popup-wrap .btn-x { top: 2rem; right: 2rem; } }
 
 .btn-x { display: block; width: 4rem; height: 4rem; background-size: 3.8rem 3.8rem; background-repeat: no-repeat; background-position: center center; background-image: url("../images/ico_x_001.png"); }
+
+.btn-x.ty02 { width: 2rem; height: 2rem; -webkit-background-size: contain; background-size: contain; background-image: url("../images/ico_x_003.png"); }
 
 /* //Awards & Patents CSS */
 /* team building & Careers */

@@ -1055,6 +1055,13 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-image: url("../images/ico_x_001.png");
+  &.ty02 {
+    width: 2rem;
+    height: 2rem;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-image: url('../images/ico_x_003.png');
+  }
 }
 
 
