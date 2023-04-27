@@ -136,15 +136,15 @@
     }
   }
   @include t-l {
-    gap: 2rem;
+    gap: 4rem;
     .img-box {
       gap: 2rem;
-      flex-basis: calc((100% - 2rem) / 2);
-      width: calc((100% - 2rem) / 2);
+      flex-basis: calc((100% - 4rem) / 2);
+      width: calc((100% - 4rem) / 2);
     }
     .tit-box {
-      flex-basis: calc((100% - 2rem) / 2);
-      width: calc((100% - 2rem) / 2);
+      flex-basis: calc((100% - 4rem) / 2);
+      width: calc((100% - 4rem) / 2);
       gap: 6rem;
       .head-sec {
         .txt-wrap {
@@ -471,10 +471,10 @@
       background-image: url("../images/ico_appl_feat_024.png");
     }
   }
+  //@include t-l {
+  //  margin: 0 auto;
+  //}
   @include t-l {
-    margin: 0 auto;
-  }
-  @include t-s {
     width: 8rem;
     .ico-box {
       width: 6.5rem;
@@ -485,6 +485,9 @@
     .tit-l {
       @include font-set($font-13r, $l, inherit, 0.78px, inherit);
     }
+  }
+  @include t-s {
+    margin: 0 auto;
   }
 }
 

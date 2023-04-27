@@ -2026,7 +2026,7 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 
 @media (max-width: 1279px) { .uas-img p, .uas-img a { font-family: "Pretendard", sans-serif; line-height: 1.4; } }
 
-.uas-img p { display: block; width: 75%; font-size: 2.6rem; font-weight: 300; }
+.uas-img p { display: block; width: 100%; font-size: 2.6rem; font-weight: 300; }
 
 .uas-img p.ty02 { width: 100%; font-size: 1.8rem; }
 
@@ -2095,9 +2095,9 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 
 .img-cont .img-box.ty04 .main-img { padding-bottom: 125%; }
 
-@media (max-width: 1279px) { .img-cont { gap: 2rem; }
-  .img-cont .img-box { gap: 2rem; flex-basis: calc((100% - 2rem) / 2); width: calc((100% - 2rem) / 2); }
-  .img-cont .tit-box { flex-basis: calc((100% - 2rem) / 2); width: calc((100% - 2rem) / 2); gap: 6rem; }
+@media (max-width: 1279px) { .img-cont { gap: 4rem; }
+  .img-cont .img-box { gap: 2rem; flex-basis: calc((100% - 4rem) / 2); width: calc((100% - 4rem) / 2); }
+  .img-cont .tit-box { flex-basis: calc((100% - 4rem) / 2); width: calc((100% - 4rem) / 2); gap: 6rem; }
   .img-cont .tit-box .head-sec .txt-wrap .tit-head { font-size: 4rem; font-weight: 400; font-family: inherit; letter-spacing: 0.4px; line-height: 1.2; }
   .img-cont .tit-box .head-sec .txt-wrap .tit-head.ty02 { font-size: 4rem; font-weight: 400; font-family: inherit; letter-spacing: -1px; line-height: 1.2; }
   .img-cont .tit-box .feat-sec { padding: 0; margin-left: unset; }
@@ -2214,11 +2214,11 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 
 .feat-info-item .ico-box.ty24 { background-image: url("../images/ico_appl_feat_024.png"); }
 
-@media (max-width: 1279px) { .feat-info-item { margin: 0 auto; } }
-
-@media (max-width: 768px) { .feat-info-item { width: 8rem; }
+@media (max-width: 1279px) { .feat-info-item { width: 8rem; }
   .feat-info-item .ico-box { width: 6.5rem; height: 6.5rem; background-size: 60%; -webkit-border-radius: 1rem; -moz-border-radius: 1rem; border-radius: 1rem; }
   .feat-info-item .tit-l { font-size: 1.3rem; font-weight: 300; font-family: inherit; letter-spacing: 0.78px; line-height: inherit; } }
+
+@media (max-width: 768px) { .feat-info-item { margin: 0 auto; } }
 
 .auto-vehi-cont { display: flex; justify-content: space-between; gap: 9rem; align-items: center; }
 
