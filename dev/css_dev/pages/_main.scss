@@ -647,9 +647,13 @@
   padding: 0 2rem;
   height: fit-content;
   box-sizing: border-box;
+  display: block;
+  &.hidden {
+    display: none;
+  }
   .popup {
-
     background-color: #fff;
+    box-shadow: 4.3px 4.2px 6px 0 rgba(0, 0, 0, 0.24);
   }
   .popup-001 {
     .pop-content {

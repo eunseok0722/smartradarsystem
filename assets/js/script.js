@@ -6,6 +6,8 @@ const d1Item = document.getElementsByClassName("d1-item");
 const gnbWrap = document.querySelector(".gnb-wrap");
 const btnMo = document.querySelector(".btn-mo");
 const d2Item = document.querySelectorAll('.d2-item');
+const mainPop = document.querySelector(".main-popup-wrap");
+const btnX = document.querySelector('.btn-x.ty02');
 /* header */
 
 // if (window.matchMedia("(max-width: 1279px)").matches) {
@@ -146,6 +148,15 @@ chLang.addEventListener("mouseleave", (event) => {
 });
 
 /* //change language */
+
+/* main */
+if(mainPop) {
+  btnX.addEventListener('click', function() {
+    mainPop.classList.add('hidden');
+  })
+}
+
+/* // main */
 
 /* awards */
 

@@ -1005,9 +1005,11 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 
 .concept-img-wrap .concept-img.concept-img-04 { background-image: url("../images/img_main_007.png"); }
 
-.main-popup-wrap { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; max-width: 560px; padding: 0 2rem; height: fit-content; box-sizing: border-box; }
+.main-popup-wrap { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; max-width: 560px; padding: 0 2rem; height: fit-content; box-sizing: border-box; display: block; }
 
-.main-popup-wrap .popup { background-color: #fff; }
+.main-popup-wrap.hidden { display: none; }
+
+.main-popup-wrap .popup { background-color: #fff; box-shadow: 4.3px 4.2px 6px 0 rgba(0, 0, 0, 0.24); }
 
 .main-popup-wrap .popup-001 .pop-content { width: 100%; height: fit-content; background-image: url("../images/img_pop_bg_001.png"); -webkit-background-size: cover; background-size: cover; background-position: center center; position: relative; }
 
