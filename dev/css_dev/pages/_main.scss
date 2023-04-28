@@ -404,6 +404,7 @@
     }
     .ban-tit {
       @include font-set($font-22r, $b, inherit, 0.22px, 1.2);
+
       &.ty02 {
         @include font-set($font-22r, $b, inherit, -0.99px, 1.2);
       }
@@ -436,14 +437,16 @@
     p {
       color: #fff;
     }
-    .ban-tit  {
+    .ban-tit {
       @include font-set($font-22r, $b, inherit, 0.22px, 1.2);
+
       &.ty02 {
         @include font-set($font-22r, $b, inherit, -0.99px, 1.2);
       }
     }
     .ban-sub-tit {
       @include font-set(3.2rem, $el, inherit, 0.32px, 1.2);
+
       &.ty02 {
         @include font-set(3.2rem, $el, inherit, -1.49px, 1.2);
       }
@@ -534,6 +537,7 @@
         p {
           @include font-set(2rem, $el, $mo_font, normal, 1.6);
         }
+
         &.ty02 {
           p {
             @include font-set(2rem, $el, $mo_font, -0.68px, 1.6);
@@ -551,10 +555,12 @@
 
       .tit-head {
         @include font-set(2.8rem, $sb, $mo_font, normal, 1.2);
+
         &.ty02 {
           @include font-set(2.8rem, $sb, $mo_font, -1.26px, 1.2);
 
         }
+
         span {
           font-weight: $el;
 
@@ -575,10 +581,12 @@
           p {
             @include font-set(1.5rem, $el, $mo_font, -0.68px, 1.4);
           }
+
           .emp {
             margin-top: 3rem;
             font-weight: $r;
           }
+
           .fw-r {
             font-weight: $r;
           }
@@ -648,13 +656,16 @@
   height: fit-content;
   box-sizing: border-box;
   display: block;
+
   &.hidden {
     display: none;
   }
+
   .popup {
     background-color: #fff;
     box-shadow: 4.3px 4.2px 6px 0 rgba(0, 0, 0, 0.24);
   }
+
   .popup-001 {
     .pop-content {
       width: 100%;
@@ -664,29 +675,37 @@
       background-size: cover;
       background-position: center center;
       position: relative;
+
       a {
         display: block;
         width: 100%;
         height: 100%;
         padding-bottom: 73.21%;
+
         p,
         button {
           position: absolute;
           left: 50%;
           transform: translateX(-50%);
         }
+
         p {
           display: block;
           width: 100%;
           bottom: 7.5rem;
           text-align: center;
-          @include font-set(42px, $l, $point_font, normal, 1.2);
+          word-break: keep-all;
+          @include font-set(4.2rem, $l, $point_font, normal, 1.2);
           color: $white;
+          @include t-l {
+            @include font-set(4.2rem, $l, inherit, normal, 1.2);
+          }
           @include m-l {
             bottom: 15%;
             @include font-set(2.4rem, $l, inherit, normal, 1.2)
           }
         }
+
         button {
           bottom: 2rem;
           color: $blue_l;
@@ -696,27 +715,56 @@
         }
       }
     }
+
     .pop-footer {
       display: flex;
       padding: 1.5rem 2rem;
       box-sizing: border-box;
       justify-content: space-between;
+
       .input-wrap {
         display: flex;
         align-items: center;
+
         input {
           width: 2rem;
           height: 2rem;
         }
+
         label {
           margin-left: 1rem;
           @include font-set($font-14r, $r, inherit, normal, 1);
         }
       }
     }
+    &.kr {
+      .pop-content {
+        a {
+          p {
+            @include font-set(4.2rem, $l, $kr_font, normal, 1.2);
+            @include t-l {
+              @include font-set(4.2rem, $l, inherit, normal, 1.2);
+            }
+            @include m-l {
+              bottom: 15%;
+              @include font-set(2.4rem, $l, inherit, normal, 1.2)
+            }
+          }
+        }
+      }
+      .pop-footer {
+        .input-wrap {
+          label {
+            @include font-set($font-14r, $r, $kr_font, normal, 1);
+            @include t-l {
+              @include font-set($font-14r, $r, inherit, normal, 1);
+            }
+          }
+        }
+      }
+    }
   }
 }
-
 
 
 @keyframes banner-slide {

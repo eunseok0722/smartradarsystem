@@ -1017,7 +1017,9 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 
 .main-popup-wrap .popup-001 .pop-content a p, .main-popup-wrap .popup-001 .pop-content a button { position: absolute; left: 50%; transform: translateX(-50%); }
 
-.main-popup-wrap .popup-001 .pop-content a p { display: block; width: 100%; bottom: 7.5rem; text-align: center; font-size: 42px; font-weight: 300; font-family: "Poppins", "NanumSquareRound", sans-serif; letter-spacing: normal; line-height: 1.2; color: #fff; }
+.main-popup-wrap .popup-001 .pop-content a p { display: block; width: 100%; bottom: 7.5rem; text-align: center; word-break: keep-all; font-size: 4.2rem; font-weight: 300; font-family: "Poppins", "NanumSquareRound", sans-serif; letter-spacing: normal; line-height: 1.2; color: #fff; }
+
+@media (max-width: 1279px) { .main-popup-wrap .popup-001 .pop-content a p { font-size: 4.2rem; font-weight: 300; font-family: inherit; letter-spacing: normal; line-height: 1.2; } }
 
 @media (max-width: 640px) { .main-popup-wrap .popup-001 .pop-content a p { bottom: 15%; font-size: 2.4rem; font-weight: 300; font-family: inherit; letter-spacing: normal; line-height: 1.2; } }
 
@@ -1032,6 +1034,16 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 .main-popup-wrap .popup-001 .pop-footer .input-wrap input { width: 2rem; height: 2rem; }
 
 .main-popup-wrap .popup-001 .pop-footer .input-wrap label { margin-left: 1rem; font-size: 1.4rem; font-weight: 400; font-family: inherit; letter-spacing: normal; line-height: 1; }
+
+.main-popup-wrap .popup-001.kr .pop-content a p { font-size: 4.2rem; font-weight: 300; font-family: "NanumSquareRound", sans-serif; letter-spacing: normal; line-height: 1.2; }
+
+@media (max-width: 1279px) { .main-popup-wrap .popup-001.kr .pop-content a p { font-size: 4.2rem; font-weight: 300; font-family: inherit; letter-spacing: normal; line-height: 1.2; } }
+
+@media (max-width: 640px) { .main-popup-wrap .popup-001.kr .pop-content a p { bottom: 15%; font-size: 2.4rem; font-weight: 300; font-family: inherit; letter-spacing: normal; line-height: 1.2; } }
+
+.main-popup-wrap .popup-001.kr .pop-footer .input-wrap label { font-size: 1.4rem; font-weight: 400; font-family: "NanumSquareRound", sans-serif; letter-spacing: normal; line-height: 1; }
+
+@media (max-width: 1279px) { .main-popup-wrap .popup-001.kr .pop-footer .input-wrap label { font-size: 1.4rem; font-weight: 400; font-family: inherit; letter-spacing: normal; line-height: 1; } }
 
 @keyframes banner-slide { 0% { top: 0; }
   23.33% { top: 0; }
