@@ -8,6 +8,7 @@ const btnMo = document.querySelector(".btn-mo");
 const d2Item = document.querySelectorAll('.d2-item');
 const mainPop = document.querySelector(".main-popup-wrap");
 const btnX = document.querySelector('.btn-x.ty02');
+const notOpenToday = document.querySelector('#notOpenToday')
 /* header */
 
 // if (window.matchMedia("(max-width: 1279px)").matches) {
@@ -150,9 +151,36 @@ chLang.addEventListener("mouseleave", (event) => {
 /* //change language */
 
 /* main */
+
+//  쿠키 정의
+
+//  쿠키 생성
+let setCookie = function () {
+  let expiration = new Date();
+  expiration.setDate(expiration.getDate() + 7);
+  let cookies = '';
+  cookies = `popupCookie=1; expires= ${expiration.toUTCString()}`;
+  document.cookie = cookies;
+}
+
+const mainPopClose = function (number, expiration) {
+  mainPop.classList.add('hidden');
+  if (number === 1) {
+    if (document.cookie.indexOf('popupCookie') === -1) {
+      setCookie()
+    }
+  }
+}
+
 if(mainPop) {
+  if(document.cookie.indexOf('popupCookie') !== -1) {
+    mainPopClose(0)
+  }
   btnX.addEventListener('click', function() {
-    mainPop.classList.add('hidden');
+    mainPopClose(0);
+  })
+  notOpenToday.addEventListener('click', function() {
+    mainPopClose(1, 1);
   })
 }
 
