@@ -2143,7 +2143,7 @@ select:focus, select :focus-visible { outline-color: #008aff; }
   .img-cont .tit-box .head-sec .txt-wrap .tit-head { font-size: 4rem; font-weight: 400; font-family: inherit; letter-spacing: 0.4px; line-height: 1.2; }
   .img-cont .tit-box .head-sec .txt-wrap .tit-head.ty02 { font-size: 4rem; font-weight: 400; font-family: inherit; letter-spacing: -1px; line-height: 1.2; }
   .img-cont .tit-box .feat-sec { padding: 0; margin-left: unset; }
-  .img-cont .tit-box .feat-sec .feat-info-list { column-gap: 0; justify-content: space-evenly; }
+  .img-cont .tit-box .feat-sec .feat-info-list { column-gap: 0; }
   .img-cont .tit-box .feat-sec .feat-info-list .list-item { flex-basis: 25%; } }
 
 @media (max-width: 768px) { .img-cont { flex-direction: column-reverse; align-items: center; gap: 4rem; }
