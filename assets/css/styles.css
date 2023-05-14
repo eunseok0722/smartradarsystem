@@ -897,6 +897,11 @@ select:focus, select :focus-visible { outline-color: #008aff; }
 
 .main-visual .visual-cont .d2-list-wrap .d2-list .d2-list-item.ty04 .d3-item a { background-color: #1ca55c; }
 
+@media (max-width: 1279px) { .main-visual .visual-cont { max-width: unset; }
+  .main-visual .visual-cont .img-box { display: flex; justify-content: center; align-items: center; }
+  .main-visual .visual-cont .img-box img { width: 90%; min-width: unset; }
+  .main-visual .d2-list-wrap { display: none; } }
+
 /* new main */
 .main-banner { width: 100%; height: 0; padding-bottom: 46.61%; overflow: hidden; position: relative; }
 

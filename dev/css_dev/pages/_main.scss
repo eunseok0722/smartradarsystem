@@ -258,7 +258,23 @@
       }
     }
   }
-
+  @include t-l {
+    .visual-cont {
+      max-width: unset;
+      .img-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 90%;
+          min-width: unset;
+        }
+      }
+    }
+    .d2-list-wrap {
+      display: none;
+    }
+  }
 }
 
 /* new main */

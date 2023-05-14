@@ -157,7 +157,7 @@ chLang.addEventListener("mouseleave", (event) => {
 //  쿠키 생성
 let setCookie = function () {
   let expiration = new Date();
-  expiration.setDate(expiration.getDate() + 7);
+  expiration.setDate(expiration.getDate() + 1);
   let cookies = '';
   cookies = `popupCookie=1; expires= ${expiration.toUTCString()}`;
   document.cookie = cookies;
